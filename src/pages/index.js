@@ -4,11 +4,11 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Img from "gatsby-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -28,6 +28,8 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const thumbnailImg =
+            post.frontmatter?.thumbnailImg?.childImageSharp.fluid
 
           return (
             <li key={post.fields.slug}>
@@ -53,6 +55,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
+              <Img fluid={thumbnailImg} />
             </li>
           )
         })}
@@ -87,6 +90,13 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          thumbnailImg {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
