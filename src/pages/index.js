@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Img from "gatsby-image"
+import GatsbyImage from "gatsby-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
             post.frontmatter.thumbnailImg?.childImageSharp.fluid
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.fields.slug} className="postContent">
               <article
                 className="post-list-item"
                 itemScope
@@ -56,7 +56,9 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
-              <Img fluid={thumbnailImg} />
+              <div className="imageWrapper post-list-item">
+                <GatsbyImage fluid={thumbnailImg} />
+              </div>
             </li>
           )
         })}
@@ -93,7 +95,7 @@ export const pageQuery = graphql`
           description
           thumbnailImg {
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 800) {
                 ...GatsbyImageSharpFluid
               }
             }
