@@ -12,12 +12,13 @@ module.exports = {
     title: `Faded Angels`,
     author: {
       name: `Amaranth`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `웹 개발과 게임 개발이 주요 관심사인 개발자 지망생`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,
+      github: `amaran-th`,
     },
   },
   plugins: [

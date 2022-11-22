@@ -341,14 +341,3 @@ summary {
 [hidden] {
   display: none;
 }
-.imageWrapper {
-  min-width: 5rem;
-  max-width: 20rem;
-  width: 200px;
-  height: max-content;
-}
-.postContent {
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-}

@@ -5,10 +5,14 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GatsbyImage from "gatsby-image"
+import "..//tailwind.css"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  //TODO redux로 저장
+  const theme = "amaranth"
+  const darkMode = true
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -23,47 +27,62 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          console.log(post)
-          const thumbnailImg =
-            post.frontmatter.thumbnailImg?.childImageSharp.fluid
+    <div className={theme + "-theme " + (darkMode ? "dark" : "light")}>
+      <Layout location={location} title={siteTitle}>
+        <Bio />
+        <ol style={{ listStyle: `none` }}>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+            console.log(post)
+            const thumbnailImg =
+              post.frontmatter.thumbnailImg?.childImageSharp.fluid
 
-          return (
-            <li key={post.fields.slug} className="postContent">
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-              <div className="imageWrapper post-list-item">
-                <GatsbyImage fluid={thumbnailImg} />
-              </div>
-            </li>
-          )
-        })}
-      </ol>
-    </Layout>
+            return (
+              <Link to={post.fields.slug} itemProp="url">
+                <li
+                  key={post.fields.slug}
+                  className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 hover:bg-slate-100"
+                >
+                  <article
+                    className=""
+                    itemScope
+                    itemType="http://schema.org/Article"
+                  >
+                    <header className="mb-4">
+                      <h2 className="mt-2 text-main text-3xl">
+                        <span itemProp="headline">{title}</span>
+                      </h2>
+                      <small className="text-sub">
+                        {post.frontmatter.date}
+                      </small>
+                    </header>
+                    <section>
+                      <p
+                        className="mb-0"
+                        dangerouslySetInnerHTML={{
+                          __html: post.frontmatter.description || post.excerpt,
+                        }}
+                        itemProp="description"
+                      />
+                    </section>
+                  </article>
+                  {thumbnailImg ? (
+                    <div className="min-w-[5rem] max-w-[20rem] w-[150px] h-[150px]">
+                      <GatsbyImage
+                        fluid={thumbnailImg}
+                        className="rounded-xl h-full w-full"
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </li>
+              </Link>
+            )
+          })}
+        </ol>
+      </Layout>
+    </div>
   )
 }
 

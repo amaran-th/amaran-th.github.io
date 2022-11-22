@@ -31,7 +31,7 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
+    <div className="bio bg-shadow p-2 py-4 rounded-md">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
@@ -44,10 +44,14 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          <strong className="text-point">{author.name}</strong>{" "}
+          {author?.summary || null}
+          <br />
+          <a
+            className="hover:text-sub"
+            href={`https://github.com/${social?.github || ``}`}
+          >
+            제 Github에 오시면 더 많은 활동을 보실 수 있습니다.
           </a>
         </p>
       )}

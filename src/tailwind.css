@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  /*카페24 아네모네 에어*/
+  font-family: "Cafe24Ohsquareair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*마루 부리*/
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*고운돋움Regular*/
+  font-family: "GowunDodum-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*마이쮸체*/
+  font-family: "TTCrownMychewR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*코트라 희망체*/
+  font-family: "KOTRAHOPE";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*열린명조*/
+  font-family: "YeolrinMyeongjo-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/YeolrinMyeongjo-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*잉크립퀴드*/
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lavender-theme {
+  --color-main: #a56bc0;
+  --color-point: #8e4dac;
+  --color-sub: #e0bbff;
+  --color-shadow: #d5c9de;
+}
+
+.olive-theme {
+  --color-main: #838517;
+  --color-point: #6f700f;
+  --color-sub: #d2d897;
+  --color-shadow: #e4e6d2;
+}
+
+.amaranth-theme {
+  --color-main: #b8578f;
+  --color-point: #992f6d;
+  --color-sub: #e7a6bc;
+  --color-shadow: #efe7ea;
+}
+.hydrangea-theme {
+  --color-main: #567eb9;
+  --color-point: #3d66a3;
+  --color-sub: #93c7e9;
+  --color-shadow: #c7d7e1;
+}
+.freesia-theme {
+  --color-main: #ecab31;
+  --color-point: #e6a01e;
+  --color-sub: #ffdd94;
+  --color-shadow: #e0d7c3;
+}
+
+.light input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+}
+.light input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
+  -webkit-text-fill-color: #000;
+}
+.dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
+.dark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+@tailwind utilities;
