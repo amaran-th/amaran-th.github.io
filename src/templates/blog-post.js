@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,17 +10,22 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
-
+  const writer = site.siteMetadata?.author?.name
   return (
     <Layout location={location} title={siteTitle}>
       <article
-        className="blog-post"
+        className="blog-post space-y-8"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 className="text-main text-6xl font-bold" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <p className="space-x-4">
+            <span className="font-bold text-sub">{writer}</span>
+            <span>{post.frontmatter.date}</span>
+          </p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -81,6 +86,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -89,7 +97,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일")
         description
       }
     }

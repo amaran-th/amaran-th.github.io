@@ -5,25 +5,31 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GatsbyImage from "gatsby-image"
-import "../tailwind.css"
+import "..//tailwind.css"
 
-const BlogIndex = ({ data, location }) => {
+const CategoryPost = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const categories = data.allMarkdownRemark.categoryList
+  const { category } = pageContext
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Bio />
-        <p>블로그 포스트를 찾을 수 없습니다.</p>
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
       </Layout>
     )
   }
 
   return (
-    <Layout location={location} title={siteTitle} categories={categories}>
+    <Layout location={location} title={siteTitle}>
+      <Seo title={`Posts in ${category}`} /> {/* 페이지 title 수정 */}
       <Bio />
+      <h3>{`현재 카테고리 : ${category}`}</h3> {/* 현재 카테고리 표시 */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -77,7 +83,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default CategoryPost
 
 /**
  * Head export to define metadata for the page
@@ -87,14 +93,16 @@ export default BlogIndex
 export const Head = () => <Seo title="Faded Angels" />
 
 export const pageQuery = graphql`
-  {
+  query ($category: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      categoryList: distinct(field: frontmatter___category)
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { category: { eq: $category } } }
+    ) {
       nodes {
         excerpt
         fields {
@@ -111,6 +119,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          category
         }
       }
     }

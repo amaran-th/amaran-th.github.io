@@ -3,6 +3,7 @@ title: 테스트~
 date: "2022-11-20T21:28:51.284Z"
 description: "개츠비 블로그 테스트"
 thumbnailImg: "./night_in_the_ooz.png"
+category: "테스트"
 ---
 
 ![나이트인더우즈](./night_in_the_ooz.png)

@@ -2,11 +2,13 @@
 title: dependencies vs devDependencies
 date: "2022-11-21T13:01:03.284Z"
 description: "package.json의 dependencies vs devDependencies 속성에 대하여"
+category: "주저리주저리"
+tag: ["node"]
 ---
 
-<aside>
-<img src="https://www.notion.so/icons/command-line_gray.svg" alt="https://www.notion.so/icons/command-line_gray.svg" width="40px" /> <span>npm install [패키지명]</span>
-</aside>
+```
+npm install [패키지명]
+```
 
 위와 같이 nodejs 프로젝트에서 npm install 명령어로 node 플러그인을 설치하면 기본적으로 프로젝트 내에 생성되어 있는 node_modules 디렉토리 내에 패키지가 설치됩니다.
 
@@ -22,10 +24,10 @@ description: "package.json의 dependencies vs devDependencies 속성에 대하�
 
 ### 배포
 
-<aside>
-<img src="https://www.notion.so/icons/command-line_gray.svg" alt="https://www.notion.so/icons/command-line_gray.svg" width="40px" /> npm install --production
+```
+npm install --production
 
-</aside>
+```
 
 기본적으로 node package를 install 하면 dependencies와 devDependencies의 패키지가 모두 설치되지만, 옵션으로 `--production`을 붙여주면 dependencies 항목의 패키지만 설치가 됩니다.
 
