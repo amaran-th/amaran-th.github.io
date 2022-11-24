@@ -21,8 +21,10 @@ const Layout = ({ location, title, categories, children }) => {
         <p className="text-point text-center font-bold">-● 카테고리 ●-</p>
         <ul className="">
           {categories?.map(category => (
-            <li key={category}>
-              <Link to={`/${category}/`}>{category}</Link>
+            <li key={category.fieldValue}>
+              <Link to={`/${category.fieldValue}/`}>
+                {category.fieldValue}({category.totalCount})
+              </Link>
             </li>
           ))}
         </ul>
@@ -35,12 +37,14 @@ const Layout = ({ location, title, categories, children }) => {
       </Link>
     )
     category = (
-      <nav className=" bg-shadow m-2 p-4 shadow-md rounded-xl sticky top-20 mt-4 ">
+      <nav className="h-[70vh] bg-white border-y border-r p-4 shadow-md rounded-r-xl sticky top-32 mt-4">
         <p className="text-point text-center font-bold">-● 카테고리 ●-</p>
         <ul className="">
           {categories?.map(category => (
-            <li key={category}>
-              <Link to={`/${category}/`}>{category}</Link>
+            <li key={category.fieldValue}>
+              <Link to={`/${category.fieldValue}/`}>
+                {category.fieldValue}({category.totalCount})
+              </Link>
             </li>
           ))}
         </ul>
@@ -53,9 +57,14 @@ const Layout = ({ location, title, categories, children }) => {
       <header className=" bg-white sticky -top-4 pt-9 shadow-md p-5 mb-12 z-[99]">
         {header}
       </header>
-      <div className="flex">
-        <nav className="fixed left-0 md:static min-w-xs ">{category}</nav>
-        <div className="max-w-3xl px-5 py-10" data-is-root-path={isRootPath}>
+      <div className="flex max-w-6xl justify-between">
+        <nav className="fixed left-0 md:static min-w-[12rem] z-[99] ">
+          {category}
+        </nav>
+        <div
+          className=" w-full max-w-3xl px-5 py-10"
+          data-is-root-path={isRootPath}
+        >
           <main>{children}</main>
         </div>
       </div>

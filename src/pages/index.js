@@ -10,8 +10,7 @@ import "../tailwind.css"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const categories = data.allMarkdownRemark.categoryList
-
+  const categories = data.allMarkdownRemark.group
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -94,7 +93,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      categoryList: distinct(field: frontmatter___category)
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
       nodes {
         excerpt
         fields {
@@ -111,6 +113,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          category
         }
       }
     }

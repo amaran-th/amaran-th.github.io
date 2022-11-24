@@ -6,13 +6,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
+  data: { previous, next, site, categoryList, markdownRemark: post },
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} categories={categories}>
       <article
         className="blog-post space-y-8"
         itemScope
@@ -88,6 +89,32 @@ export const pageQuery = graphql`
         title
         author {
           name
+        }
+      }
+    }
+    categoryList: allMarkdownRemark {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
+    }
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          thumbnailImg {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

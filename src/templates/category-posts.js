@@ -10,6 +10,7 @@ import "..//tailwind.css"
 const CategoryPost = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const categories = data.categoryList.group
   const { category } = pageContext
 
   if (posts.length === 0) {
@@ -26,7 +27,7 @@ const CategoryPost = ({ data, location, pageContext }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} categories={categories}>
       <Seo title={`Posts in ${category}`} /> {/* 페이지 title 수정 */}
       <Bio />
       <h3>{`현재 카테고리 : ${category}`}</h3> {/* 현재 카테고리 표시 */}
@@ -99,10 +100,20 @@ export const pageQuery = graphql`
         title
       }
     }
+    categoryList: allMarkdownRemark {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
+    }
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
+      }
       nodes {
         excerpt
         fields {

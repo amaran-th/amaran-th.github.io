@@ -20,12 +20,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
-        categoryList: distinct(field: frontmatter___category)
         nodes {
           id
           fields {
             slug
           }
+        }
+      }
+      categoryList: allMarkdownRemark {
+        group(field: frontmatter___category) {
+          fieldValue
+          totalCount
         }
       }
     }
@@ -41,15 +46,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const categoryPosts = path.resolve("./src/templates/category-posts.js")
 
   // 카테고리 데이터를 가져온다.
-  const categories = result.data.allMarkdownRemark.categoryList
+  const categories = result.data.categoryList.group
 
   // 카테고리 마다 하나의 페이지를 만든다.
   categories.forEach(category => {
     createPage({
       // 생성할 페이지들의 slug는 카테고리 이름을 kebab base로 변환한 것이다.
-      path: `/${category}/`,
+      path: `/${category.fieldValue}/`,
       component: categoryPosts,
-      context: { category },
+      context: { category: category.fieldValue },
     })
   })
   const posts = result.data.allMarkdownRemark.nodes
