@@ -20,7 +20,7 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className="text-main text-6xl font-bold" itemProp="headline">
+          <h1 className="text-main text-5xl font-bold" itemProp="headline">
             {post.frontmatter.title}
           </h1>
           <p className="space-x-4">
@@ -29,6 +29,7 @@ const BlogPostTemplate = ({
           </p>
         </header>
         <section
+          className="mark_down p-4  rounded-md"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -39,6 +40,7 @@ const BlogPostTemplate = ({
       </article>
       <nav className="blog-post-nav">
         <ul
+          className="text-main font-bold hover:text-point"
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -50,14 +52,20 @@ const BlogPostTemplate = ({
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                ←{" "}
+                <span className="underline underline-offset-4">
+                  {previous.frontmatter.title}
+                </span>
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                <span className="underline underline-offset-4">
+                  {next.frontmatter.title}
+                </span>{" "}
+                →
               </Link>
             )}
           </li>

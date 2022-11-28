@@ -6,6 +6,8 @@ category: "주저리주저리"
 tag: ["node"]
 ---
 
+### npm install 옵션
+
 ```
 npm install [패키지명]
 ```
@@ -26,7 +28,6 @@ npm install [패키지명]
 
 ```
 npm install --production
-
 ```
 
 기본적으로 node package를 install 하면 dependencies와 devDependencies의 패키지가 모두 설치되지만, 옵션으로 `--production`을 붙여주면 dependencies 항목의 패키지만 설치가 됩니다.

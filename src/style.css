@@ -85,7 +85,7 @@ footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
 
-hr {
+.mark_down hr {
   background: var(--color-accent);
   height: 1px;
   border: 0;
@@ -93,12 +93,12 @@ hr {
 
 /* Heading */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.mark_down h1,
+.mark_down h2,
+.mark_down h3,
+.mark_down h4,
+.mark_down h5,
+.mark_down h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
@@ -106,97 +106,102 @@ h6 {
   letter-spacing: -0.025em;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.mark_down h2,
+.mark_down h3,
+.mark_down h4,
+.mark_down h5,
+.mark_down h6 {
   font-weight: var(--fontWeight-bold);
   color: var(--color-heading);
 }
 
-h1 {
+.mark_down h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
 }
 
-h2 {
+.mark_down h2 {
   font-size: var(--fontSize-5);
 }
 
-h3 {
+.mark_down h3 {
   font-size: var(--fontSize-4);
 }
 
-h4 {
+.mark_down h4 {
   font-size: var(--fontSize-3);
 }
 
-h5 {
+.mark_down h5 {
   font-size: var(--fontSize-2);
 }
 
-h6 {
+.mark_down h6 {
   font-size: var(--fontSize-1);
 }
 
-h1 > a {
+.mark_down h1 > a {
   color: inherit;
   text-decoration: none;
 }
 
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
+.mark_down h2 > a,
+.mark_down h3 > a,
+.mark_down h4 > a,
+.mark_down h5 > a,
+.mark_down h6 > a {
   text-decoration: none;
   color: inherit;
 }
 
 /* Prose */
 
-p {
+.mark_down p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
   padding: var(--spacing-0);
 }
-
-ul,
-ol {
+.mark_down ul {
+  list-style-type: disc;
+}
+.mark_down ol {
+  list-style-type: decimal;
+}
+.mark_down ul,
+.mark_down ol {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
-  margin-bottom: var(--spacing-8);
-  list-style-position: outside;
+  margin-bottom: var(--spacing-4);
+  list-style-position: inside;
   list-style-image: none;
 }
 
-ul li,
-ol li {
+.mark_down ul li,
+.mark_down ol li {
   padding-left: var(--spacing-0);
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
-li > p {
+.mark_down li > p {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
-li *:last-child {
+.mark_down li *:last-child {
   margin-bottom: var(--spacing-0);
 }
 
-li > ul {
+.mark_down li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
 }
 
-blockquote {
+.mark_down blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
+  margin-left: calc(var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
@@ -205,34 +210,34 @@ blockquote {
   margin-bottom: var(--spacing-8);
 }
 
-blockquote > :last-child {
+.mark_down blockquote > :last-child {
   margin-bottom: var(--spacing-0);
 }
 
-blockquote > ul,
-blockquote > ol {
+.mark_down blockquote > ul,
+.mark_down blockquote > ol {
   list-style-position: inside;
 }
 
-table {
+.mark_down table {
   width: 100%;
   margin-bottom: var(--spacing-8);
   border-collapse: collapse;
   border-spacing: 0.25rem;
 }
 
-table thead tr th {
+.mark_down table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
 /* Link */
 
-a {
+.mark_down a {
   color: var(--color-primary);
 }
 
-a:hover,
-a:focus {
+.mark_down a:hover,
+.mark_down a:focus {
   text-decoration: none;
 }
 
@@ -267,16 +272,16 @@ a:focus {
 }
 
 .blog-post header h1 {
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0) !important;
 }
 
 .blog-post header p {
-  font-size: var(--fontSize-2);
-  font-family: var(--font-heading);
+  font-size: var(--fontSize-2) !important;
+  font-family: var(--font-heading) !important;
 }
 
 .blog-post-nav ul {
-  margin: var(--spacing-0);
+  margin: var(--spacing-0) !important;
 }
 
 .gatsby-highlight {
@@ -292,6 +297,6 @@ a:focus {
   }
   ul,
   ol {
-    list-style-position: inside;
+    list-style-position: inside !important;
   }
 }

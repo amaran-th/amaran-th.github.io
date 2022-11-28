@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
             <Link to={post.fields.slug} itemProp="url">
               <li
                 key={post.fields.slug}
-                className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 hover:bg-slate-100"
+                className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100 "
               >
                 <article
                   className=""

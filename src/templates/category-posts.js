@@ -27,7 +27,12 @@ const CategoryPost = ({ data, location, pageContext }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle} categories={categories}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      categories={categories}
+      currentCategory={category}
+    >
       <Seo title={`Posts in ${category}`} /> {/* 페이지 title 수정 */}
       <Bio />
       <h3>{`현재 카테고리 : ${category}`}</h3> {/* 현재 카테고리 표시 */}
@@ -42,7 +47,7 @@ const CategoryPost = ({ data, location, pageContext }) => {
             <Link to={post.fields.slug} itemProp="url">
               <li
                 key={post.fields.slug}
-                className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 hover:bg-slate-100"
+                className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100"
               >
                 <article
                   className=""

@@ -43,6 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
     return
   }
+
   const categoryPosts = path.resolve("./src/templates/category-posts.js")
 
   // 카테고리 데이터를 가져온다.
@@ -124,6 +125,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+      github: String
     }
 
     type MarkdownRemark implements Node {
