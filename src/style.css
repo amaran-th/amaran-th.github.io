@@ -156,7 +156,17 @@ footer {
 }
 
 /* Prose */
-
+.mark_down aside {
+  background-color: var(--color-shadow);
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: 5px;
+}
+.mark_down aside hr {
+  background: var(--color-sub);
+  height: 2px;
+  border: 0;
+  margin: var(--spacing-2) var(--spacing-0);
+}
 .mark_down p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
