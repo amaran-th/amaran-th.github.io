@@ -158,7 +158,7 @@ footer {
 /* Prose */
 .mark_down aside {
   background-color: var(--color-shadow);
-  padding: var(--spacing-4) var(--spacing-8);
+  padding: var(--spacing-4) var(--spacing-8) var(--spacing-1) var(--spacing-8);
   border-radius: 5px;
 }
 .mark_down aside hr {
@@ -171,7 +171,7 @@ footer {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  margin: var(--spacing-4) var(--spacing-0);
   padding: var(--spacing-0);
 }
 .mark_down ul {
@@ -218,7 +218,6 @@ footer {
   border-left: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-2);
   font-style: italic;
-  margin-bottom: var(--spacing-8);
 }
 
 .mark_down blockquote > :last-child {
@@ -232,7 +231,7 @@ footer {
 
 .mark_down table {
   width: 100%;
-  margin-bottom: var(--spacing-8);
+  margin: var(--spacing-4) var(--spacing-0);
   border-collapse: collapse;
   border-spacing: 0.25rem;
 }
