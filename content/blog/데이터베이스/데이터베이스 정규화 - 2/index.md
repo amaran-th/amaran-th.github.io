@@ -4,6 +4,7 @@ date: "2022-12-06T17:18:03.284Z"
 description: "MVD와 4NF, JD와 5NF"
 category: "데이터베이스"
 tag: ["database"]
+thumbnailImg: "./summary.png"
 ---
 
 ### 4NF

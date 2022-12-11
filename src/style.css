@@ -160,12 +160,13 @@ footer {
   background-color: var(--color-shadow);
   padding: var(--spacing-4) var(--spacing-8) var(--spacing-1) var(--spacing-8);
   border-radius: 5px;
+  margin: var(--spacing-4) var(--spacing-0);
 }
 .mark_down aside hr {
   background: var(--color-sub);
   height: 2px;
   border: 0;
-  margin: var(--spacing-2) var(--spacing-0);
+  margin: var(--spacing-0);
 }
 .mark_down p {
   line-height: var(--lineHeight-relaxed);
@@ -185,7 +186,7 @@ footer {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
-  margin-bottom: var(--spacing-4);
+  margin: var(--spacing-4) var(--spacing-0);
   list-style-position: inside;
   list-style-image: none;
 }
