@@ -22,9 +22,9 @@ tag: ["database"]
   - `COMMIT` : 트랜잭션의 변경사항을 적용한다.
   - `ROLLBACK` : 트랜잭션의 변경사항을 취소한다.
 
-\*트랜잭션을 Commit하기 전까지 트랜잭션의 변경사항은 실제 테이블에 적용되지 않는다.
+⭐트랜잭션을 Commit하기 전까지 트랜잭션의 변경사항은 실제 테이블에 적용되지 않는다.
 
-\*이미 Commit된 변경사항은 Rollback할 수 없다.
+⭐이미 Commit된 변경사항은 Rollback할 수 없다.
 
 ```sql
  BEGIN TRANSACTION

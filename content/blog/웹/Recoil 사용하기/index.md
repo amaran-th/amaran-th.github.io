@@ -28,7 +28,7 @@ npm install recoil
 2. &lt;RecoilRoot&gt; 태그
    가장 상위 컴포넌트인 App.jsx에 다음과 같이 &lt;RecoilRoot&gt; 태그로 컴포넌트를 둘러싸줍니다.
 
-\*CharacterCounter 컴포넌트는 이 다음 문단에서 만들 컴포넌트입니다.
+⭐CharacterCounter 컴포넌트는 이 다음 문단에서 만들 컴포넌트입니다.
 
 ```javascript
 //App.jsx

@@ -22,38 +22,45 @@ tag: ["Unity"]
 
 ### List(리스트)
 
-\*배열과의 차이
+⭐배열과의 차이
 
-1. 크기를 미리 정해줄 필요가 없다. = 크기가 동적이다.
-2. 특정 원소를 제거하면 해당 원소의 뒤의 원소들의 index가 한 칸씩 당겨진다.
+> 1. 크기를 미리 정해줄 필요가 없다. = 크기가 동적이다.
+> 2. 특정 원소를 제거하면 해당 원소의 뒤의 원소들의 index가 한 칸씩 당겨진다.
 
 - 선언 : **List<_type_> _varName_ = new List<_type_>();**
   ```csharp
   List<int> num = new List<int>();
   ```
 - 원소 추가 : **Add(_value_)**
+
   ```csharp
   num.Add(2);
   ```
-  +) 특정 위치에 원소 추가 : **Insert(_index_, _value_)**
-  ```csharp
-  ...
-  dogs.Add("spaniel");
-  dogs.Add("beagle");
-  dogs.Insert(1,"dalmatian");
-  ```
-  +) 특정 위치에 배열 추가 : **InsertRang(_index_, _array_)**
-  ```csharp
-  ...
-  dogs.Add("spaniel");
-  dogs.Add("beagle");
-  String[] dogs2=new String[3];
-  dogs2[0]="chiwawa";
-  dogs2[1]="poodle";
-  dogs2[2]="pomeranian";
-  dogs.Insert(1,dogs2);
-  ```
-  +) 리스트 마지막에 배열 추가 : **AddRange(_array_);**
+
+  - 특정 위치에 원소 추가 : **Insert(_index_, _value_)**
+
+    ```csharp
+    ...
+    dogs.Add("spaniel");
+    dogs.Add("beagle");
+    dogs.Insert(1,"dalmatian");
+    ```
+
+  - 특정 위치에 배열 추가 : **InsertRang(_index_, _array_)**
+
+    ```csharp
+    ...
+    dogs.Add("spaniel");
+    dogs.Add("beagle");
+    String[] dogs2=new String[3];
+    dogs2[0]="chiwawa";
+    dogs2[1]="poodle";
+    dogs2[2]="pomeranian";
+    dogs.Insert(1,dogs2);
+    ```
+
+  - 리스트 마지막에 배열 추가 : **AddRange(_array_);**
+
 - 원소 탐색
   - **Contains(_value_)**
     : list 안에 해당 요소가 있는지 없는지 여부를 true/false로 반환한다.
@@ -91,7 +98,7 @@ tag: ["Unity"]
 
 : 키(key)와 값(value)의 쌍을 원소로 갖는 배열
 
-\*파이썬의 dictionary와 동일한 개념이다.
+⭐파이썬의 dictionary와 동일한 개념이다.
 
 - 선언
   ```csharp
@@ -107,26 +114,26 @@ tag: ["Unity"]
   int val=dict["cat"]
   ```
 
-  +) **TryGetValue(_key_, out _변수_)**
-  특정 키가 존재할 경우 해당 *key*에 대응되는 값을 찾아 *변수*에 저장한다.
+  - **TryGetValue(_key_, out _변수_)**
+    특정 키가 존재할 경우 해당 *key*에 대응되는 값을 찾아 *변수*에 저장한다.
 
-  ```csharp
-  int val1;
-  if(dict.TryGetValue("cat", out val1)){
-  ...
+    ```csharp
+    int val1;
+    if(dict.TryGetValue("cat", out val1)){
+    ...
 
-  //아래와 같이 변수의 선언과 동시에 값을 받아올 수도 있다.
-  if(dict.TryGetValue("cat", out int val2)){
-   ...
-  ```
+    //아래와 같이 변수의 선언과 동시에 값을 받아올 수도 있다.
+    if(dict.TryGetValue("cat", out int val2)){
+    ...
+    ```
 
-  +) foreach문으로 pair 를 추출 후 조회하는 방법
+  - foreach문으로 pair 를 추출 후 조회하는 방법
 
-  ```csharp
-  foreach(var pair in dict){
-  	sum+=**pair.Value**;
-  }
-  ```
+    ```csharp
+    foreach(var pair in dict){
+        sum+=**pair.Value**;
+    }
+    ```
 
 - 키 포함 여부 : **ContainsKey(key)**
   딕셔너리에 존재하는 키인지 여부를 반환한다.

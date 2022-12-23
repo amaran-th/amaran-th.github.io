@@ -188,8 +188,6 @@ footer {
 }
 .mark_down ul,
 .mark_down ol {
-  margin-left: var(--spacing-0);
-  margin-right: var(--spacing-0);
   padding: var(--spacing-0);
   margin: var(--spacing-4) var(--spacing-0);
   list-style-position: inside;
@@ -237,9 +235,7 @@ footer {
   margin-left: calc(var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
-  font-style: italic;
+  border-left: var(--spacing-1) solid var(--color-sub);
 }
 
 .mark_down blockquote > :last-child {
