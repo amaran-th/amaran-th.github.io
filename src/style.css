@@ -168,6 +168,11 @@ footer {
   border: 0;
   margin: var(--spacing-0);
 }
+.mark_down nav {
+  color: gray;
+  background-color: whitesmoke;
+  padding: 1em 1.5em;
+}
 .mark_down p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
@@ -209,6 +214,22 @@ footer {
 .mark_down li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
+  list-style-type: circle;
+}
+.mark_down li > ul > li > ul {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
+  list-style-type: square;
+}
+.mark_down li > ol {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
+  list-style-type: lower-alpha;
+}
+.mark_down li > ol > li > ol {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
+  list-style-type: lower-roman;
 }
 
 .mark_down blockquote {
