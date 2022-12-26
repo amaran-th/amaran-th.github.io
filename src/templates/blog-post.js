@@ -13,14 +13,22 @@ const BlogPostTemplate = ({
   const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
   return (
-    <Layout location={location} title={siteTitle} categories={categories}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      categories={categories}
+      isPost={true}
+    >
       <article
         className="blog-post space-y-8"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className="text-main text-5xl font-bold" itemProp="headline">
+          <h1
+            className="text-main text-5xl font-bold font-title"
+            itemProp="headline"
+          >
             {post.frontmatter.title}
           </h1>
           <p className="space-x-4">
@@ -34,9 +42,7 @@ const BlogPostTemplate = ({
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
+        <br />
       </article>
       <nav className="blog-post-nav">
         <ul

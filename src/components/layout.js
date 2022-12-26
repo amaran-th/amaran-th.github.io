@@ -5,8 +5,16 @@ import {
   ChevronDoubleRightIcon,
 } from "@heroicons/react/24/solid"
 import CategoryList from "./side"
+import Bio from "./bio"
 
-const Layout = ({ location, title, categories, children, currentCategory }) => {
+const Layout = ({
+  location,
+  title,
+  categories,
+  children,
+  currentCategory,
+  isPost = false,
+}) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const theme = "amaranth"
@@ -17,19 +25,19 @@ const Layout = ({ location, title, categories, children, currentCategory }) => {
 
   if (isRootPath) {
     header = (
-      <p className="font-bold font-cardHand sm:text-7xl text-4xl">
+      <p className="font-bold font-logo sm:text-5xl text-4xl">
         <Link to="/">{title}</Link>
       </p>
     )
   } else {
     header = (
-      <Link className="header-link-home font-cardHand" to="/">
+      <Link className="header-link-home font-logo" to="/">
         {title}
       </Link>
     )
   }
   category = (
-    <nav className="h-[70vh] bg-white border-y border-r p-4 shadow-md rounded-r-xl sticky top-32 mt-4">
+    <nav className="min-h-[75vh] bg-white border-y border-r p-4 shadow-md rounded-r-xl sticky top-28">
       <ul className="space-y-2 py-4">
         {categories?.map(category => (
           <li key={category.fieldValue}>
@@ -55,9 +63,9 @@ const Layout = ({ location, title, categories, children, currentCategory }) => {
   )
   return (
     <div className={theme + "-theme " + (darkMode ? "dark" : "light") + " "}>
-      <header className="flex bg-white sticky -top-4 pt-9 shadow-md p-5 z-[99] mb-4 sm:mb-12">
+      <header className="flex bg-white sticky -top-4 pt-9 shadow-md p-5 z-[99]">
         <button
-          className=" mr-4 px-2 bg-white z-[100] md:hidden"
+          className=" mr-4 px-2 bg-white z-[100] lg:hidden"
           onClick={() => setOpenCategory(!openCategory)}
         >
           <ChevronDoubleRightIcon
@@ -69,22 +77,29 @@ const Layout = ({ location, title, categories, children, currentCategory }) => {
         </button>
         {header}
       </header>
-      <div className="flex max-w-6xl justify-between">
+      <body className="relative ">
         <nav
           className={
-            "fixed min-w-[12rem] left-0 z-[99] md:static md:block transition ease-in-out " +
-            (openCategory ? "" : "md:translate-x-0 -translate-x-[12rem]")
+            "absolute border min-w-[12rem] left-0 z-[98] mt-4 lg:fixed lg:block transition ease-in-out " +
+            (openCategory ? "" : "lg:translate-x-0 -translate-x-[12rem]")
           }
         >
           {category}
         </nav>
-        <div
-          className=" w-full max-w-3xl px-5 py-4"
-          data-is-root-path={isRootPath}
-        >
-          <main>{children}</main>
+        <div className="bg-shadow flex justify-center">
+          {!isPost ? <Bio /> : ""}
         </div>
-      </div>
+        <div className="static flex max-w-6xl justify-between">
+          <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
+          <div
+            className="w-full max-w-3xl px-5 mt-12"
+            data-is-root-path={isRootPath}
+          >
+            {children}
+          </div>
+        </div>
+      </body>
+
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}

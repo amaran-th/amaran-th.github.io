@@ -21,58 +21,63 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle} categories={categories}>
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          console.log(post)
-          const thumbnailImg =
-            post.frontmatter.thumbnailImg?.childImageSharp.fluid
+    <>
+      <Layout location={location} title={siteTitle} categories={categories}>
+        <ol style={{ listStyle: `none` }}>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+            console.log(post)
+            const thumbnailImg =
+              post.frontmatter.thumbnailImg?.childImageSharp.fluid
 
-          return (
-            <Link to={post.fields.slug} itemProp="url">
-              <li
-                key={post.fields.slug}
-                className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100 "
-              >
-                <article
-                  className=""
-                  itemScope
-                  itemType="http://schema.org/Article"
+            return (
+              <Link to={post.fields.slug} itemProp="url">
+                <li
+                  key={post.fields.slug}
+                  className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100 "
                 >
-                  <header className="mb-4">
-                    <h2 className="mt-2 text-main text-3xl">
-                      <span itemProp="headline">{title}</span>
-                    </h2>
-                    <small className="text-sub">{post.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      className="mb-0"
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-                {thumbnailImg ? (
-                  <div className="min-w-[5rem] max-w-[20rem] w-[150px] h-[150px]">
-                    <GatsbyImage
-                      fluid={thumbnailImg}
-                      className="rounded-xl h-full w-full"
-                    />
-                  </div>
-                ) : (
-                  ""
-                )}
-              </li>
-            </Link>
-          )
-        })}
-      </ol>
-    </Layout>
+                  <article
+                    className=""
+                    itemScope
+                    itemType="http://schema.org/Article"
+                  >
+                    <header className="mb-4">
+                      <h2 className="mt-2 text-main text-3xl">
+                        <span itemProp="headline" className="font-title">
+                          {title}
+                        </span>
+                      </h2>
+                      <small className="text-sub">
+                        {post.frontmatter.date}
+                      </small>
+                    </header>
+                    <section>
+                      <p
+                        className="mb-0"
+                        dangerouslySetInnerHTML={{
+                          __html: post.frontmatter.description || post.excerpt,
+                        }}
+                        itemProp="description"
+                      />
+                    </section>
+                  </article>
+                  {thumbnailImg ? (
+                    <div className="min-w-[5rem] max-w-[20rem] w-[150px] h-[150px]">
+                      <GatsbyImage
+                        fluid={thumbnailImg}
+                        className="rounded-xl h-full w-full"
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </li>
+              </Link>
+            )
+          })}
+        </ol>
+      </Layout>
+    </>
   )
 }
 

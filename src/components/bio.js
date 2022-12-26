@@ -31,9 +31,9 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio bg-shadow p-2 py-4 rounded-md">
+    <div className="bio p-4 ">
       <StaticImage
-        className="bio-avatar"
+        className="bio-avatar ring-4 ring-sub bg-white"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
@@ -43,21 +43,54 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          <strong className="text-point">{author.name}</strong>{" "}
-          {author?.summary || null}
-          <br />
-          <a
-            className="hover:text-sub"
-            href={`https://github.com/${social?.github || ``}`}
-          >
-            제 Github에 오시면 더 많은 활동을 보실 수 있습니다.
-          </a>
-          <ul>
-            <li>이력서 : 국문 / 영문</li>
-            <li>포트폴리오 : 국문 / 영문</li>
-          </ul>
-        </p>
+        <div className="">
+          <p className="font-title text-point text-xl">{author.name}</p>
+          <p className="text-lg font-bold">{author?.summary || null}</p>
+          <div className="p-2">
+            제{" "}
+            <a
+              className="hover:text-point hover:font-bold"
+              href={`https://github.com/${social?.github || ``}`}
+            >
+              Github
+            </a>
+            에 오시면 더 많은 활동을 보실 수 있습니다.
+            <ul>
+              <li>
+                📑이력서 :{" "}
+                <a
+                  className="hover:text-point hover:font-bold"
+                  href={`https://github.com/${social?.github || ``}`}
+                >
+                  국문
+                </a>{" "}
+                /{" "}
+                <a
+                  className="hover:text-point hover:font-bold"
+                  href={`https://github.com/${social?.github || ``}`}
+                >
+                  영문
+                </a>
+              </li>
+              <li>
+                📁포트폴리오 :{" "}
+                <a
+                  className="hover:text-point hover:font-bold"
+                  href={`https://github.com/${social?.github || ``}`}
+                >
+                  국문
+                </a>{" "}
+                /{" "}
+                <a
+                  className="hover:text-point hover:font-bold"
+                  href={`https://github.com/${social?.github || ``}`}
+                >
+                  영문
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       )}
     </div>
   )

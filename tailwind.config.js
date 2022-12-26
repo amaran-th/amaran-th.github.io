@@ -4,13 +4,9 @@ module.exports = {
   purge: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      basic: ["GowunDodum-Regular"],
-      title: ["Cafe24Ohsquareair"],
-      cute: ["TTCrownMychewR"],
-      cardBasic: ["MaruBuri-Regular"],
-      cardCute: ["KOTRAHOPE"],
-      cardCool: ["YeolrinMyeongjo-Medium"],
-      cardHand: ["InkLipquid"],
+      title: ["MaplestoryOTFBold"],
+      content: ["GowunBatang-Regular"],
+      logo: ["PyeongChangPeace-Bold"],
     },
     extend: {
       colors: {

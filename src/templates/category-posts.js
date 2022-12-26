@@ -33,9 +33,13 @@ const CategoryPost = ({ data, location, pageContext }) => {
       categories={categories}
       currentCategory={category}
     >
-      <Seo title={`Posts in ${category}`} /> {/* 페이지 title 수정 */}
-      <Bio />
-      <h3>{`현재 카테고리 : ${category}`}</h3> {/* 현재 카테고리 표시 */}
+      <Seo title={`카테고리 [${category}]의 게시글 목록`} />{" "}
+      {/* 페이지 title 수정 */}
+      <span className="text-main text-xl font-bold ">
+        {category}({posts.length})
+      </span>
+      <hr className="my-2" />
+      {/* 현재 카테고리 표시 */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -55,7 +59,7 @@ const CategoryPost = ({ data, location, pageContext }) => {
                   itemType="http://schema.org/Article"
                 >
                   <header className="mb-4">
-                    <h2 className="mt-2 text-main text-3xl">
+                    <h2 className="mt-2 text-main text-3xl font-title">
                       <span itemProp="headline">{title}</span>
                     </h2>
                     <small className="text-sub">{post.frontmatter.date}</small>

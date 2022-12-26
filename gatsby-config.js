@@ -11,8 +11,8 @@ module.exports = {
   siteMetadata: {
     title: `Faded Angels`,
     author: {
-      name: `Amaranth`,
-      summary: `웹 개발과 게임 개발이 주요 관심사인 개발자 지망생`,
+      name: `Amaranth(아마란스)`,
+      summary: `풀스택 웹 개발자를 목표로 기반을 다지고 있는 개발자 지망생`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,

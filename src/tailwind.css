@@ -2,54 +2,30 @@
 @tailwind components;
 
 @font-face {
-  /*카페24 아네모네 에어*/
-  font-family: "Cafe24Ohsquareair";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+  /*메이플스토리*/
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
     format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*고운바탕Regular*/
+  font-family: "GowunBatang-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*평창체*/
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
-@font-face {
-  /*마루 부리*/
-  font-family: "MaruBuri-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  /*고운돋움Regular*/
-  font-family: "GowunDodum-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  /*마이쮸체*/
-  font-family: "TTCrownMychewR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  /*코트라 희망체*/
-  font-family: "KOTRAHOPE";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  /*열린명조*/
-  font-family: "YeolrinMyeongjo-Medium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/YeolrinMyeongjo-Medium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 @font-face {
   /*잉크립퀴드*/
   font-family: "InkLipquid";
@@ -77,7 +53,7 @@
   --color-main: #b8578f;
   --color-point: #992f6d;
   --color-sub: #e7a6bc;
-  --color-shadow: #efe7ea;
+  --color-shadow: #fff6f9;
 }
 .hydrangea-theme {
   --color-main: #567eb9;

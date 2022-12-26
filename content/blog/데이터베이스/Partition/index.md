@@ -12,7 +12,7 @@ tag: ["database"]
 
 ⇒테이블이 커짐에 따라 발생하는 성능 저하를 해결하기 위함
 
-\*테이블이 파티션되면 index도 분리된다.
+⭐테이블이 파티션되면 index도 분리된다.
 
 - terminal에서 partition 사용해보기
 
@@ -41,7 +41,7 @@ tag: ["database"]
     alter table member drop partition p2;
     ```
 
-    \*partition을 삭제하게 되면 해당 partition의 record들이 함께 삭제된다.
+    ⭐partition을 삭제하게 되면 해당 partition의 record들이 함께 삭제된다.
 
   - partition 추가
 
