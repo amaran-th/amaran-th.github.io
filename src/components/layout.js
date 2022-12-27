@@ -80,7 +80,7 @@ const Layout = ({
       <body className="relative ">
         <nav
           className={
-            "absolute border min-w-[12rem] left-0 z-[98] mt-4 lg:fixed lg:block transition ease-in-out " +
+            "fixed min-w-[12rem] left-0 z-[98] mt-4 transition ease-in-out " +
             (openCategory ? "" : "lg:translate-x-0 -translate-x-[12rem]")
           }
         >
