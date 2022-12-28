@@ -6,51 +6,43 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GatsbyImage from "gatsby-image"
 import "../tailwind.css"
+var kebabCase = require("lodash.kebabcase")
 
-const CategoryPost = ({ data, location, pageContext }) => {
+const Tags = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   const categories = data.categoryList.group
-  const { category } = pageContext
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
+  const tags = data.tagList.group
+  const { tag } = pageContext
   return (
-    <Layout
-      location={location}
-      title={siteTitle}
-      categories={categories}
-      currentCategory={category}
-    >
-      <Seo title={`카테고리 [${category}]의 게시글 목록`} />{" "}
-      {/* 페이지 title 수정 */}
+    <Layout location={location} title={siteTitle} categories={categories}>
+      <Seo title={`태그 [${tag}]의 게시글 목록`} />
+      <div className="border bg-gray-50 p-2 mb-4">
+        <h1>Tags</h1>
+        <ul className="flex flex-wrap">
+          {tags.map(tag => (
+            <Link
+              to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              className="rounded-full border shadow-sm px-4 m-1 bg-white hover:bg-slate-100"
+            >
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          ))}
+        </ul>
+      </div>
       <span className="text-main text-xl font-bold ">
-        {category}({posts.length})
+        {tag}({posts.length})
       </span>
       <hr className="my-2" />
-      {/* 현재 카테고리 표시 */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
+          const title = post?.frontmatter?.title || post?.fields?.slug
           const thumbnailImg =
-            post.frontmatter.thumbnailImg?.childImageSharp.fluid
-
+            post?.frontmatter.thumbnailImg?.childImageSharp.fluid
           return (
-            <Link to={post.fields.slug} itemProp="url">
+            <Link to={post?.fields.slug} itemProp="url">
               <li
-                key={post.fields.slug}
+                key={post?.fields.slug}
                 className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100"
               >
                 <article
@@ -62,13 +54,13 @@ const CategoryPost = ({ data, location, pageContext }) => {
                     <h2 className="mt-2 text-main text-3xl font-title">
                       <span itemProp="headline">{title}</span>
                     </h2>
-                    <small className="text-sub">{post.frontmatter.date}</small>
+                    <small className="text-sub">{post?.frontmatter.date}</small>
                   </header>
                   <section>
                     <p
                       className="mb-0"
                       dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
+                        __html: post?.frontmatter.description || post?.excerpt,
                       }}
                       itemProp="description"
                     />
@@ -93,17 +85,10 @@ const CategoryPost = ({ data, location, pageContext }) => {
   )
 }
 
-export default CategoryPost
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Faded Angels" />
+export default Tags
 
 export const pageQuery = graphql`
-  query ($category: String!) {
+  query ($tag: String) {
     site {
       siteMetadata {
         title
@@ -115,9 +100,15 @@ export const pageQuery = graphql`
         totalCount
       }
     }
+    tagList: allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+    }
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { category: { eq: $category } } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       group(field: frontmatter___category) {
         fieldValue
@@ -140,6 +131,7 @@ export const pageQuery = graphql`
             }
           }
           category
+          tags
         }
       }
     }

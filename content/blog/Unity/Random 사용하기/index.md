@@ -3,7 +3,10 @@ title: Random 사용하기
 date: "2022-12-11T20:16:03.284Z"
 description: "내장 클래스 Random Class를 사용해보자"
 category: "Unity"
-tag: ["Unity"]
+tags:
+  - Unity
+  - C#
+  - Random
 ---
 
 ### Random Class

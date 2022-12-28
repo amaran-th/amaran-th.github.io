@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 const CategoryList = ({ categories }) => {
   // Set these values by editing "siteMetadata" in gatsby-config.js

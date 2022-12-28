@@ -3,7 +3,9 @@ title: List&Dictionary 사용법
 date: "2022-12-24T00:08:03.284Z"
 description: "C#의 리스트와 딕셔너리를 사용해보자."
 category: "Unity"
-tag: ["Unity"]
+tags:
+  - Unity
+  - C#
 ---
 
 <nav>

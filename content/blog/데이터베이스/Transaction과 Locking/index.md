@@ -3,7 +3,8 @@ title: Transaction과 Locking
 date: "2022-12-11T13:57:03.284Z"
 description: "MySQL 트랜잭션과 Locking"
 category: "데이터베이스"
-tag: ["database"]
+tags:
+  - database
 ---
 
 ### Transaction(트랜잭션)

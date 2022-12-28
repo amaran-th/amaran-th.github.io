@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
-
+const kebabCase = require(`lodash.kebabcase`)
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -27,6 +27,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      tagList: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
+      }
       categoryList: allMarkdownRemark {
         group(field: frontmatter___category) {
           fieldValue
@@ -43,12 +49,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
     return
   }
-
+  const tagPosts = path.resolve("./src/templates/tag-posts.js")
   const categoryPosts = path.resolve("./src/templates/category-posts.js")
 
   // 카테고리 데이터를 가져온다.
+  const tags = result.data.tagList.group
   const categories = result.data.categoryList.group
-
+  //태그 목록을 가져온다.
   // 카테고리 마다 하나의 페이지를 만든다.
   categories.forEach(category => {
     createPage({
@@ -56,6 +63,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `/${category.fieldValue}/`,
       component: categoryPosts,
       context: { category: category.fieldValue },
+    })
+  })
+  tags.forEach(tag => {
+    createPage({
+      // 생성할 페이지들의 slug는 카테고리 이름을 kebab base로 변환한 것이다.
+      path: `/tags/` + kebabCase(tag.fieldValue) + `/`,
+      component: tagPosts,
+      context: { tag: tag.fieldValue },
     })
   })
   const posts = result.data.allMarkdownRemark.nodes
@@ -139,6 +154,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       image : String
       category : String
+      tags : [String!]
     }
 
     type Fields {

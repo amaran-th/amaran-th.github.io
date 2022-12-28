@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import {
   ChevronRightIcon,
@@ -42,7 +42,7 @@ const Layout = ({
         {categories?.map(category => (
           <li key={category.fieldValue}>
             <Link to={`/${category.fieldValue}/`}>
-              {category.fieldValue == currentCategory ? (
+              {category.fieldValue === currentCategory ? (
                 <>
                   <ChevronRightIcon className="h-6 w-6 inline-block" />
 

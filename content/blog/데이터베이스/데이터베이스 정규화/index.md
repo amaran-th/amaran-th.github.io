@@ -3,7 +3,10 @@ title: 데이터베이스 정규화 - 1
 date: "2022-11-29T13:01:03.284Z"
 description: "함수 종속성과 데이터베이스 정규화"
 category: "데이터베이스"
-tag: ["database"]
+tags:
+  - database
+  - 정규화
+  - 데이터베이스 성능
 ---
 
 ### 용어 설명

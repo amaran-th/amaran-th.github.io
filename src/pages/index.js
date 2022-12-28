@@ -47,9 +47,12 @@ const BlogIndex = ({ data, location }) => {
                           {title}
                         </span>
                       </h2>
-                      <small className="text-sub">
+                      <span className="text-sub text-sm">
                         {post.frontmatter.date}
-                      </small>
+                        <span className="font-bold mx-2 text-gray-400 text-sm">
+                          {post.frontmatter.category}
+                        </span>
+                      </span>
                     </header>
                     <section>
                       <p
@@ -119,6 +122,7 @@ export const pageQuery = graphql`
             }
           }
           category
+          tags
         }
       }
     }

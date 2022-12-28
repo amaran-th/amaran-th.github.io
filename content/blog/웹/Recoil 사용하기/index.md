@@ -3,7 +3,10 @@ title: Recoil 사용하기
 date: "2022-11-30T13:01:03.284Z"
 description: "Recoil 기본 및 로컬 스토리지 사용하기"
 category: "웹"
-tag: ["recoil", "front-end", "상태관리 라이브러리"]
+tags:
+  - recoil
+  - frontend
+  - 상태관리 라이브러리
 ---
 
 ### React 프로젝트 생성하기

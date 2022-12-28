@@ -3,7 +3,9 @@ title: ScrollView를 사용하여 리스트 구현하기
 date: "2022-12-27T14:55:03.284Z"
 description: "ScrollView를 사용해보자"
 category: "Unity"
-tag: ["Unity"]
+tags:
+  - Unity
+  - UI
 ---
 
 ### 1. ScrollView UI 생성 및 설정

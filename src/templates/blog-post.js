@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import kebabCase from "lodash.kebabcase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -41,6 +42,22 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+
+        <div className="tags">
+          <ul>
+            {post.frontmatter.tags
+              ? post.frontmatter.tags.map(tag => (
+                  <Link
+                    key={kebabCase(tag)}
+                    to={`/tags/${kebabCase(tag)}`}
+                    className="rounded-full border shadow-sm px-4 m-1 bg-white hover:bg-slate-100"
+                  >
+                    {kebabCase(tag)}
+                  </Link>
+                ))
+              : null}
+          </ul>
+        </div>
         <hr />
         <br />
       </article>
@@ -122,6 +139,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
           thumbnailImg {
             childImageSharp {
               fluid(maxWidth: 800) {
@@ -140,6 +158,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY년 MM월 DD일")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
