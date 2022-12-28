@@ -62,7 +62,12 @@ const CategoryPost = ({ data, location, pageContext }) => {
                     <h2 className="mt-2 text-main text-3xl font-title">
                       <span itemProp="headline">{title}</span>
                     </h2>
-                    <small className="text-sub">{post.frontmatter.date}</small>
+                    <span className="text-sub text-sm">
+                      {post.frontmatter.date}
+                      <span className="font-bold mx-2 text-gray-400 text-sm">
+                        {post.frontmatter.category}
+                      </span>
+                    </span>{" "}
                   </header>
                   <section>
                     <p
