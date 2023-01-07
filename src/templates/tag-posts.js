@@ -17,8 +17,8 @@ const Tags = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={siteTitle} categories={categories}>
       <Seo title={`태그 [${tag}]의 게시글 목록`} />
+      <h1>Tags</h1>
       <div className="border bg-gray-50 p-2 mb-4">
-        <h1>Tags</h1>
         <ul className="flex flex-wrap">
           {tags.map(tag => (
             <Link
