@@ -26,6 +26,14 @@ module.exports = {
     `gatsby-plugin-image`,
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://amaran-th.github.io/",
+        sitemap: "https://amaran-th.github.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
