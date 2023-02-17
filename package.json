@@ -17,6 +17,7 @@
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-plugin-sitemap": "^6.6.0",
     "gatsby-remark-images": "^7.0.0",
     "gatsby-remark-prismjs": "^7.2.0",
     "gatsby-remark-responsive-iframe": "^6.0.0",
