@@ -15,7 +15,7 @@ module.exports = {
       summary: `풀스택 웹 개발자를 목표로 기반을 다지고 있는 개발자 지망생`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://amaran-th.github.io/`,
+    siteUrl: `https://amaran-th.github.io`,
     social: {
       twitter: `kylemathews`,
       github: `amaran-th`,
@@ -30,7 +30,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://amaran-th.github.io/",
-        sitemap: "https://amaran-th.github.io/sitemap-index.xml",
+        sitemap: "https://amaran-th.github.io/sitemap-0.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
