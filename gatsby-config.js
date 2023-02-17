@@ -15,7 +15,7 @@ module.exports = {
       summary: `풀스택 웹 개발자를 목표로 기반을 다지고 있는 개발자 지망생`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://amaran-th.github.io/`,
     social: {
       twitter: `kylemathews`,
       github: `amaran-th`,
@@ -24,12 +24,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://amaran-th.github.io/",
-        sitemap: "https://amaran-th.github.io/sitemap.xml",
+        sitemap: "https://amaran-th.github.io/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
