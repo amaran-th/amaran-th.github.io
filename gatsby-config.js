@@ -26,11 +26,13 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        output: `/sitemap.xml`,
+        siteUrl: `https://amaran-th.github.io`,
+        stripQueryString: true,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
