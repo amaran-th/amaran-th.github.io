@@ -7,6 +7,7 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const siteUrl = `https://amaran-th.github.io`
 module.exports = {
   siteMetadata: {
     title: `Faded Angels`,
