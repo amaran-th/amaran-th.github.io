@@ -17,6 +17,7 @@
     "gatsby-plugin-feed": "^5.0.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-sitemap": "^6.6.0",
@@ -49,7 +50,7 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp google80d250e3568ced59.html public/",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
