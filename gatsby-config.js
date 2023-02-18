@@ -24,13 +24,63 @@ module.exports = {
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-netlify`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/**/404", "/**/404.html"],
+        query: `
+            {
+              site {
+                siteMetadata {
+                  siteUrl
+                }
+              }
+              allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
+                edges {
+                  node {
+                    context {
+                      i18n {
+                        defaultLanguage
+                        languages
+                        originalPath
+                      }
+                    }
+                    path
+                  }
+                }
+              }
+            }
+          `,
+        resolveSiteUrl: () => siteUrl,
+        serialize: ({ site, allSitePage }) => {
+          return allSitePage.edges.map(edge => {
+            const { languages, originalPath, defaultLanguage } =
+              edge.node.context.i18n
+            const { siteUrl } = site.siteMetadata
+            const url = siteUrl + originalPath
+            const links = [
+              { lang: defaultLanguage, url },
+              { lang: "x-default", url },
+            ]
+            languages.forEach(lang => {
+              if (lang === defaultLanguage) return
+              links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` })
+            })
+            return {
+              url,
+              changefreq: "daily",
+              priority: originalPath === "/" ? 1.0 : 0.7,
+              links,
+            }
+          })
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://amaran-th.github.io/",
-        sitemap: "https://amaran-th.github.io/sitemap-0.xml",
+        sitemap: "https://amaran-th.github.io/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
