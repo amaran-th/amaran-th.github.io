@@ -19,7 +19,11 @@ module.exports = {
     siteUrl: `https://amaran-th.github.io`,
     social: {
       twitter: `kylemathews`,
-      github: `amaran-th`,
+      github: `https://github.com/amaran-th`,
+      portfolioK: `https://chip-force-ed0.notion.site/b50243b25c044af886d904fd8435410b`,
+      portfolioE: ``,
+      CVK: `https://chip-force-ed0.notion.site/Amaranth-bac9cc6bd28b4dfcb0614aa5d9f2f59b`,
+      CVE: ``,
     },
   },
   plugins: [
