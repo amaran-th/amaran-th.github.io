@@ -39,5 +39,7 @@ README.md 문서는 추후 수정할 예정이다.
 <br/>
 <br/>
 
-- 참고 게시글
-  - [깃허브 템플릿 저장소 만들기](https://chinsun9.github.io/2021/07/17/github-template-repo/)
+<nav> 참고 게시글
+
+- [깃허브 템플릿 저장소 만들기](https://chinsun9.github.io/2021/07/17/github-template-repo/)
+</nav>

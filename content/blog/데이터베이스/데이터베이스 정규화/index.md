@@ -226,8 +226,10 @@ sjp에서 candidate key는 `{ {s, j}, {j, p} }`이다.
 
 위와 같이 중복되는 후보키를 갖더라도 BCNF를 충족할 수 있다.
 
-- 참고 게시글
+<nav> 참고 게시글
 
-[[관계형 데이터베이스] - 데이터베이스 정규화 (Database Normalization)](https://untitledtblog.tistory.com/128)
+- [[관계형 데이터베이스] - 데이터베이스 정규화 (Database Normalization)](https://untitledtblog.tistory.com/128)
 
-[데이터베이스 정규화 이론 3. 2NF, 3NF, BCNF](https://www.korecmblog.com/database-normalization-3-2nf-3nf-bcnf/)
+- [데이터베이스 정규화 이론 3. 2NF, 3NF, BCNF](https://www.korecmblog.com/database-normalization-3-2nf-3nf-bcnf/)
+
+</nav>

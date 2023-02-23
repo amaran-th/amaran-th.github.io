@@ -69,12 +69,14 @@ private void Init(){
 
 Content의 **_Rect Transform_** 컴포넌트의 pivot pos Y를 1로 바꿔준다.(가로 스크롤을 사용하는 경우 pivot pos X를 바꿔주면 된다.
 
-- 참고 게시글
+<nav> 참고 게시글
 
-[[Unity] ScrollView를 사용하여 List 만들기](https://kumgo1d.tistory.com/14)
+- [[Unity] ScrollView를 사용하여 List 만들기](https://kumgo1d.tistory.com/14)
 
-[[Unity3D] UGUI 스크롤뷰 리스트 아이템 동적 생성](https://www.youtube.com/watch?v=TnGqmHEoaFE)
+- [[Unity3D] UGUI 스크롤뷰 리스트 아이템 동적 생성](https://www.youtube.com/watch?v=TnGqmHEoaFE)
 
-[[Unity]유니티 스크롤 리스트 뷰 만들기](https://textbox.tistory.com/entry/Unity%EC%9C%A0%EB%8B%88%ED%8B%B0-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EB%B7%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+- [[Unity]유니티 스크롤 리스트 뷰 만들기](https://textbox.tistory.com/entry/Unity%EC%9C%A0%EB%8B%88%ED%8B%B0-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EB%B7%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
-[[Unity] 유니티 스크롤뷰 > 뷰포트 > 콘텐트 에서 콘텐트의 스크롤 렉트의 시작 위치가 중앙으로 잡히는 버그 (scroll rect starting in the mddle)](https://ssscool.tistory.com/428)
+- [[Unity] 유니티 스크롤뷰 > 뷰포트 > 콘텐트 에서 콘텐트의 스크롤 렉트의 시작 위치가 중앙으로 잡히는 버그 (scroll rect starting in the mddle)](https://ssscool.tistory.com/428)
+
+</nav>

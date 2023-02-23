@@ -37,6 +37,8 @@ npm install --production
 
 이렇게 패키지를 구분해서 설치해주면 배포 시에 배포에 불필요한 라이브러리를 제외함으로써 빌드 시간을 효율적으로 줄일 수 있습니다.
 
-- 참고 게시글
+<nav> 참고 게시글
 
-[[Node] npm install, --save, --save-dev 차이](https://jae04099.tistory.com/entry/Node-npm-install-save-save-dev-%EC%B0%A8%EC%9D%B4)
+- [[Node] npm install, --save, --save-dev 차이](https://jae04099.tistory.com/entry/Node-npm-install-save-save-dev-%EC%B0%A8%EC%9D%B4)
+
+</nav>

@@ -155,8 +155,10 @@ const textState = atom({
 
 ![local storage에 저장된 결과](./recoil.png)
 
-- 참고 게시글
+<nav> 참고 게시글
 
-[Recoil 시작하기](https://recoiljs.org/ko/docs/introduction/getting-started/)
+- [Recoil 시작하기](https://recoiljs.org/ko/docs/introduction/getting-started/)
 
-[Recoil-persist로 state를 localstorage로 저장하기](https://velog.io/@tchaikovsky/Recoil-persist%EB%A1%9C-state%EB%A5%BC-localstorage%EB%A1%9C-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
+- [Recoil-persist로 state를 localstorage로 저장하기](https://velog.io/@tchaikovsky/Recoil-persist%EB%A1%9C-state%EB%A5%BC-localstorage%EB%A1%9C-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
+
+</nav>

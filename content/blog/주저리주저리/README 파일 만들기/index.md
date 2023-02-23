@@ -112,5 +112,8 @@ git clone -b as https://github.com/amaran-th/java-racingcar.git
 
 ![result](./result.png)
 
-- 참고 게시글
-  [우아한테크코스 4기 프리코스 후기 (4) - README.md 작성 (markdown)](https://creampuffy.tistory.com/132)
+<nav> 참고 게시글
+
+- [우아한테크코스 4기 프리코스 후기 (4) - README.md 작성 (markdown)](https://creampuffy.tistory.com/132)
+
+</nav>
