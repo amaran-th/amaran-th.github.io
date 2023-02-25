@@ -259,6 +259,18 @@ footer {
 .mark_down table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
+/*Code*/
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f4f4f4 !important;
+  font-family: inherit !important;
+  padding: 0px 4px !important;
+  font-size: 90% !important;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  padding: 1em !important;
+}
 
 /* Link */
 
