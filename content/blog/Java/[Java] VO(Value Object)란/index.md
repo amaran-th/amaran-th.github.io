@@ -2,7 +2,7 @@
 title: "[Java] VO(Value Object)란?"
 date: "2023-03-08T20:22:03.284Z"
 description: VO의 개념과 활용 방법에 대해 알아보자.
-category: "우테코 5기"
+category: "Java"
 tags:
   - 우아한 테크코스
   - Java

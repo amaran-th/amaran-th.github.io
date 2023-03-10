@@ -2,7 +2,7 @@
 title: "[디자인 패턴] Strategy Pattern(전략 패턴)"
 date: "2023-02-25T12:31:03.284Z"
 description: "전략패턴에 대해 알아보자"
-category: "우테코 5기"
+category: "디자인 패턴"
 tags:
   - 디자인 패턴
   - 시리즈

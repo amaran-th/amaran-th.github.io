@@ -2,7 +2,7 @@
 title: "[디자인 패턴] Factory Method Pattern(팩토리 메서드 패턴)"
 date: "2023-03-07T17:31:03.284Z"
 description: "팩토리 메서드 패턴에 대해 알아보자"
-category: "우테코 5기"
+category: "디자인 패턴"
 tags:
   - 디자인 패턴
   - 시리즈

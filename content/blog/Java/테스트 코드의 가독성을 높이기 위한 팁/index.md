@@ -2,7 +2,7 @@
 title: 테스트 코드의 가독성을 높이기 위한 팁
 date: "2023-02-23T15:55:03.284Z"
 description: "@Nested 어노테이션과 @DisplayName 어노테이션을 사용해 테스트코드의 가독성을 높여보자."
-category: "우테코 5기"
+category: "Java"
 tags:
   - 우아한 테크코스
   - Java

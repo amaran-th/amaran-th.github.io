@@ -1,8 +1,8 @@
 ---
 title: "[Java] 정적 팩토리 메서드란"
 date: "2023-03-07T18:53:03.284Z"
-description: 정적 팩토리 메서의 개념과 사용방법에 대해 알아보자
-category: "우테코 5기"
+description: 정적 팩토리 메서드의 개념과 사용방법에 대해 알아보자
+category: "Java"
 tags:
   - 우아한 테크코스
   - Java

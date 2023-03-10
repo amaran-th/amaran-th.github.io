@@ -2,7 +2,7 @@
 title: "[디자인 패턴] Template Method Pattern"
 date: "2023-03-03T18:58:03.284Z"
 description: "Template Method패턴에 대해 알아보자"
-category: "우테코 5기"
+category: "디자인 패턴"
 tags:
   - 디자인 패턴
   - 시리즈
