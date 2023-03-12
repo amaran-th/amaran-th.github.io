@@ -12,14 +12,19 @@ tags:
 ## ✨LOG
 
 - 첫 **발표 스터디**를 진행했다.
+
 - `공통 교육 - 데이터베이스` 강의를 들었다.
+
 - **블랙잭 미션 2단계**를 구현하였다.
+
 - 데일리 코치님과 면담을 진행했다.
 
 ## ✨배운 점&궁금한 점
 
 - [팩토리 메서드 패턴](<https://amaran-th.github.io/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4/[%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4]%20Factory%20Method%20Pattern(%ED%8C%A9%ED%86%A0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%20%ED%8C%A8%ED%84%B4)/>)과 [정적 팩토리 메서드](https://amaran-th.github.io/Java/[Java]%20%EC%A0%95%EC%A0%81%20%ED%8C%A9%ED%86%A0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%9E%80/)에 대해 공부했다.
+
 - [값 객체](<https://amaran-th.github.io/Java/[Java]%20VO(Value%20Object)%EB%9E%80/>)에 대해 공부하였다.
+
 - MarkDown 플러그인 중 하나인 [mermaid의 사용법](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[Markdown]%20mermaid%EB%A1%9C%20UML%20%EB%A7%8C%EB%93%A4%EA%B8%B0/)에 대해 배웠다.
 
 ## ✨느낀점
