@@ -63,15 +63,13 @@ flowchart LR
 
 `파일>설정> Plugin > Marketplace`로 들어가 Mermaid를 검색하고 설치해준다.
 
-1. **버전이 2022.2.3 미만인 경우**
+2. **버전이 2022.2.3 미만인 경우**
 
 `파일>설정`으로 들어가 🔍검색창에 **Markdown**을 검색한다.
 
 ![intelliJ2](./intelliJ2.png)
 
 `언어 및 프레임워크>Markdown`으로 들어간 후 Markdown 확장에서 Mermaid에 체크하여 확장 프로그램을 설치해준다.
-
-끝!
 
 ### VSCode
 
@@ -152,6 +150,8 @@ Plugin 창으로 들어가 mermaid를 검색하고 Markdown Preview Mermaid Supp
 
 - 화살표
 
+  화살표는 다음과 같은 양식이 존재한다. 상황에 맞게 사용하면 된다.
+
   ````markdown
   ```mermaid
   flowchart LR
@@ -170,6 +170,8 @@ Plugin 창으로 들어가 mermaid를 검색하고 Markdown Preview Mermaid Supp
   ![flow2](./flow2.png)
 
 - Subgraph 만들기
+
+  흐름도를 세분화할 때 용이하다.
 
   ````markdown
   ```mermaid
@@ -259,9 +261,9 @@ Plugin 창으로 들어가 mermaid를 검색하고 Markdown Preview Mermaid Supp
     - `\*` : 조합 관계(Composition)
     - `o` : 집합 관계(Aggregation)
     - `>`, `<` : 연관관계(Association)
-    - `|>` : Realization
+    - `|>` : 실현관계(Realization)
   - 선 유형
-    - `--` : Solid
+    - `--` : 기본(Solid)
     - `..` : 점선(Dashed)
 
 더 다양한 활용 방법은 아래에 첨부해둔 공식 문서를 통해 확인할 수 있다.
