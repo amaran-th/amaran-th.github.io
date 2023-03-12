@@ -52,109 +52,112 @@ tags:
 
 1. **이름을 가질 수 있다.**
 
-생성자는 내부 구조를 잘 알고 있어야 목적에 맞게 객체를 생성할 수 있다.
+   생성자는 내부 구조를 잘 알고 있어야 목적에 맞게 객체를 생성할 수 있다.
 
-정적 팩토리 메서드를 사용하면 **메서드 이름에 객체의 생성 목적을 담아**낼 수 있다.
+   정적 팩토리 메서드를 사용하면 **메서드 이름에 객체의 생성 목적을 담아**낼 수 있다.
 
 2. **호출할 때마다 새로운 객체를 생성할 필요가 없다.**
 
-enum과 같이 자주 사용되는 요소의 개수가 정해져 있다면 해당 개수만큼 미리 생성해놓고 **조회**할 수 있는 구조로 만들 수 있다.
+   enum과 같이 자주 사용되는 요소의 개수가 정해져 있다면 해당 개수만큼 미리 생성해놓고 **조회**할 수 있는 구조로 만들 수 있다.
 
-- 예시
+   - 예시
 
-```java
-public class LottoNumber {
-  private static final int MIN_LOTTO_NUMBER = 1;
-  private static final int MAX_LOTTO_NUMBER = 45;
+     ```java
+     public class LottoNumber {
+       private static final int MIN_LOTTO_NUMBER = 1;
+       private static final int MAX_LOTTO_NUMBER = 45;
 
-  private static Map<Integer, LottoNumber> lottoNumberCache = new HashMap<>();
+       private static Map<Integer, LottoNumber> lottoNumberCache = new HashMap<>();
 
-  static {
-    IntStream.range(MIN_LOTTO_NUMBER, MAX_LOTTO_NUMBER)
-                .forEach(i -> lottoNumberCache.put(i, new LottoNumber(i)));
-  }
+       static {
+         IntStream.range(MIN_LOTTO_NUMBER, MAX_LOTTO_NUMBER)
+                     .forEach(i -> lottoNumberCache.put(i, new LottoNumber(i)));
+       }
 
-  private int number;
+       private int number;
 
-  private LottoNumber(int number) {
-    this.number = number;
-  }
+       private LottoNumber(int number) {
+         this.number = number;
+       }
 
-  **public LottoNumber of(int number) {  // LottoNumber를 반환하는 정적 팩토리 메서드
-    return lottoNumberCache.get(number);
-  }**
+       **public LottoNumber of(int number) {  // LottoNumber를 반환하는 정적 팩토리 메서드
+         return lottoNumberCache.get(number);
+       }**
 
-  ...
-}
-```
+       ...
+     }
+     ```
 
-- 미리 생성된 로또 번호 객체를 조회(캐싱)함으로써 새로운 객체 생성의 부담을 덜 수 있다.
-- 생성자의 접근 제한자를 private로 설정함으로써 객체 생성을 정적 팩토리 메서드로만 가능하도록 제한할 수 있다.
-  ⇒정해진 범위를 벗어나는 로또 번호의 생성을 막을 수 있다.(유효성 검증)
+   - 미리 생성된 로또 번호 객체를 조회(캐싱)함으로써 새로운 객체 생성의 부담을 덜 수 있다.
+   - 생성자의 접근 제한자를 private로 설정함으로써 객체 생성을 정적 팩토리 메서드로만 가능하도록 제한할 수 있다.
+     ⇒정해진 범위를 벗어나는 로또 번호의 생성을 막을 수 있다.(유효성 검증)
 
 3. **하위 자료형 객체를 반환할 수 있다.**
 
-정적 팩토리 메서드는 **반환값**을 가지고 있기 때문에, 다음과 같이 분기처리를 통해 하위 타입의 객체를 반환할 수 있다.
+   정적 팩토리 메서드는 **반환값**을 가지고 있기 때문에, 다음과 같이 분기처리를 통해 하위 타입의 객체를 반환할 수 있다.
 
-```java
-//Basic, Intermediate, Advanced 클래스가 Level이라는 상위 클래스를 상속받고 있는 구조
-public class Level {
-  ...
-  public static Level of(int score) {
-    if (score < 50) {
-      return new Basic();
-    } else if (score < 80) {
-      return new Intermediate();
-    } else {
-      return new Advanced();
-    }
-  }
-  ...
-}
-```
+   ```java
+   //Basic, Intermediate, Advanced 클래스가 Level이라는 상위 클래스를 상속받고 있는 구조
+   public class Level {
+     ...
+     public static Level of(int score) {
+       if (score < 50) {
+         return new Basic();
+       } else if (score < 80) {
+         return new Intermediate();
+       } else {
+         return new Advanced();
+       }
+     }
+     ...
+   }
+   ```
 
 4. **객체 생성을 캡슐화할 수 있다.**
 
-생성자를 클래스의 메서드 안으로 숨기면서 내부 상태를 외부에 드러낼 필요 없이 객체 생성 인터페이스를 단순화시킬 수 있다.
+   생성자를 클래스의 메서드 안으로 숨기면서 내부 상태를 외부에 드러낼 필요 없이 객체 생성 인터페이스를 단순화시킬 수 있다.
 
-- 예시
+   - 예시
 
-```java
-public class CarDto {
-  private String name;
-  private int position;
+   ```java
+   public class CarDto {
+     private String name;
+     private int position;
 
-  pulbic static CarDto from(Car car) {
-    return new CarDto(car.getName(), car.getPosition());
-  }
-}
+     pulbic static CarDto from(Car car) {
+       return new CarDto(car.getName(), car.getPosition());
+     }
+   }
 
-// Car -> CatDto 로 변환
-CarDto carDto = CarDto.from(car);
-```
+   // Car -> CatDto 로 변환
+   CarDto carDto = CarDto.from(car);
+   ```
 
-```java
-Car carDto = CarDto.from(car); // 정적 팩토리 메서드를 쓴 경우
-CarDto carDto = new CarDto(car.getName(), car.getPosition); // 생성자를 쓴 경우
-```
+   ```java
+   Car carDto = CarDto.from(car); // 정적 팩토리 메서드를 쓴 경우
+   CarDto carDto = new CarDto(car.getName(), car.getPosition); // 생성자를 쓴 경우
+   ```
 
-DTO와 Entity 간에는 자유롭게 형 변환이 가능해야 하는데, 정적 팩토리 메서드를 사용하면 내부 구현을 모르더라도 손쉽게 변환이 가능하다.
+   DTO와 Entity 간에는 자유롭게 형 변환이 가능해야 하는데, 정적 팩토리 메서드를 사용하면 내부 구현을 모르더라도 손쉽게 변환이 가능하다.
 
 ### ⚠️주의할 점
 
 1. 팩토리 메서드만 존재하는 클래스를 생성할 경우 **상속이 불가능**하다!
 
-⇒상속을 위해서는 public, protected 생성자가 필요하기 때문에 정적 팩토리 메서드만 제공할 경우 상속이 불가능하다.(private로 선언된 인스턴스에 접근할 수 없으므로)
+   ⇒상속을 위해서는 public, protected 생성자가 필요하기 때문에 정적 팩토리 메서드만 제공할 경우 상속이 불가능하다.(private로 선언된 인스턴스에 접근할 수 없으므로)
 
-⇒이런 제약은 상속보다 조합을 사용하도록 유도하고 불변 타입으로 만들기 위해선 이 제약을 지켜야 한다는 점에서 오히려 장점이 될 수도 있다.
+   ⇒이런 제약은 상속보다 조합을 사용하도록 유도하고 불변 타입으로 만들기 위해선 이 제약을 지켜야 한다는 점에서 오히려 장점이 될 수도 있다.
 
 2. 다른 정적 메서드와 잘 구분이 되지 않아 문서만으로 확인하기 어려울 수 있다.
 
 ### 사용 TIP
 
 - 사용하기 좋은 상황
+
   - 객체 간 **형변환**이 필요한 경우
+
   - **여러 번의 객체 생성**이 필요한 경우
+
 - 활용 예시
 
   - 기존 코드
