@@ -1,8 +1,8 @@
 ---
 title: "2023.03.19"
 date: "2023-03-19T18:08:03.284Z"
-description: "체스 미션을 수행하며"
-category: "우테코 6주차 기술 부채"
+description: "우테코 6주차 기술 부채"
+category: "기술 부채"
 tags:
   - 기술 부채
   - 데이터베이스
