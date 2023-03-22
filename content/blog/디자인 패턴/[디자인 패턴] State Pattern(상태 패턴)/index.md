@@ -107,6 +107,70 @@ State - 상태를 클래스로 표현하기
 
 일반적으로 상태를 나타내는 클래스는 한 개씩 인스턴스를 만든다고 가정한다.(Singleton)
 
+### 활용 예시(feat. 체스 미션)
+
+: 체스 게임에서 게임의 진행 상태에 따라 컨트롤러의 동작이 달라지는데, 여기에 상태 패턴을 적용해보았다.
+
+![예제 코드의 클래스 구조](./example.jpg)
+
+- GameState 인터페이스
+  ```java
+  public interface GameState {
+
+      void startGame(Runnable runnable);    //ReadyState 외의 상태에서는 예외처리
+      void movePiece(Runnable runnable);    //RunningState 외의 상태에서는 예외처리
+      void finishGame(Runnable runnable);   //RunningState외의 상태에서는 예외처리
+
+      boolean isFinished();    //FinishedState상태에서만 false 반환
+  }
+  ```
+- ReadyState 클래스(구현체)
+  ```java
+  public class ReadyState implements GameState {
+
+      public static final GameState STATE = new ReadyState();
+
+      public void startGame(Runnable runnable){
+          runnable.run();
+      }
+      public void movePiece(Runnable runnable){
+          throw new IllegalArgumentException("입력된 명령어가 올바르지 않습니다.");
+      }
+      public void finishGame(Runnable runnable){
+          throw new IllegalArgumentException("입력된 명령어가 올바르지 않습니다.");
+      }
+      public boolean isFinished(){
+          return false;
+      }
+  }
+  ```
+
+특정 Command를 입력 받거나, 일련의 상황이 발생한 경우(King이 공격당한 경우)에만 상태가 변경된다.
+
+```java
+public class ChessGame {
+
+    private final ChessBoard chessBoard;
+    private GameState state;
+		...
+		public void startGame() {
+        state.startGame(()->{
+            state = RunningState.STATE;
+        });
+    }
+		...
+
+		if (chessBoard.isKingDead()) {    //코드의 일부
+				state = FinishedState.STATE;
+		}
+```
+
+GameState를 ChessGame의 인스턴스 변수로 넣어주었다. ChessGame에 정의된 startGame() 등의 메서드는 ChessController에서 호출되는 구조다.
+
+위 코드의 startGame() 메서드를 보면 GameState의 메서드 startGame()의 인자로 람다식을 넣어주는데, startGame()의 경우 현재 state가 **_ReadyState_**가 아닌 경우 예외가 발생하므로, ChessGame의 state가 **_ReadyState_**일 때만 해당 로직을 실행할 수 있도록 강제할 수 있다.
+
+상태 패턴을 사용하면 상태에 대해 일일이 조건문을 작성할 필요 없이, **다형성을 이용해 상태에 따른 동작을 처리**할 수 있다.
+
 ## State 패턴의 특징
 
 ---
