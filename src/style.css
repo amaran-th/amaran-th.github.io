@@ -205,6 +205,10 @@ footer {
 .mark_down li > * {
   margin-left: var(--spacing-4);
 }
+.mark_down li > strong,
+.mark_down li > a {
+  margin-left: var(--spacing-0);
+}
 
 .mark_down li > p:first-child {
   display: inline;
@@ -235,6 +239,7 @@ footer {
 
 .mark_down blockquote {
   color: var(--color-text-light);
+  margin-top: var(--spacing-6);
   margin-left: calc(var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
