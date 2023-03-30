@@ -8,6 +8,7 @@ tags:
   - 시리즈
   - Java 언어로 배우는 디자인 패턴 입문
   - 우아한 테크코스
+thumbnailImg: "./image.png"
 ---
 
 <nav>
@@ -114,6 +115,7 @@ State - 상태를 클래스로 표현하기
 ![예제 코드의 클래스 구조](./example.jpg)
 
 - GameState 인터페이스
+
   ```java
   public interface GameState {
 
@@ -124,7 +126,9 @@ State - 상태를 클래스로 표현하기
       boolean isFinished();    //FinishedState상태에서만 false 반환
   }
   ```
+
 - ReadyState 클래스(구현체)
+
   ```java
   public class ReadyState implements GameState {
 

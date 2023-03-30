@@ -8,6 +8,7 @@ tags:
   - 시리즈
   - Java 언어로 배우는 디자인 패턴 입문
   - 우아한 테크코스
+thumbnailImg: "./image.png"
 ---
 
 <nav>
