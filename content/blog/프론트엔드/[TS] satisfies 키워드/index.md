@@ -71,21 +71,24 @@ const object: { a: number; b: { a: number } } = {
 ```
 
 ```tsx
-const variable1: **{ grade: string }** = { grade: "a", score: 90 }
+const variable1: { grade: string } = { grade: "a", score: 90 }
 // error
-const variable2: { grade: string, score: number, attribute: object } = { grade: "a", score: 90 }
+const variable2: { grade: string; score: number; attribute: object } = {
+  grade: "a",
+  score: 90,
+}
 const variable3 = {
-    // no way to force type { grade: string }
-    key: { grade: "a", score: 90 }
+  // no way to force type { grade: string }
+  key: { grade: "a", score: 90 },
 }
 type Variable4 = { key: { grade: string } }
 const variable4: Variable4 = {
-    key: { grade: "a", score: 90 }
+  key: { grade: "a", score: 90 },
 }
-type Variable5 = { key: { grade: string, score: number, attribute: object } }
+type Variable5 = { key: { grade: string; score: number; attribute: object } }
 const variable5: Variable5 = {
-    // error
-    key: { grade: "a", score: 90 }
+  // error
+  key: { grade: "a", score: 90 },
 }
 ```
 
