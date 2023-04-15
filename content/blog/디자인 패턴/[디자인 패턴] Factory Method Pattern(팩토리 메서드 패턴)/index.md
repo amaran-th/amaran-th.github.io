@@ -11,16 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- Factory Method 패턴의 구성요소
-- Factory Method 패턴의 특징
-
-</nav>
-
 Factory Method - 하위 클래스에서 인스턴스 작성하기
 
 가상 생성자(Virtual Constructor) 패턴이라고도 하며, 디자인 패턴 중 **생성** 패턴에 속하는 패턴이다.

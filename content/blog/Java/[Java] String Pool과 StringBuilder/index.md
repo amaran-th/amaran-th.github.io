@@ -9,20 +9,6 @@ tags:
   - String
 ---
 
-<nav>
-
-목차
-
-- String Pool과 intern() 메서드는 무엇일까?
-  - String 객체를 생성하는 방법
-  - intern() 메서드
-- StringBuilder
-  - StringBuilder란?
-  - StringConcatFactory?
-  - StringBuilder와 StringBuffer의 차이
-
-</nav>
-
 ## String Pool과 intern() 메서드는 무엇일까?
 
 ### String 객체를 생성하는 방법

@@ -11,16 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- Command Pattern 패턴의 구성요소
-- Command Pattern 패턴의 특징
-
-</nav>
-
 Command - 명령을 클래스로 표현하기
 
 작동(Action), 트랜잭션(Transaction)이라고도 하며, 디자인 패턴 중 **행동** 패턴에 속하는 패턴이다.

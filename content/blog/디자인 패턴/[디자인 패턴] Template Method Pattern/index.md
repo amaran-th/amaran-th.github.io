@@ -11,16 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- Template Method 패턴의 구성요소
-- Template Method 패턴의 특징
-
-</nav>
-
 Template Method
 
 디자인 패턴 중 **행동** 패턴에 속하는 패턴이다.

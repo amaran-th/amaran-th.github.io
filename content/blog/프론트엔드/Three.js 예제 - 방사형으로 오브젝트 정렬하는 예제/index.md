@@ -8,16 +8,6 @@ tags:
 thumbnailImg: "./result.png"
 ---
 
-<nav>
-
-목차
-
-- Renderer, Scene, Camera
-- Adding Renderer, Scene, Camera
-- 전체 코드
-
-</nav>
-
 ### Renderer, Scene, Camera
 
 - Renderer

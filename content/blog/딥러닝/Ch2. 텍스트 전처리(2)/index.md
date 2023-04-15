@@ -11,18 +11,6 @@ tags:
 
 유용한 한국어 전처리 패키지를 정리한 포스트입니다.
 
-<nav>
-
-목차
-
-- PyKoSpacing
-- Py-Hanspell
-- SOYNLP를 이용한 단어 토큰화
-- SOYNLP를 이용한 반복되는 문자 정제
-- Customized KoNLPy
-
-</nav>
-
 ### 1. PyKoSpacing
 
 : 띄어쓰기가 되어있지 않은 문장을 띄어쓰기된 문장으로 변환하는 패키지.

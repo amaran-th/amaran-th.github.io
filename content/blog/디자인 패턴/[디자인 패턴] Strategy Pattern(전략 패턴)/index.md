@@ -11,16 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- Strategy 패턴의 구성요소
-- Strategy 패턴의 장점
-
-</nav>
-
 Strategy Pattern -알고리즘을 모두 바꾸기
 
 전략 패턴은 정책(Policy) 패턴으로도 불리며, 디자인 패턴 중 **행동** 패턴에 속하는 패턴이다.

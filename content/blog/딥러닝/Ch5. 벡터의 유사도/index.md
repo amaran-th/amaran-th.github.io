@@ -12,15 +12,6 @@ thumbnailImg: "./코사인유사도.png"
 
 기계가 문서의 유사도를 계산하는 성능은 각 문서의 단어들을 수치화한 방법(DTM, Word2Vec 등)과 문서 간 단어들의 차이를 계산한 방법(유클리드 거리, 코사인 유사도 등)에 좌우된다.
 
-<nav>
-
-목차
-
-- 코사인 유사도(Cosine Similarity)
-- 여러가지 유사도 기법
-
-</nav>
-
 # 5-1 코사인 유사도(Cosine Similarity)
 
 ### 1. 코사인 유사도(CosineSimilarity)

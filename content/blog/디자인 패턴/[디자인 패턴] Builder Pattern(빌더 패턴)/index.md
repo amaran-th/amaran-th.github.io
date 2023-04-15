@@ -11,18 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- 활용 예시(feat. [Java 언어로 배우는 디자인패턴 입문] 120p 예제
-- Builder Pattern의 구성요소
-- Builder Pattern의 특징
-- 부록
-
-</nav>
-
 **Builder - 복잡한 인스턴스 조립하기**
 
 building은 구조를 가진 커다란 건축물을 의미한다.

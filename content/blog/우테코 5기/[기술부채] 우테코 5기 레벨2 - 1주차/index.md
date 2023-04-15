@@ -9,28 +9,6 @@ tags:
   - 우아한 테크코스
 ---
 
-<nav>
-
-목차
-
-- 코드 리뷰
-  - 웹 자동차 경주 1단계(1)
-- 자잘한 기술부채
-  - @ResponseBody
-  - Mapping
-  - ResponseEntity
-  - @PathVariable
-  - Media Types produces/consumes?
-  - @RequestParam @RequestHeader
-  - MySQL 쿼리 실행 메서드
-  - KeyHolder
-  - SqlParameterSource
-  - 자바 클래스를 스프링 빈으로 등록하는 방법
-  - 의존성 주입(DI)
-  - .gitkeep
-
-</nav>
-
 ## 코드 리뷰
 
 ---

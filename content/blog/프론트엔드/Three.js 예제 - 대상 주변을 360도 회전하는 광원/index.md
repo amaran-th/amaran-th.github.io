@@ -8,16 +8,6 @@ tags:
 thumbnailImg: "./result.png"
 ---
 
-<nav>
-
-목차
-
-- Adding Lights and Shadows
-- request AnimationFrame
-- Adding statistics and dat.GUI
-
-</nav>
-
 ### Adding Light and Shadows
 
 WebGL에서는 shader에서 모두 직접 구현했어야 했다.

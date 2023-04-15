@@ -8,19 +8,6 @@ tags:
   - typescript
 ---
 
-<nav>
-
-목차
-
-- 들어가며
-- satisfies 키워드의 필요성
-- 타입스크립트의 type을 업캐스팅하는 방법
-  - 방법 1 : variable의 type을 미리 정의한다.
-  - 방법 2 : “as” 키워드를 사용한다.
-  - 방법 3 : “satisfies” 키워드를 사용한다.
-
-</nav>
-
 ## 들어가며
 
 프론트엔드 프로젝트 진행 중, 코드리뷰로 객체 property 뒤에 `satisfies [타입]`을 붙이는 게 좋다는 말을 들었는데, satisfies 키워드는 어떨 때, 왜 사용하는 것인지 궁금해져 알아보았다.

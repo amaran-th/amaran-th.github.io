@@ -11,16 +11,6 @@ tags:
 thumbnailImg: "./image.png"
 ---
 
-<nav>
-
-목차
-
-- 정의
-- State Pattern 패턴의 구성요소
-- State Pattern 패턴의 특징
-
-</nav>
-
 State - 상태를 클래스로 표현하기
 
 상태 표현 객체(Object for State)라고도 하며, 디자인 패턴 중 **행동** 패턴에 속하는 패턴이다.

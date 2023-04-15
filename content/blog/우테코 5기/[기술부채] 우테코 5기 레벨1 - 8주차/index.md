@@ -9,29 +9,6 @@ tags:
   - 우아한 테크코스
 ---
 
-<nav>
-
-목차
-
-- 코드 리뷰
-  - 코드 리뷰(체스 3, 4단계)(1)
-  - 코드 리뷰(체스 3, 4단계)(2)
-- 학습로그 학습하기
-  - 방금 저장한 데이터의 ID 불러오기
-  - 테스트 더블
-- 레벨 인터뷰 공통 피드백
-- 자잘한 기술부채
-  - 동시성 이슈(Concurrency Issue)
-  - 커넥션 풀(Connection Pool)
-  - 생성자 체이닝(Constructor Chaining)
-  - Junit5과 AssertJ의 차이
-  - System.lineSeperator()(Java 1.7 이상)
-  - EnumMap
-  - length와 size()의 차이(=자바에서 길이와 크기의 차이)
-  - 롬복(Lombok)
-
-</nav>
-
 ## 코드 리뷰
 
 ---
