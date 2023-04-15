@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/solid"
 import CategoryList from "./side"
 import Bio from "./bio"
+import TableOfContents from "./TableOfContents"
 
 const Layout = ({
   location,
@@ -14,6 +15,7 @@ const Layout = ({
   children,
   currentCategory,
   isPost = false,
+  tableOfContents = null,
 }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -77,7 +79,7 @@ const Layout = ({
         </button>
         {header}
       </header>
-      <body className="relative ">
+      <body className="relative">
         <nav
           className={
             "fixed min-w-[12rem] left-0 z-[98] mt-4 transition ease-in-out " +
@@ -86,17 +88,25 @@ const Layout = ({
         >
           {category}
         </nav>
-        <div className="bg-shadow flex justify-center">
-          {!isPost ? <Bio /> : ""}
-        </div>
-        <div className="static flex max-w-6xl justify-between">
-          <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
-          <div
-            className="w-full max-w-3xl px-5 mt-12"
-            data-is-root-path={isRootPath}
-          >
-            {children}
+        <div className="w-full flex justify-center">
+          <div className="w-full flex max-w-6xl justify-between">
+            <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
+            <div
+              className="w-full max-w-3xl px-5 mt-12"
+              data-is-root-path={isRootPath}
+            >
+              {children}
+            </div>
           </div>
+
+          <nav
+            className={
+              "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
+              "lg:block lg:translate-x-0 translate-x-[12rem]"
+            }
+          >
+            <TableOfContents content={tableOfContents} />
+          </nav>
         </div>
       </body>
 

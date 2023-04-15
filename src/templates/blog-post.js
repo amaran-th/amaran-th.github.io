@@ -13,12 +13,14 @@ const BlogPostTemplate = ({
   const siteTitle = site.siteMetadata?.title || `Title`
   const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
+  console.log(post.tableOfContents)
   return (
     <Layout
       location={location}
       title={siteTitle}
       categories={categories}
       isPost={true}
+      tableOfContents={post.tableOfContents}
     >
       <article
         className="blog-post space-y-8"
@@ -154,6 +156,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents
       frontmatter {
         title
         date(formatString: "YYYY년 MM월 DD일")

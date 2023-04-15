@@ -91,6 +91,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+          tableOfContents: post.tableOfContents,
         },
       })
     })
