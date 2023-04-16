@@ -89,13 +89,18 @@ const Layout = ({
           {category}
         </nav>
         <div className="w-full flex justify-center">
-          <div className="w-full flex max-w-6xl justify-between">
-            <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
-            <div
-              className="w-full max-w-3xl px-5 mt-12"
-              data-is-root-path={isRootPath}
-            >
-              {children}
+          <div className="w-full">
+            <div className="w-full bg-shadow flex justify-center">
+              <Bio />
+            </div>
+            <div className="w-full flex max-w-6xl justify-between">
+              <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
+              <div
+                className="w-full max-w-3xl px-5 mt-12"
+                data-is-root-path={isRootPath}
+              >
+                {children}
+              </div>
             </div>
           </div>
 
