@@ -90,6 +90,172 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
 
 ![DI_Container.png](DI_Container.png)
 
+## IoC Container의 생명주기(Lifecycle)
+
+---
+
+### Bean 객체의 생명주기
+
+`스프링 빈 생성→의존관계 주입→초기화→소멸`로 구성된다.
+
+여기서 빈을 초기화/소멸시킬 때 사용되는 콜백(콜백함수)을 알아보자.
+
+- InitializingBean, DisposableBean 인터페이스를 사용한 방법
+  - afterPropertiesSet() : 스프링 빈 초기화
+  - destroy() : 스프링 빈 소멸
+  ```java
+  public class NetworkClient implements InitializingBean, DisposableBean {
+      private String url;
+
+      public NetworkClient() {
+          System.out.println("생성자 호출 url = " + url);
+      }
+
+      public void setUrl(String url) {
+          this.url = url;
+      }
+      //서비스 시작시 호출
+      public void connect() {
+          System.out.println("connect = " + url);
+      }
+      public void call(String msg) {
+          System.out.println("call : " + url + "message = " + msg);
+      }
+      //서비스 종료시 호출
+      public void disconnect() {
+          System.out.println("close = " + url);
+      }
+
+      @Override
+      public void afterPropertiesSet() throws Exception {
+          System.out.println("NetworkClient.afterPropertiesSet");
+          connect();
+          call("초기화 연결 메세지");
+      }
+
+      @Override
+      public void destroy() throws Exception {
+          System.out.println("NetworkClient.destroy");
+          disconnect();
+      }
+  }
+  ```
+  ⚠️ 스프링 전용 인터페이스이기 때문에 외부 라이브러리에서는 사용할 수 없다.
+- `@Configuration`을 붙인 설정 정보에 초기화/소멸 콜백함수를 지정하는 방법
+  ```java
+  @Configuration
+  static class LifeCycleConfig{
+  		@Bean(initMethod = "init", destroyMethod="close")
+      public NetworkClient networkClient() {
+          NetworkClient networkClient = new NetworkClient();
+          networkClient.setUrl("https://hong.com");
+          return networkClient;
+      }
+  }
+  ```
+  ```java
+  public class NetworkClient{
+      private String url;
+
+      public NetworkClient() {
+          System.out.println("생성자 호출 url = " + url);
+      }
+      public void setUrl(String url) {
+          this.url = url;
+      }
+      //서비스 시작시 호출
+      public void connect() {
+          System.out.println("connect = " + url);
+      }
+      public void call(String msg) {
+          System.out.println("call : " + url + "message = " + msg);
+      }
+      //서비스 종료시 호출
+      public void disconnect() {
+          System.out.println("close = " + url);
+      }
+      public void init() throws Exception {
+          System.out.println("NetworkClient.init");
+          connect();
+          call("초기화 연결 메세지");
+      }
+      public void close() throws Exception {
+          System.out.println("NetworkClient.close");
+          disconnect();
+      }
+  }
+  ```
+  콜백 함수의 이름을 자유롭게 지정할 수 있고, 스프링 설정 정보를 사용하는 방법이므로 외부 라이브러리에서도 사용 가능하다.
+- @PostConstruct, @PreDestroy 어노테이션 사용하기
+  ```java
+  @Configuration
+  static class LifeCycleConfig{
+  		@Bean(initMethod = "init", destroyMethod="close")
+      public NetworkClient networkClient() {
+          NetworkClient networkClient = new NetworkClient();
+          networkClient.setUrl("https://hong.com");
+          return networkClient;
+      }
+  }
+  ```
+  ```java
+  public class NetworkClient{
+      private String url;
+
+      //...
+
+      @PostConstruct
+      public void init() throws Exception {
+          System.out.println("NetworkClient.init");
+          connect();
+          call("초기화 연결 메세지");
+      }
+
+      @PreDestroy
+      public void close() throws Exception {
+          System.out.println("NetworkClient.close");
+          disconnect();
+      }
+  }
+  ```
+  어노테이션 하나만 붙이면 되기 때문에 편리하다.
+
+### IoC 컨테이너의 생명주기
+
+크게 `생성→빈 설정→사용→소멸`로 구성된다.
+
+아래와 같이 스프링 컨테이너에 대한 라이프사이클 메서드를 사용할 수 있다.
+
+```java
+AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
+	ac.register();//빈 추가로 등록
+	ac.referesh();//등록하기 위한 갱신
+	ac.close();//소멸 메서드, 이때 빈도 같이 소멸
+```
+
+- 앞 목차에서 작성한 NetworkClient 빈 객체를 사용하는 예제 코드
+  ```java
+  public class BeanLifeCycleTest {
+      @Test
+      public void lifeCycleTest(){
+          ConfigurableApplicationContext ac = new AnnotationConfigApplicationContext(LifeCycleConfig.class);
+          NetworkClient networkClient = ac.getBean(NetworkClient.class);
+          ac.close();
+      }
+
+      @Configuration
+      static class LifeCycleConfig{
+          @Bean(initMethod = "init", destroyMethod="close")
+  		    public NetworkClient networkClient() {
+  		        NetworkClient networkClient = new NetworkClient();
+  		        networkClient.setUrl("https://hong.com");
+  		        return networkClient;
+  		    }
+      }
+  }
+  ```
+  lifeCycleTest() 메서드의 첫 라인에서 ApplicationContext 클래스 생성자의 매개변수로 LifeCycleConfig 클래스를 넣어줌으로써 ac 객체는 NetworkClient 빈 객체를 얻었다.
+
 ## 결론
 
 <aside>
@@ -102,3 +268,5 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
 [[Spring] IoC(Inversion of Control : 제어의 역전)컨테이너란?](https://choicode.tistory.com/31)
 
 [IoC 컨테이너와 DI(Dependency Injection)](https://dog-developers.tistory.com/12)
+
+[<Spring> 스프링 핵심원리 이해 8 - 스프링 컨테이너와 빈 생명주기 콜백](https://hongchangsub.com/springcore8/)
