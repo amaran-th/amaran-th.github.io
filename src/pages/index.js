@@ -23,14 +23,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <>
-      <Helmet
-        meta={[
-          ...{
-            name: "google-site-verification",
-            content: "aZ6Rx91KxboXOthhgdEOqpLc2tw6PThHxoPcNdMfeIk",
-          },
-        ]}
-      />
+      <Seo />
       <Layout location={location} title={siteTitle} categories={categories}>
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {

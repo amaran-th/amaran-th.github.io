@@ -37,6 +37,10 @@ const Seo = ({ description, title, children }) => {
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta
+        name="google-site-verification"
+        content="aZ6Rx91KxboXOthhgdEOqpLc2tw6PThHxoPcNdMfeIk"
+      />
+      <meta
         name="twitter:creator"
         content={site.siteMetadata?.social?.twitter || ``}
       />
