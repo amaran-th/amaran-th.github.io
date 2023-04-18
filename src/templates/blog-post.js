@@ -5,6 +5,7 @@ import kebabCase from "lodash.kebabcase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Utterances from "../components/Utterances"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, categoryList, markdownRemark: post },
@@ -44,7 +45,6 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-
         <div className="tags">
           <ul>
             {post.frontmatter.tags
@@ -61,8 +61,9 @@ const BlogPostTemplate = ({
           </ul>
         </div>
         <hr />
-        <br />
       </article>
+      <Utterances />
+      <br />
       <nav className="blog-post-nav">
         <ul
           className="text-main font-bold hover:text-point"
