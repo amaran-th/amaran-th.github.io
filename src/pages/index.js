@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
