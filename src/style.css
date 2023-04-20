@@ -160,13 +160,12 @@ footer {
 
 /* Prose */
 .mark_down aside {
-  background-color: var(--color-shadow);
-  padding: var(--spacing-4) var(--spacing-8) var(--spacing-1) var(--spacing-8);
+  border: 2px solid #dfdfde;
+  padding: var(--spacing-4) var(--spacing-8) var(--spacing-4) var(--spacing-8);
   border-radius: 5px;
   margin: var(--spacing-4) var(--spacing-0);
 }
 .mark_down aside hr {
-  background: var(--color-sub);
   height: 2px;
   border: 0;
   margin: var(--spacing-0);
@@ -268,14 +267,16 @@ footer {
 }
 /*Code*/
 :not(pre) > code[class*="language-"] {
-  background: #f4f4f4 !important;
+  color: var(--color-primary);
+  background: #ededeb !important;
   font-family: inherit !important;
   font-size: 90% !important;
-  padding: 0px 4px !important;
+  padding: 1px 5px !important;
   margin: var(--spacing-0);
 }
+
 pre[class*="language-"] {
-  background: #f4f4f4 !important;
+  background: #f7f6f3 !important;
   font-family: inherit !important;
   font-size: 90% !important;
   padding: 1em !important;
