@@ -15,7 +15,7 @@ module.exports = {
       name: `Amaranth(아마란스)`,
       summary: `풀스택 웹 개발자를 목표로 기반을 다지고 있는 개발자 지망생`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `아마란스 블로그`,
     siteUrl: `https://amaran-th.github.io`,
     social: {
       twitter: `kylemathews`,

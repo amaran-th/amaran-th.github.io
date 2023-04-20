@@ -65,7 +65,7 @@ const Bio = () => {
               <li>
                 📑이력서 :{" "}
                 <Link
-                  className="text-sm hover:bg-sub rounded-full bg-sub text-white px-2"
+                  className="text-sm hover:bg-main rounded-full bg-sub text-white px-2"
                   target="_blank"
                   to={`${social?.CVK || ``}`}
                 >
