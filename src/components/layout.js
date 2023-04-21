@@ -88,7 +88,7 @@ const Layout = ({
         >
           {category}
         </nav>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center space-x-2">
           <div className="w-full">
             <div className="w-full bg-shadow flex justify-center">
               <Bio />

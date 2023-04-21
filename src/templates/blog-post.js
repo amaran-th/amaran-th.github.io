@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/Utterances"
+import TableOfContents from "../components/TableOfContents"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, categoryList, markdownRemark: post },
@@ -24,11 +25,11 @@ const BlogPostTemplate = ({
       tableOfContents={post.tableOfContents}
     >
       <article
-        className="blog-post space-y-8"
+        className="blog-post space-y-"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+        <header className="mb-8">
           <h1
             className="text-main text-5xl font-bold font-title"
             itemProp="headline"
@@ -40,13 +41,21 @@ const BlogPostTemplate = ({
             <span>{post.frontmatter.date}</span>
           </p>
         </header>
+        <nav
+          className={
+            "border-2 rounded-md p-2 max-h-[80vh] z-[98] mt-4 transition ease-in-out block lg:hidden"
+          }
+        >
+          <TableOfContents content={post.tableOfContents} />
+        </nav>
         <section
-          className="mark_down p-4  rounded-md"
+          className="mark_down p-4 rounded-md"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <div className="tags">
+        <div className="tags p-4 my-4 rounded-md bg-gray-100">
           <ul>
+            Tag -
             {post.frontmatter.tags
               ? post.frontmatter.tags.map(tag => (
                   <Link
