@@ -7,6 +7,7 @@ tags:
   - Gatsby
   - React
   - SEO
+thumbnailImg: "./7.png"
 ---
 
 ## 플러그인 설치

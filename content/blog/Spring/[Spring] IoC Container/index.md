@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Spring
   - 로드맵
+thumbnailImg: "./DI_Container.png"
 ---
 
 ## 정의
@@ -101,8 +102,10 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
 여기서 빈을 초기화/소멸시킬 때 사용되는 콜백(콜백함수)을 알아보자.
 
 - InitializingBean, DisposableBean 인터페이스를 사용한 방법
+
   - afterPropertiesSet() : 스프링 빈 초기화
   - destroy() : 스프링 빈 소멸
+
   ```java
   public class NetworkClient implements InitializingBean, DisposableBean {
       private String url;
@@ -140,8 +143,11 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
       }
   }
   ```
+
   ⚠️ 스프링 전용 인터페이스이기 때문에 외부 라이브러리에서는 사용할 수 없다.
+
 - `@Configuration`을 붙인 설정 정보에 초기화/소멸 콜백함수를 지정하는 방법
+
   ```java
   @Configuration
   static class LifeCycleConfig{
@@ -153,6 +159,7 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
       }
   }
   ```
+
   ```java
   public class NetworkClient{
       private String url;
@@ -185,8 +192,11 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
       }
   }
   ```
+
   콜백 함수의 이름을 자유롭게 지정할 수 있고, 스프링 설정 정보를 사용하는 방법이므로 외부 라이브러리에서도 사용 가능하다.
+
 - @PostConstruct, @PreDestroy 어노테이션 사용하기
+
   ```java
   @Configuration
   static class LifeCycleConfig{
@@ -198,6 +208,7 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
       }
   }
   ```
+
   ```java
   public class NetworkClient{
       private String url;
@@ -218,6 +229,7 @@ BeanFactor에 여러가지 컨테이너 기능을 추가한 것을 `ApplicationC
       }
   }
   ```
+
   어노테이션 하나만 붙이면 되기 때문에 편리하다.
 
 ### IoC 컨테이너의 생명주기
@@ -234,6 +246,7 @@ AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext()
 ```
 
 - 앞 목차에서 작성한 NetworkClient 빈 객체를 사용하는 예제 코드
+
   ```java
   public class BeanLifeCycleTest {
       @Test
@@ -254,6 +267,7 @@ AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext()
       }
   }
   ```
+
   lifeCycleTest() 메서드의 첫 라인에서 ApplicationContext 클래스 생성자의 매개변수로 LifeCycleConfig 클래스를 넣어줌으로써 ac 객체는 NetworkClient 빈 객체를 얻었다.
 
 ## 결론

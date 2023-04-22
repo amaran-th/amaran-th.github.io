@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Markdown
   - UML
+thumbnailImg: "./sequence1.png"
 ---
 
 ## 들어가며

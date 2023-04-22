@@ -5,6 +5,7 @@ description: "Github의 template repository를 만들어보자."
 category: "주저리주저리"
 tags:
   - Github
+thumbnailImg: "./setting.png"
 ---
 
 ### 들어가며

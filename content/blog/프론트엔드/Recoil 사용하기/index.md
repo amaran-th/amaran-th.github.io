@@ -7,6 +7,7 @@ tags:
   - recoil
   - frontend
   - 상태관리 라이브러리
+thumbnailImg: "./recoil.png"
 ---
 
 ### React 프로젝트 생성하기

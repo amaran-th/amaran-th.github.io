@@ -7,6 +7,7 @@ tags:
   - Gatsby
   - React
   - GraphQL
+thumbnailImg: "./result3.png"
 ---
 
 ### 1. 포스트에 태그 추가하기

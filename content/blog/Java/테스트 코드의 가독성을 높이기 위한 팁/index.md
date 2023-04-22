@@ -8,6 +8,7 @@ tags:
   - Java
   - BDD
   - JUnit5
+thumbnailImg: "./example.png"
 ---
 
 ### @Nested

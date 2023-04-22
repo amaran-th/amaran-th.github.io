@@ -7,6 +7,7 @@ tags:
   - Gatsby
   - React
   - Github
+thumbnailImg: "./6.png"
 ---
 
 ## 서론

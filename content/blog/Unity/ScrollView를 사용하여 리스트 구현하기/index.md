@@ -6,6 +6,7 @@ category: "Unity"
 tags:
   - Unity
   - UI
+thumbnailImg: "./scroll_rect.png"
 ---
 
 ### 1. ScrollView UI 생성 및 설정

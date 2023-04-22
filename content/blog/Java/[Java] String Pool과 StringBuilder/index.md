@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Java
   - String
+thumbnailImg: "./pool.png"
 ---
 
 ## String Pool과 intern() 메서드는 무엇일까?

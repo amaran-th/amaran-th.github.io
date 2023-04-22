@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Spring
   - 로드맵
+thumbnailImg: "./singleton.png"
 ---
 
 ## 스프링 빈(Spring Bean) 이란?
