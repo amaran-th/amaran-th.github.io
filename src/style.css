@@ -266,6 +266,7 @@ footer {
 .mark_down table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
+
 /*Code*/
 :not(pre) > code[class*="language-"] {
   color: var(--color-primary);

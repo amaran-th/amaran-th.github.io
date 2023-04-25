@@ -245,6 +245,32 @@ public class AppCtx {
 
 💡Bean 주입에서는 `@Autowired`가 수동보다 우선권을 가졌지만 Bean 등록에서는 반대의 양상을 보인다.
 
+### ❗4/25 추가 내용
+
+제보를 받고 직접 확인해보니 @Component로 등록한 빈과 @Configuration으로 등록한 빈이 충돌하면 애플리케이션이 실행되지 않고 예외가 발생했다.
+
+```
+Description:
+
+The bean 'car2', defined in class path resource [racingcar/AppCtx.class], could not be registered. A bean with that name has already been defined in file [C:\Github_projects\jwp-racingcar\out\production\classes\racingcar\Car2.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+```
+
+[ComponentScan - 중복 등록과 충돌](https://velog.io/@hyun6ik/ComponentScan-중복-등록과-충돌)
+
+이에 대해서 찾아보니, 스프링부트에서는 `@Component`로 자동 등록한 Bean과 수동 등록한 Bean이 충돌했을 때 충돌 오류가 발생하도록 기본값이 설정되어 있다고 한다.
+
+이 경우 Bean 이름이 충돌하는 경우와 마찬가지로 Bean 이름을 바꾸거나, application.properties 파일에 아래 코드를 추가해주는 것으로 해결할 수 있다.
+
+```
+spring.main.allow-bean-definition-overriding=true
+```
+
+💡후자의 경우 Bean 충돌이 나지 않고 수동 Bean 등록이 우선적으로 적용된다.
+
 ## 참고 게시글
 
 ---
