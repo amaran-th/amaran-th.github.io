@@ -52,7 +52,9 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --color-point: #992f6d;
   --color-primary: #d867a9;
+  --color-sub: #e7a6bc;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -296,7 +298,7 @@ pre[class*="language-"] code {
 .mark_down a:hover,
 .mark_down a:focus {
   text-decoration: none;
-  color: #992f6d;
+  color: var(--color-point);
 }
 
 /* Custom classes */
@@ -339,14 +341,14 @@ pre[class*="language-"] code {
   margin-left: 0px;
 }
 .table-of-content > ul > li {
-  color: #e7a6bc;
+  color: var(--color-sub);
   margin-bottom: 0.5em;
 }
 .table-of-content > ul ul {
   border-left: 2px solid #dddddf;
   margin-left: 1em;
   padding-left: 1em;
-  color: #e7a6bc;
+  color: var(--color-sub);
 }
 
 .table-of-content a,
@@ -357,7 +359,7 @@ pre[class*="language-"] code {
 }
 .table-of-content a:hover,
 .table-of-content li a:hover {
-  color: #992f6d;
+  color: var(--color-point);
   background-color: #dddddf;
   transition: all 0.25s ease 0s;
 }
