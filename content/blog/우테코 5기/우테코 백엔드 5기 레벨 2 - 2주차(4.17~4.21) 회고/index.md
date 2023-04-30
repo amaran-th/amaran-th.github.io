@@ -33,8 +33,8 @@ tags:
 - [로드맵] [Spring Bean](https://amaran-th.github.io/Spring/[Spring]%20Bean/)에 대해 알아보고 정리했다.
 
 - [로드맵] [Component Scan](https://amaran-th.github.io/Spring/[Spring]%20Component%20Scan/)에 대해 공부했다.
+- [로드맵] [Layered Architecture](<https://amaran-th.github.io/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EC%84%A4%EA%B3%84/Layered%20Architecture(%EA%B3%84%EC%B8%B5%ED%99%94%20%EA%B5%AC%EC%A1%B0)/>)에 대해 알아보고 정리했다.
 - [근로] [Mockito](<http://amaran-th.github.io/Java/[Java]%20Mockito%20%EC%82%AC%EC%9A%A9%EB%B2%95(%EA%B8%B0%EB%B3%B8)/>)의 사용법을 숙지했다.
-- [Layered Architecture](<https://amaran-th.github.io/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EC%84%A4%EA%B3%84/Layered%20Architecture(%EA%B3%84%EC%B8%B5%ED%99%94%20%EA%B5%AC%EC%A1%B0)/>)에 대해 알아보고 정리했다.
 - [근로] [Code Coverage의 정의와 IntelliJ에서 브랜치 커버리지를 확인하는 방법](https://amaran-th.github.io/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EC%84%A4%EA%B3%84/[IntelliJ]%20%EC%BD%94%EB%93%9C%20%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0/)에 대해 알아보고 정리했다.
 
 ## ✨느낀점
