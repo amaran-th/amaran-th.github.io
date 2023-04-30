@@ -6,7 +6,6 @@ category: "Spring"
 tags:
   - 우아한 테크코스
   - Spring
-  - 로드맵
 ---
 
 ## 서론
