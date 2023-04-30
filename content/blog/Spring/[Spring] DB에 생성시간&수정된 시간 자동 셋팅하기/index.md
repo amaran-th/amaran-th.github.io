@@ -173,9 +173,13 @@ public class BaseEntity {
 ```
 
 - `@MappedSuperclass` : 생성 시간, 수정 시간과 같은 공통 매핑 정보가 필요할 때, 부모 클래스에 선언된 필드를 상속받는 클래스에서 그대로 사용하게 하기 위해 사용된다.
+
   ⚠️`@MappedSuperclass`가 선언된 클래스는 Entity가 아니며 직접 생성해서 사용될 일이 없기 때문에 **대부분 추상 클래스로 만들어진다**.
+
   ⇒부모 클래스를 상속받는 자식 클래스에게 **매핑 정보만을 제공**하고 싶을 때 사용하는 어노테이션
+
   💡JPA에서 @Entity 클래스는 `@Entity`나 `@MappedSuperclass`로 지정한 클래스만 상속할 수 있다.
+
 - 공통 클래스(BaseEntity)를 상속받은 Entity 클래스
 
   ```java
