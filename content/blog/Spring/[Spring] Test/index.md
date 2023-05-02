@@ -122,15 +122,51 @@ E2E 테스트는 기술적인 관점에서, 인수 테스트는 비즈니스적�
 
 - 컴포넌트 스캔 범위는 Bean 전체이다.(프로덕션 코드의 애플리케이션이 실행될 때 스캔되는 범위와 동일)
 - 속성
+
   - classes : 해당 속성을 정의해주면 해당 클래스의 빈만 정의된다.
     ```java
     @SpringBootTest(classes = {SessionController.class, WebConfig.class})
     ```
   - webEnvironment
-    - `WebEnvironment.MOCK` : 기본적으로 설정되는 기본 설정으로 내장 톰캣이 구동되지 않는다.
-    - `WebEnvironment.RANDOM_PORT` : 포트가 랜덤으로 지정되어 상용 앱에서 구동되는 것처럼 내장 톰캣이 구동된다.
-    - `WebEnvironment.DEFINED_PORT` : 정의된 포트로 내장톰캣이 구동된다.
-    - `WebEnvironment.NONE` : WebEnvironment.NONE으로 구동된다
+
+    - `WebEnvironment.MOCK`(default) : 실제 서블릿 컨테이너를 띄우지 않고 서블릿 컨테이너를 **mocking**한 것이 실행된다.
+
+      <aside>
+      💡 이 속성값을 사용할 때는 보통 MockMvc를 주입받아 테스트한다.
+
+      </aside>
+
+    - `WebEnvironment.RANDOM_PORT` : 스프링 부트의 내장 서버를 **랜덤 포트**로 띄운다.
+    - `WebEnvironment.DEFINED_PORT` : 스프링 부트의 내장 서버를 **정의된 포트**로 띄운다.
+
+      - 테스트를 위한 실제 서블릿 컨테이너를 띄운다.
+      - `TestRestTemplate` 또는 `WebTestClient`를 주입받아 테스트한다.
+
+      ```java
+
+      @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+      public class WebtoonApiControllerTest {
+
+            @LocalServerPort
+            private int port;
+
+            @Autowired
+            private TestRestTemplate restTemplate;
+
+            @Test
+            // Do some test...
+
+          }
+      ```
+
+- `WebEnvironment.NONE` : WebEnvironment.NONE으로 구동된다
+
+<aside>
+    💡 내장 서버의 포트번호 설정을 Defined_port보다 Random_Port로 설정하는 이유?
+
+: 포트번호를 고정할 경우 병렬 테스트를 진행할 때 **포트 충돌**이 일어날 수 있기 때문에
+
+  </aside>
 
 ### @WebMvcTest
 
@@ -266,3 +302,7 @@ E2E 테스트는 기술적인 관점에서, 인수 테스트는 비즈니스적�
 [Spring Boot 테스트 애노테이션](https://catsbi.oopy.io/e2fa9884-eb59-4f79-8732-6e3e14e456fd)
 
 [[level2. 웹 체스 미션] @JdbcTest, @DataJdbcTest, @JpaTest](https://pomo0703.tistory.com/100)
+
+[[Spring/번역] 컨트롤러 테스트 가이드 in Spring Boot](https://dadadamarine.github.io/java/spring/2019/03/16/spring-boot-validation.html)
+
+[phind 답변](https://www.phind.com/search?cache=818b4df7-5ee4-476f-9e90-747b5e3bb3bc)
