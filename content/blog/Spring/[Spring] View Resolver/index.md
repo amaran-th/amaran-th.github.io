@@ -75,12 +75,17 @@ View Resolver를 통해 원하는 View 형식(View Type)으로 View를 전달해
 
 ---
 
-컨트롤러에서 매번 View를 생성하여 반환하는 것은 비효율적이기 때문에, 스프링에서는 이 작업을 적절히 분리하여 View Resolver가 View를 선택(매핑)하고 생성하게 하였다.
+DispatcherServlet에 View 객체를 전달하는 방법은 크게 2가지가 있다.
+
+1. 컨트롤러에서 직접 View 타입의 객체를 반환하는 방법
+2. String 타입의 View 이름을 반환하는 방법\*
+
+컨트롤러에서 매번 View를 생성하여 반환하는 것(첫 번째 방법)은 비효율적이기 때문에, 스프링에서는 이 작업을 적절히 분리하여 View Resolver가 View를 선택(매핑)하고 생성하게 하였다(두 번째 방법).
 
 View Resolver가 수행하는 작업은 다음과 같다.
 
 - 데이터 객체(Map, Model, ModelAndView 등이 될 수 있음)를 View 영역으로 전달하기 위해, 적절한 View 객체를 매핑한다.
-- 좀 더 구체적으로 표현하자면, View Resolver는 컨트롤러(핸들러)가 반환한 **View 이름으로 해당되는 View Component를 찾아 매핑한다.**
+- 좀 더 구체적으로 표현하자면, View Resolver는 컨트롤러(핸들러)가 반환한 **View 이름으로 그에 해당되는 View Component를 찾아 매핑한다.**
 - 컨트롤러는 View의 논리적인 이름만을 반환한 뒤 역할을 종료하고, 이를 DispatcherServlet의 View Resolver가 받아 사용할 View 객체를 찾아 생성하는 작업을 수행한다.
 - 스프링 MVC 구조에서의 동작 흐름
   - Handler Mapping, Handler Adapter를 통해 Controller의 Handler가 실행되면, Handler가 처리된 ModelAndView를 반환한다.
