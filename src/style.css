@@ -343,6 +343,8 @@ pre[class*="language-"] code {
 
 /*toc*/
 .table-of-content {
+  min-width: 30vw;
+  font-size: medium;
   background: #fff;
   overflow-wrap: break-word;
   height: 100%;
