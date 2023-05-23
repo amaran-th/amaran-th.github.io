@@ -544,10 +544,10 @@ spring.datasource.url=jdbc:mysql://localhost:[포트(기본 3306)]/[table이름]
 spring.datasource.username=[설정한유저네임(기본 root)]
 spring.datasource.password=[설정한비밀번호]
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.show-sql=true
+logging.level.org.springframework.jdbc.core=TRACE
 ```
 
-- `spring.jpa.show-sql` 속성 : true로 설정하면 실행되는 쿼리 문구를 로그에 보여준다.
+- `logging.level.org.springframework.jdbc.core` 속성 : 실행되는 쿼리 문구를 로그에 보여준다.
 
 [Spring에 MySQL 연동하기](https://velog.io/@ddusi/Spring-1)
 
