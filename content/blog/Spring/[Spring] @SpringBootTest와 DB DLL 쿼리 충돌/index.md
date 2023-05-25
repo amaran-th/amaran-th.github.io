@@ -33,7 +33,7 @@ webEnvironment 속성을 비롯한 설정 정보들이 달라질 때 Application
   ⇒webEnvironment 속성이 동일할 때 캐싱된 ApplicationContext가 없다면 새로 생성하고, 있다면 캐싱된 ApplicationContext를 가져와서 사용한다.
 - **ApplicationContext가 처음 생성될 때마다 DB Connection을 연결한다.**
   - 이 때 생성된 DB Connection들은 모든 테스트가 종료된 후에 끊어진다.
-  💡 sql 스크립트는 DB Connection이 연결될 때 한 번 실행된다.
+    💡 sql 스크립트는 DB Connection이 연결될 때 한 번 실행된다.
 
 <aside>
 ⚠️ ApplicationContext가 여러 개다 ≠ 구동된 웹 서버가 여러 개다
@@ -90,6 +90,14 @@ webEnvironment 속성을 비롯한 설정 정보들이 달라질 때 Application
    <aside>
    ⚠️ sql 스크립트에 DML 쿼리가 포함되어 있다면 해당 쿼리도 중복 실행된다.(insert가 2번 일어난다든지)
 
+   이 경우 다음과 같이 INSERT 쿼리에 ON를 사용해 해결할 수 있다.
+
+   ```sql
+    INSERT INTO users (NAME, email) VALUES ('값1', '값2') ON DUPLICATE KEY UPDATE name='값1', email='값2';
+   ```
+
+   동일한 key가 존재하지 않을 때는 데이터를 추가하고, 이미 동일한 key가 존재하는 경우 데이터를 업데이트한다.
+
    </aside>
 
 3. `@AutoConfigureTestDatabase`
@@ -98,9 +106,11 @@ webEnvironment 속성을 비롯한 설정 정보들이 달라질 때 Application
 
    <aside>
    ⚠️ @AutoConfigureTestDatabase를 붙인 테스트마다 같은 DB를 공유하는 것은 마찬가지이기 때문에, ApplicationContext가 3개 이상이라면 사용할 수 없는 방법이다.
-   ⇒**@AutoConfigureTestDatabase마다 새 DB를 생성하는 것이 아님!**
+   ⇒<b>@AutoConfigureTestDatabase마다 새 DB를 생성하는 것이 아님!</b>
 
    </aside>
+
+4. (2023-05-25 추가) `@SpringBootTest` 어노테이션을 사용하는 테스트의 경우, `webEnvironment` 속성을 `RANDOM_PORT`로 설정해주면, 새로운 포트를 사용하는 것이기 때문에 새 DB를 받아 사용하게 된다.
 
 ## 참고 자료
 
