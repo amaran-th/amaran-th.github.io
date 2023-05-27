@@ -158,7 +158,9 @@ debug 이하 레벨은 주로 개발 과정에서 쓰이고, 실제 환경에서
     </aside>
 
 - pattern 적용 예시
+
   사용한 패턴 : `"%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta([%thread]) %highlight([%-3level]) %logger{5} - %msg %n"`
+
   ```java
   2023-05-25 11:53:38.478 [http-nio-8080-exec-1] [DEBUG] o.s.j.c.JdbcTemplate - Executing prepared SQL query
   ```
@@ -366,7 +368,7 @@ Logging 관련 설정을 위해 xml 파일로 설정하는 방법과 java code�
     
    **[예제 코드 3]**
 
-   다른 예시를 보면, HTTP 요청/응답에 대한 로깅을 위해 `logback-access.xml`을 다음과 같이 작성하면, 콘솔에 HTTP 요청/응답이 출력되고 `targt/http-access.log` 파일에 요청/응답과 처리된 시간을 기록한다.(rollingPolicy는 아직 어떻게 동작하는 건지 잘 모르겠다.)
+   HTTP 요청/응답에 대한 로깅을 위해 `logback-access.xml`을 다음과 같이 작성하면, 콘솔에 HTTP 요청/응답이 출력되고 `targt/http-access.log` 파일에 요청/응답과 처리된 시간을 기록한다.(rollingPolicy는 아직 어떻게 동작하는 건지 잘 모르겠다.)
 
    ```xml
    <configuration>
