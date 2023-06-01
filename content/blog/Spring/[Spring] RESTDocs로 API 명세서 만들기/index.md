@@ -58,7 +58,7 @@ thumbnailImg: "./thumbnail.png"
 
 ![Untitled](c.png)
 
-위 파일은 {서버 url}/docs/index.md로 접속하면 렌더링되는 view 파일이다.
+앞의 .adoc 파일이 .html 파일로 변환된 것으로, {서버 url}/docs/index.md로 접속하면 렌더링되는 view 파일이다.
 
 다음은 문서화를 위해 사용된 도구들이다.
 
@@ -103,7 +103,8 @@ ext { // 변수를 선언하는 것이라고 보면 됨
 	snippetsDir = file('build/generated-snippets')
 }
 
-test { // snippetsDir를 test task의 출력으로 설정한다.=>test 결과물(스니펫)들이 build/generated-snippets 경로에 생성된다.
+test {
+    // snippetsDir를 test task의 출력으로 설정한다.=>test 결과물(스니펫)들이 build/generated-snippets 경로에 생성된다.
 	outputs.dir snippetsDir
 	useJUnitPlatform()
 }
