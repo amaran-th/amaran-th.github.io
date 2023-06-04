@@ -25,7 +25,7 @@ thumbnailImg: "./roadmap.png"
 ## ✨배운 점&궁금한 점
 
 - [이번 주차 기술 부채](https://amaran-th.github.io/%EC%9A%B0%ED%85%8C%EC%BD%94%205%EA%B8%B0/[%EA%B8%B0%EC%88%A0%EB%B6%80%EC%B1%84]%20%EC%9A%B0%ED%85%8C%EC%BD%94%205%EA%B8%B0%20%EB%A0%88%EB%B2%A82%20-%201%EC%A3%BC%EC%B0%A8/)
-- [로드맵 학습하기(IoC Container)](https://amaran-th.github.io/Spring/[Spring]%20IoC%20Container/)
+- [로드맵] [IoC Container](https://amaran-th.github.io/Spring/[Spring]%20IoC%20Container/)
 
 ## ✨느낀점
 
