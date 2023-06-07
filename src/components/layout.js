@@ -19,7 +19,7 @@ const Layout = ({
 }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const theme = "amaranth"
+  const theme = "hydrangea"
   const darkMode = true
   const [openCategory, setOpenCategory] = useState(false)
   let header
