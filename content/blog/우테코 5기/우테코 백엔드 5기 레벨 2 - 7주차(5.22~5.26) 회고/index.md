@@ -1,7 +1,7 @@
 ---
 title: 우테코 백엔드 5기 레벨 2 - 7주차(5.22~5.26) 회고
 date: "2023-05-29T13:07:03.284Z"
-description: "우테코 5기 - level2 6주차 회고"
+description: "우테코 5기 - level2 7주차 회고"
 category: "우테코 5기"
 tags:
   - 우아한 테크코스

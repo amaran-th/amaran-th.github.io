@@ -29,6 +29,7 @@ tags:
 
 <aside>
 
+
 💡 **trivial Functional Dependency**(자명한 함수 종속성)
 
 ---
