@@ -263,10 +263,10 @@ Agent가 GIthub 서버로 직접 접근하는 형태
 - 단점
   - 용량이 크다.
 
-<aside>
-⚠️ 저는 해당 방법을 실제로 사용해보진 않았으며, 이런 방법이 있다는 것만 알아주시면 될 듯합니다.
+(2023년 6월 10일자 추가)
+직접 이 방법으로 배포를 해보고 정리했으니, 필요하다면 다음 포스팅을 참고해주면 되겠다.
 
-</aside>
+[self-hosted runner로 서버 자동배포](https://amaran-th.github.io/%EC%9D%B8%ED%94%84%EB%9D%BC/[CICD]%20Self-hosted%20Runner%EB%A1%9C%20%EC%84%9C%EB%B2%84%20%EB%B0%B0%ED%8F%AC%20%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0/)
 
 ### 빌드만 Github Action으로 수행 후 서버에서 직접 배포
 
