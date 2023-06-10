@@ -60,6 +60,7 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-back: #ededeb;
 }
 
 /* HTML elements */
@@ -244,9 +245,9 @@ footer {
   color: var(--color-text-light);
   margin-top: var(--spacing-6);
   margin-left: calc(var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
+  padding: var(--spacing-4);
   border-left: var(--spacing-1) solid var(--color-sub);
+  background-color: #f8f9fa;
 }
 
 .mark_down blockquote > :last-child {
@@ -283,7 +284,7 @@ footer {
 /*Code*/
 :not(pre) > code[class*="language-"] {
   color: var(--color-primary);
-  background: #ededeb !important;
+  background: var(--color-back) !important;
   font-size: 100% !important;
   padding: 2px 5px !important;
   margin: var(--spacing-0);
