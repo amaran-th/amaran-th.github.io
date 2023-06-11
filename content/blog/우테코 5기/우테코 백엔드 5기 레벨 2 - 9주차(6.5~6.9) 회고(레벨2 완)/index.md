@@ -14,7 +14,9 @@ tags:
 - 6/5(월)
   - 레벨 인터뷰 돌아보기 활동을 했다.
     지난 레벨1에서의 레벨 인터뷰의 피드백을 공유하였다.
+
     [레벨1 레벨 인터뷰 돌아보기 | 2023.06.05 · woowacourse/retrospective · Discussion #36](https://github.com/woowacourse/retrospective/discussions/36)
+
   - [근로] 지금까지 학습한 도메인을 다같이 복습했다.
   - 예선을 통과한 프로젝트 기획안들이 공개되었다!(내 건 목록에 없었다…^-^)
 - 6/6(화)
