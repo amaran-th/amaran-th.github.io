@@ -45,9 +45,9 @@
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
+  --fontSize-1: 1.2rem;
+  --fontSize-2: 1.44rem;
+  /* --fontSize-3: 1.44rem; */
   --fontSize-4: 1.728rem;
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
@@ -55,6 +55,7 @@
   --color-point: #567eb9;
   --color-primary: #0c3675;
   --color-sub: #77b2da;
+  --color-code: #da77a0;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -132,7 +133,7 @@ footer {
 }
 
 .mark_down h3 {
-  font-size: var(--fontSize-3);
+  font-size: var(--fontSize-4);
 }
 /* 안 쓸 것 같으니 일단 주석처리
 .mark_down h4 {
@@ -283,7 +284,7 @@ footer {
 
 /*Code*/
 :not(pre) > code[class*="language-"] {
-  color: var(--color-primary);
+  color: var(--color-code);
   background: var(--color-back) !important;
   font-size: 100% !important;
   padding: 2px 5px !important;
@@ -304,7 +305,7 @@ pre[class*="language-"] code {
 
 /* Link */
 .mark_down a {
-  color: var(--color-primary);
+  color: var(--color-sub);
 }
 
 .mark_down a:hover,
@@ -324,7 +325,7 @@ pre[class*="language-"] code {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
   text-decoration: none;
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-4);
 }
 
 .bio {
