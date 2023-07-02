@@ -273,12 +273,12 @@ footer {
   background-color: var(--color-sub);
   border-left: 2px solid var(--color-accent);
   color: white;
+  padding: 0.5em;
 }
 .mark_down table thead tr th:first-child,
 .mark_down table thead tr td:first-child,
 .mark_down table tbody tr td:first-child {
   border-left: none;
-  padding: 0.5em;
 }
 .mark_down table tbody tr td {
   padding: 0.5em;
