@@ -40,6 +40,7 @@ tags:
 ## ✨ 공부한 것
 
 - [헥사고날 아키텍처](<https://amaran-th.github.io/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EC%84%A4%EA%B3%84/Hexagonal%20Architecture(%ED%97%A5%EC%82%AC%EA%B3%A0%EB%82%A0%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)/>)에 대해 알아보았다.
+- 각자 조사해오기로 한 [Git 브랜치 전략](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[Github]%20Git%20%EB%B8%8C%EB%9E%9C%EC%B9%98%20%EC%A0%84%EB%9E%B5/)과 [Git Commit 컨벤션](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[Github]%20Git%20Commit%20Convention/)에 대해 알아보았다.
 
 ## ✨ 회고
 
