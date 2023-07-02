@@ -52,8 +52,8 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-point: #567eb9;
-  --color-primary: #0c3675;
+  --color-point: #0c3675;
+  --color-primary: #567eb9;
   --color-sub: #77b2da;
   --color-code: #da77a0;
   --color-text: #2e353f;
@@ -263,23 +263,27 @@ footer {
 .mark_down table {
   width: 100%;
   margin: var(--spacing-4) var(--spacing-0);
-  border-collapse: collapse;
-  border-spacing: 0.25rem;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 4px solid var(--color-sub);
+  border-spacing: 0rem;
 }
 
 .mark_down table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
-  border-left: 1px solid var(--color-accent);
+  background-color: var(--color-sub);
+  border-left: 2px solid var(--color-accent);
+  color: white;
 }
 .mark_down table thead tr th:first-child,
 .mark_down table thead tr td:first-child,
 .mark_down table tbody tr td:first-child {
   border-left: none;
-  padding-left: 0em;
+  padding: 0.5em;
 }
 .mark_down table tbody tr td {
-  padding-left: 1em;
-  border-left: 1px solid var(--color-accent);
+  padding: 0.5em;
+  border-bottom: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-accent);
 }
 
 /*Code*/
