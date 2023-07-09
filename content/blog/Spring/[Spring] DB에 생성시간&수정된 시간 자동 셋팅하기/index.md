@@ -147,7 +147,9 @@ public class MyApplication {
   ```
 
 - `@CreatedDate`와 `@LastModifiedDate`
+
   : Spring Data Jpa에서 제공하는 어노테이션
+
   - `@CreatedDate` : 해당 엔티티가 **생성될 때** 생성된 시간을 자동으로 삽입해주는 어노테이션. 일반적으로 생성일자는 수정되어선 안되므로 `@Column(updatable = false)`를 함께 적용해준다.
   - `@LastModifiedDate` : 해당 엔티티가 **수정될 때** 수정된 시간을 자동으로 삽입해주는 어노테이션
   - `@CreatedBy` : 해당 엔티티가 **생성될 때** 생성하는 사람이 **누구인지**를 자동으로 삽입해주는 어노테이션
