@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const ContentIndex = ({ children }) => {
   // Set these values by editing "siteMetadata" in gatsby-config.js
 
-  return <nav className="bg-black">{children}</nav>
+  return <nav className="">{children}</nav>
 }
 
 export default ContentIndex

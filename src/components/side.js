@@ -12,8 +12,7 @@ const CategoryList = ({ categories }) => {
   // Set these values by editing "siteMetadata" in gatsby-config.js
 
   return (
-    <nav className=" bg-shadow m-2 p-4 shadow-md rounded-xl sticky top-32 mt-4 ">
-      <p className="text-point text-center font-bold">-● 카테고리 ●-</p>
+    <nav className="bg-shadow m-2 p-4 sticky top-32">
       <ul className="">
         {categories?.map(category => (
           <li key={category}>

@@ -39,7 +39,7 @@ const Layout = ({
     )
   }
   category = (
-    <nav className="min-h-[75vh] bg-white border-y border-r p-4 shadow-md rounded-r-xl sticky top-28">
+    <nav className="h-full bg-white border-y border-r p-4 shadow-md sticky">
       <ul className="space-y-2 py-4">
         {categories?.map(category => (
           <li key={category.fieldValue}>
@@ -82,8 +82,8 @@ const Layout = ({
       <body className="relative">
         <nav
           className={
-            "fixed min-w-[12rem] left-0 z-[98] mt-4 transition ease-in-out " +
-            (openCategory ? "" : "lg:translate-x-0 -translate-x-[12rem]")
+            "h-full fixed min-w-[16rem] left-0 z-[98] top-[80px] transition ease-in-out " +
+            (openCategory ? "" : "lg:translate-x-0 -translate-x-[16rem]")
           }
         >
           {category}
@@ -103,15 +103,18 @@ const Layout = ({
               </div>
             </div>
           </div>
-
-          <nav
-            className={
-              "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
-              "lg:block lg:translate-x-0 translate-x-[12rem]"
-            }
-          >
-            <TableOfContents content={tableOfContents} />
-          </nav>
+          {tableOfContents ? (
+            <nav
+              className={
+                "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
+                "lg:block lg:translate-x-0 translate-x-[12rem]"
+              }
+            >
+              <TableOfContents content={tableOfContents} />
+            </nav>
+          ) : (
+            ""
+          )}
         </div>
       </body>
 
