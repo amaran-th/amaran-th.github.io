@@ -7,7 +7,7 @@ tags:
   - database
   - 형상 관리 툴
   - 데이터베이스 성능
-thumbnail: "./thumbnail.png"
+thumbnailImg: "./thumbnail.png"
 ---
 
 ![download.png](thumbnail.png)

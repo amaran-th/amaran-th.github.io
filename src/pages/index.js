@@ -24,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
     <>
       <Seo />
       <Layout location={location} title={siteTitle} categories={categories}>
-        <ol style={{ listStyle: `none` }}>
+        <div className="grid md:grid-cols-3 grid-cols-2 space-x-4">
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             console.log(post)
@@ -33,53 +33,56 @@ const BlogIndex = ({ data, location }) => {
 
             return (
               <Link to={post.fields.slug} itemProp="url">
-                <li
+                <div
                   key={post.fields.slug}
-                  className="flex justify-between justify-items-center border-2 rounded-md shadow-md p-4 my-4 hover:bg-slate-100 "
+                  className="h-80 flex justify-between justify-items-center border-2 rounded-md shadow-md my-4 hover:bg-slate-100 hover:shadow-xl"
                 >
                   <article
-                    className=""
                     itemScope
                     itemType="http://schema.org/Article"
+                    className="flex flex-col p-4"
                   >
-                    <header className="mb-4">
-                      <h2 className="mt-2 text-main text-3xl">
-                        <span itemProp="headline" className="font-title">
-                          {title}
+                    {thumbnailImg ? (
+                      <div className="max-w-full w-full h-[116px]">
+                        <GatsbyImage
+                          fluid={thumbnailImg}
+                          className="rounded-md h-full w-full"
+                        />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    <div className="flex-auto flex flex-col">
+                      <header className="mb-2">
+                        <h2 className="listItemTitle mt-2 text-main text-2xl max-h-16">
+                          <span itemProp="headline" className="font-title">
+                            {title}
+                          </span>
+                        </h2>
+                        <span className="text-sub text-sm">
+                          {post.frontmatter.date}
                         </span>
-                      </h2>
-                      <span className="text-sub text-sm">
-                        {post.frontmatter.date}
-                        <span className="font-bold mx-2 text-gray-400 text-sm">
+                        <span className="ml-2 font-bold text-gray-400 text-sm">
                           {post.frontmatter.category}
                         </span>
-                      </span>
-                    </header>
-                    <section>
-                      <p
-                        className="mb-0"
-                        dangerouslySetInnerHTML={{
-                          __html: post.frontmatter.description || post.excerpt,
-                        }}
-                        itemProp="description"
-                      />
-                    </section>
-                  </article>
-                  {thumbnailImg ? (
-                    <div className="min-w-[5rem] max-w-[20rem] w-[150px] h-[150px]">
-                      <GatsbyImage
-                        fluid={thumbnailImg}
-                        className="rounded-xl h-full w-full"
-                      />
+                      </header>
+                      <section className="max-h-full">
+                        <p
+                          className="listItemTitle mb-0"
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              post.frontmatter.description || post.excerpt,
+                          }}
+                          itemProp="description"
+                        />
+                      </section>
                     </div>
-                  ) : (
-                    ""
-                  )}
-                </li>
+                  </article>
+                </div>
               </Link>
             )
           })}
-        </ol>
+        </div>
       </Layout>
     </>
   )

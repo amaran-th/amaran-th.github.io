@@ -79,7 +79,7 @@ const Layout = ({
         </button>
         {header}
       </header>
-      <body className="relative">
+      <body className="relative mb-4">
         <nav
           className={
             "h-full fixed min-w-[16rem] left-0 z-[98] top-[80px] transition ease-in-out " +
@@ -94,7 +94,7 @@ const Layout = ({
               <Bio />
             </div>
             <div className="w-full flex max-w-6xl justify-between">
-              <nav className="lg:min-w-[12rem] lg:static lg:block"></nav>
+              <nav className="lg:min-w-[16rem] lg:static lg:block"></nav>
               <div
                 className="w-full max-w-3xl px-5 mt-12"
                 data-is-root-path={isRootPath}
@@ -107,7 +107,7 @@ const Layout = ({
             <nav
               className={
                 "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
-                "lg:block lg:translate-x-0 translate-x-[12rem]"
+                "lg:block lg:translate-x-0 translate-x-[16rem]"
               }
             >
               <TableOfContents content={tableOfContents} />
@@ -118,7 +118,7 @@ const Layout = ({
         </div>
       </body>
 
-      <footer>
+      <footer className="bg-main flex justify-end text-white h-40 px-10">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
