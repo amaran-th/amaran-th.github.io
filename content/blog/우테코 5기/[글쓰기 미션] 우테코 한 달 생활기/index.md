@@ -7,6 +7,7 @@ tags:
   - 글쓰기
   - 회고
   - 우아한 테크코스
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 [Github 링크](https://github.com/amaran-th/woowa-writing-5/tree/amaran-th)

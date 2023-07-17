@@ -7,7 +7,7 @@ tags:
   - 기술 부채
   - 데이터베이스
   - 우아한 테크코스
-thumbnailImg: "./im.png"
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 ## 코드 리뷰

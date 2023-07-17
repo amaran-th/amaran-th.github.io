@@ -7,7 +7,7 @@ tags:
   - 기술 부채
   - Spring
   - 우아한 테크코스
-thumbnailImg: "./image.png"
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 ## 코드 리뷰

@@ -6,7 +6,7 @@ category: "우테코 5기"
 tags:
   - 기술 부채
   - 우아한 테크코스
-thumbnailImg: "./persistence.png"
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 ## 코드 리뷰

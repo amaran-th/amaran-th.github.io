@@ -6,6 +6,7 @@ category: "우테코 5기"
 tags:
   - TIL
   - 우아한 테크코스
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 ### 1레벨

@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - 백엔드
   - 근황
+thumbnailImg: "../thumbnail.jpg"
 ---
 
 ### 우테코에서 첫 한 주를 보내며
