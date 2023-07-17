@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import kebabCase from "lodash.kebabcase"
+import GatsbyImage from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -15,6 +16,7 @@ const BlogPostTemplate = ({
   const siteTitle = site.siteMetadata?.title || `Title`
   const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
+  const thumbnailImg = post.frontmatter.thumbnailImg?.childImageSharp.fluid
   console.log(post.tableOfContents)
   return (
     <Layout
@@ -41,6 +43,13 @@ const BlogPostTemplate = ({
             <span>{post.frontmatter.date}</span>
           </p>
         </header>
+        {thumbnailImg ? (
+          <div className="max-w-full w-full mb-8">
+            <GatsbyImage fluid={thumbnailImg} className="h-full w-full" />
+          </div>
+        ) : (
+          ""
+        )}
         <nav
           className={
             "border-2 rounded-md p-2 max-h-[80vh] z-[98] mt-4 transition ease-in-out block lg:hidden"
@@ -172,6 +181,13 @@ export const pageQuery = graphql`
         date(formatString: "YYYY년 MM월 DD일")
         description
         tags
+        thumbnailImg {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
