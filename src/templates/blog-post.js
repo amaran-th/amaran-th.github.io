@@ -75,7 +75,7 @@ const BlogPostTemplate = ({
       <br />
       <nav className="blog-post-nav">
         <ul
-          className="text-main font-bold hover:text-point"
+          className="text-main font-bold"
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -84,7 +84,7 @@ const BlogPostTemplate = ({
             padding: 0,
           }}
         >
-          <li>
+          <li className="hover:text-point">
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ←{" "}
@@ -94,7 +94,7 @@ const BlogPostTemplate = ({
               </Link>
             )}
           </li>
-          <li>
+          <li className="hover:text-point">
             {next && (
               <Link to={next.fields.slug} rel="next">
                 <span className="underline underline-offset-4">
