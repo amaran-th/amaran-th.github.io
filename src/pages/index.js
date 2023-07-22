@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <>
-      <Seo />
+      <Seo title={`메인 홈`} />{" "}
       <Layout location={location} title={siteTitle} categories={categories}>
         <div className="grid md:grid-cols-3 grid-cols-2 space-x-4">
           {posts.map(post => {
@@ -95,7 +95,6 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Faded Angels" />
 
 export const pageQuery = graphql`
   {

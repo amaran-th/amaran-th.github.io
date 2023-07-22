@@ -10,7 +10,7 @@
 const siteUrl = `https://amaran-th.github.io`
 module.exports = {
   siteMetadata: {
-    title: `Faded Angels`,
+    title: `아마란스 생각`,
     author: {
       name: `Amaranth(아마란스)`,
       summary: `백엔드 개발자 지망생`,

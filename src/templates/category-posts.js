@@ -105,7 +105,6 @@ export default CategoryPost
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Faded Angels" />
 
 export const pageQuery = graphql`
   query ($category: String!) {
