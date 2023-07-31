@@ -6,6 +6,7 @@ category: "Spring"
 tags:
   - 우아한 테크코스
   - Spring
+thumbnailImg: "../logback.png"
 ---
 
 ## Logging
