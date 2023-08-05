@@ -2,7 +2,7 @@
 title: "[Github] Git Commit Convention"
 date: "2023-07-02T21:43:03.284Z"
 description: "Github의 Git Commit 컨벤션에 대해 알아보자."
-category: "주저리주저리"
+category: "Github"
 tags:
   - Github
 ---

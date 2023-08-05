@@ -2,7 +2,7 @@
 title: README 파일 만들기
 date: "2023-02-18T14:42:03.284Z"
 description: "Github 레파지토리를 소개하는 README 파일을 작성해보자."
-category: "주저리주저리"
+category: "Github"
 tags:
   - 우아한 테크코스
   - 글쓰기

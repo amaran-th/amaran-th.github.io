@@ -2,7 +2,7 @@
 title: "[Github] Issue & PR Template 설정하기"
 date: "2023-07-08T15:46:03.284Z"
 description: "Github의 이슈, PR의 템플릿을 설정하는 방법에 대해 알아보자."
-category: "주저리주저리"
+category: "Github"
 tags:
   - Github
 thumbnailImg: "./1.png"

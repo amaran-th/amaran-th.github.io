@@ -2,7 +2,7 @@
 title: dependencies vs devDependencies
 date: "2022-11-21T13:01:03.284Z"
 description: "package.json의 dependencies vs devDependencies 속성에 대하여"
-category: "주저리주저리"
+category: "프론트엔드"
 tags:
   - node
 ---

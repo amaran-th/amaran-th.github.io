@@ -2,7 +2,7 @@
 title: "[Github] Git 브랜치 전략"
 date: "2023-07-02T20:59:03.284Z"
 description: "Github의 Git 브랜치 전략에 대해 알아보자."
-category: "주저리주저리"
+category: "Github"
 tags:
   - Github
 thumbnailImg: "./git-flow.png"
