@@ -5,6 +5,7 @@ description: "Github의 Git Commit 컨벤션에 대해 알아보자."
 category: "Github"
 tags:
   - Github
+thumbnailImg: "../github.jpg"
 ---
 
 # Git Commit Convention
