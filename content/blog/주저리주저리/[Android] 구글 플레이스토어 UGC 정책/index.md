@@ -5,6 +5,7 @@ description: "구글 플레이스토어 심사 통과에 게시글 및 사용자
 category: "주저리주저리"
 tags:
   - 우아한 테크코스
+thumbnailImg: "./logo.png"
 ---
 
 ## 서론
