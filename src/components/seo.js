@@ -35,6 +35,10 @@ const Seo = ({ description, title, children }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta
+        property="og:image"
+        content="https://amaran-th.github.io/static/7bdca5c75cee8c2aadcba0f8aece6b7c/d4bf4/profile-pic.avif"
+      />
       <meta name="twitter:card" content="summary" />
       <meta
         name="google-site-verification"
