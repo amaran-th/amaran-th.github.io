@@ -154,3 +154,5 @@ public class UpdateNotificationCommandService {
 ```
 
 `@EnableAsync` 어노테이션을 통해 비동기를 사용하겠다고 선언하고, 비동기로 동작하고자 하는 메서드에 `@Async` 어노테이션을 설정해주면 된다.
+
+[spring 이벤트 사용하기(event publisher, event listener)](https://wildeveloperetrain.tistory.com/217)
