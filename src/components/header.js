@@ -1,27 +1,67 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ openCategory, setOpenCategory, title }) => {
-  // Set these values by editing "siteMetadata" in gatsby-config.js
+  const [percentScr, setPercentScr] = useState(0) //웹페이지 자체의 스크롤
+  const handleScroll = () => {
+    //Math.floor(window.pageYOffset)    //현재 스크롤 위치
+    //document.documentElement.clientHeight //디바이스 높이
+    //document.documentElement.scrollHeight //스크롤을 반영한 전체 높이
+    setPercentScr(
+      (100 * Math.floor(window.pageYOffset)) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)
+    )
+    console.log(percentScr)
+  }
+  useEffect(() => {
+    //이벤트 리스너 추가
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      //이벤트 리스너 제거
+      window.removeEventListener("scroll", handleScroll)
+    }
+  })
 
   return (
-    <header className="flex bg-white sticky top-0 shadow-md p-5 z-[99] opacity-90 backdrop-blur-lg">
-      <p className="font-logo sm:text-5xl text-4xl">
-        <button
-          className="mr-4 px-2 bg-white z-[100]"
-          onClick={() => setOpenCategory(!openCategory)}
-        >
-          <ChevronDoubleRightIcon
-            className={
-              "h-6 w-6 inline-block transition ease-in-out " +
-              (openCategory ? "rotate-180" : "")
-            }
-          />
-        </button>
-        <Link to="/">{title}</Link>
-      </p>
-    </header>
+    <>
+      <header className="flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
+        <p className="font-logo sm:text-3xl text-2xl p-5 pb-0">
+          <button
+            className="mr-4 px-2 bg-white z-[100]"
+            onClick={() => setOpenCategory(!openCategory)}
+          >
+            <ChevronDoubleRightIcon
+              className={
+                "h-6 w-6 inline-block transition ease-in-out " +
+                (openCategory ? "rotate-180" : "")
+              }
+            />
+          </button>
+          <Link to="/">{title}</Link>
+        </p>
+        <div className="flex h-[50px] shadow-inner w-full">
+          <div className="w-[50px] bg-sub"></div>
+          <div
+            className={`flex justify-end bg-sub rounded-r-full`}
+            style={{ width: percentScr + "%" }}
+          >
+            <StaticImage
+              className="bio-avatar bg-white rounded-full border border-sub"
+              layout="fixed"
+              formats={["auto", "webp", "avif"]}
+              src="../images/profile-pic.png"
+              width={50}
+              height={50}
+              quality={95}
+              alt="Profile picture"
+            />
+          </div>
+        </div>
+      </header>
+    </>
   )
 }
 
