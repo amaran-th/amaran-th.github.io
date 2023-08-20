@@ -21,7 +21,7 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
 
   return (
     <>
-      <header className="flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
+      <header className="w-full flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
         <p className="font-logo sm:text-3xl text-2xl p-5 pb-0">
           <button
             className="mr-4 px-2 bg-white z-[100]"
