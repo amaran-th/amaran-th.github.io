@@ -1,11 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import {
-  ChevronRightIcon,
-  ChevronDoubleRightIcon,
-} from "@heroicons/react/24/solid"
+import { ChevronRightIcon } from "@heroicons/react/24/solid"
 import Bio from "./bio"
 import TableOfContents from "./TableOfContents"
+import Header from "./header"
 
 const Layout = ({
   location,
@@ -22,22 +20,6 @@ const Layout = ({
   const darkMode = true
   const [openCategory, setOpenCategory] = useState(true)
 
-  const header = (
-    <p className="font-logo sm:text-5xl text-4xl">
-      <button
-        className="mr-4 px-2 bg-white z-[100]"
-        onClick={() => setOpenCategory(!openCategory)}
-      >
-        <ChevronDoubleRightIcon
-          className={
-            "h-6 w-6 inline-block transition ease-in-out " +
-            (openCategory ? "rotate-180" : "")
-          }
-        />
-      </button>
-      <Link to="/">{title}</Link>
-    </p>
-  )
   const category = (
     <nav className="h-full bg-white border-y border-r shadow-md sticky">
       <div className="w-full bg-shadow flex justify-center h-[15em]">
@@ -80,9 +62,11 @@ const Layout = ({
   )
   return (
     <div className={theme + "-theme " + (darkMode ? "dark" : "light") + " "}>
-      <header className="flex bg-white sticky top-0 shadow-md p-5 z-[99] opacity-90 backdrop-blur-lg">
-        {header}
-      </header>
+      <Header
+        openCategory={openCategory}
+        setOpenCategory={setOpenCategory}
+        title={title}
+      />
       <body className="relative mb-4 flex justify-center min-h-[calc(100vh-104px-160px)]">
         <div
           className={

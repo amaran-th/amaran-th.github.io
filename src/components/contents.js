@@ -1,5 +1,3 @@
-//TODO 공통 컴포넌트 구현
-
 import * as React from "react"
 import { Link } from "gatsby"
 
