@@ -22,23 +22,13 @@ const Layout = ({
   const theme = "hydrangea"
   const darkMode = true
   const [openCategory, setOpenCategory] = useState(false)
-  let header
-  let category
 
-  if (isRootPath) {
-    header = (
-      <p className="font-bold font-logo sm:text-5xl text-4xl">
-        <Link to="/">{title}</Link>
-      </p>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home font-logo" to="/">
-        {title}
-      </Link>
-    )
-  }
-  category = (
+  const header = (
+    <p className="font-logo sm:text-5xl text-4xl">
+      <Link to="/">{title}</Link>
+    </p>
+  )
+  const category = (
     <nav className="h-full bg-white border-y border-r p-4 shadow-md sticky">
       <ul className="space-y-2 py-4">
         {categories?.map(category => (
@@ -65,7 +55,7 @@ const Layout = ({
   )
   return (
     <div className={theme + "-theme " + (darkMode ? "dark" : "light") + " "}>
-      <header className="flex bg-white sticky -top-4 pt-9 shadow-md p-5 z-[99]">
+      <header className="flex bg-white sticky top-0 shadow-md p-5 z-[99]">
         <button
           className=" mr-4 px-2 bg-white z-[100] lg:hidden"
           onClick={() => setOpenCategory(!openCategory)}
