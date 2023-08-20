@@ -93,7 +93,7 @@ const Layout = ({
           {tableOfContents ? (
             <nav
               className={
-                "sticky top-24 max-h-[80vh] min-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
+                "sticky top-[106px] max-h-[80vh] min-w-[16rem] z-[98] transition ease-in-out hidden " +
                 "lg:block lg:translate-x-0 translate-x-[16rem]"
               }
             >
