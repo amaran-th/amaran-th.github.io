@@ -16,9 +16,6 @@ const Seo = ({ description, title, children }) => {
           siteMetadata {
             title
             description
-            social {
-              twitter
-            }
           }
         }
       }
@@ -43,10 +40,6 @@ const Seo = ({ description, title, children }) => {
       <meta
         name="google-site-verification"
         content="aZ6Rx91KxboXOthhgdEOqpLc2tw6PThHxoPcNdMfeIk"
-      />
-      <meta
-        name="twitter:creator"
-        content={site.siteMetadata?.social?.twitter || ``}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />

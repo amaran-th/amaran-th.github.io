@@ -12,13 +12,13 @@ module.exports = {
   siteMetadata: {
     title: `아마란스 생각`,
     author: {
-      name: `Amaranth(아마란스)`,
+      name: `Amaranth`,
       summary: `백엔드 개발자 지망생`,
     },
     description: `아마란스 블로그`,
     siteUrl: `https://amaran-th.github.io`,
     social: {
-      twitter: `kylemathews`,
+      email: `songsy405@naver.com`,
       github: `https://github.com/amaran-th`,
       portfolioK: `https://chip-force-ed0.notion.site/b50243b25c044af886d904fd8435410b`,
       portfolioE: `https://chip-force-ed0.notion.site/Portfolio-For-blog-publishing-5306a5c906854320b875b152fddac40e`,

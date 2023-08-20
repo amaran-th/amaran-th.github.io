@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { VscGithubInverted } from "react-icons/vsc"
+import { VscGithubInverted, VscMail } from "react-icons/vsc"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -19,6 +19,7 @@ const Bio = () => {
             summary
           }
           social {
+            email
             github
             portfolioK
             portfolioE
@@ -35,67 +36,80 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio p-4 ">
+    <div className="bio p-2">
       <StaticImage
-        className="bio-avatar ring-4 ring-sub bg-white"
+        className="bio-avatar bg-white"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
-        width={50}
-        height={50}
+        width={100}
+        height={100}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <div className="">
+        <div className="flex flex-col items-center">
           <p className="font-title text-point text-xl">{author.name}</p>
           <p className="text-lg font-bold">{author?.summary || null}</p>
-          <div className="p-2">
-            제{" "}
-            <Link
-              className="ml-1 hover:text-point hover:font-bold"
-              target="_blank"
-              to={`${social?.github || ``}`}
-            >
-              <VscGithubInverted className="inline-block -mt-1 -ml-1" />
-              Github
-            </Link>
-            에 오시면 더 많은 활동을 보실 수 있습니다.
+          <div className="p-2 space-y-2">
+            <p className="flex justify-center space-x-8">
+              <Link
+                className="ml-1 hover:text-point hover:font-bold"
+                target="_blank"
+                to={`${social?.github || ``}`}
+              >
+                <VscGithubInverted className="inline-block -mt-1 -ml-1 w-8 h-8" />
+              </Link>
+              <Link
+                className="ml-1 hover:text-point hover:font-bold"
+                target="_blank"
+                to={`mailto:${social?.email || ``}`}
+              >
+                <VscMail className="inline-block -mt-1 -ml-1 w-8 h-8" />
+              </Link>
+            </p>
+
             <ul>
               <li>
-                📑이력서 :{" "}
+                📑
+                <span className="inline-block text-center font-bold min-w-[5rem]">
+                  CV
+                </span>
                 <Link
-                  className="text-sm hover:bg-main rounded-full bg-sub text-white px-2"
+                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
                   target="_blank"
                   to={`${social?.CVK || ``}`}
                 >
-                  국문(Kor)
+                  KR
                 </Link>{" "}
                 /{" "}
                 <Link
-                  className="text-sm hover:bg-main rounded-full bg-sub text-white px-2"
+                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
                   target="_blank"
                   to={`${social?.CVE || ``}`}
                 >
-                  영문(Eng)
+                  EN
                 </Link>
               </li>
               <li>
-                📁포트폴리오 :{" "}
+                📁
+                <span className="inline-block text-center font-bold min-w-[5rem]">
+                  Portfolio
+                </span>
                 <Link
-                  className="text-sm hover:bg-main rounded-full bg-sub text-white px-2"
+                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
                   target="_blank"
                   to={`${social?.portfolioK || ``}`}
                 >
-                  국문(Kor)
+                  KR
                 </Link>{" "}
                 /{" "}
                 <Link
-                  className="text-sm hover:bg-main rounded-full bg-sub text-white px-2"
+                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
                   target="_blank"
                   to={`${social?.portfolioE || ``}`}
                 >
-                  영문(Eng)
+                  EN
                 </Link>
               </li>
             </ul>
