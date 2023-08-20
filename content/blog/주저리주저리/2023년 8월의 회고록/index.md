@@ -2,12 +2,12 @@
 title: "2023년 8월의 회고록"
 date: "2023-08-20T15:52:03.284Z"
 description: "2023년 8월의 3개의 회고"
-category: "우테코 5기"
+category: "주저리주저리"
 tags:
   - 우아한 테크코스
   - 회고글
   - 근황
-thumbnailImg: "../thumbnail.jpg"
+thumbnailImg: "../회고.jpg"
 ---
 
 <aside>
