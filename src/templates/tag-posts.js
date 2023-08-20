@@ -72,7 +72,7 @@ const Tags = ({ pageContext, data, location }) => {
                   </section>
                 </article>
                 {thumbnailImg ? (
-                  <div className="min-w-[5rem] max-w-[20rem] w-[150px] h-[150px]">
+                  <div className="min-w-[150px] h-[150px]">
                     <GatsbyImage
                       fluid={thumbnailImg}
                       className="rounded-xl h-full w-full"
