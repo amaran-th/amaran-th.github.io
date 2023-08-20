@@ -55,7 +55,7 @@ const Layout = ({
   )
   return (
     <div className={theme + "-theme " + (darkMode ? "dark" : "light") + " "}>
-      <header className="flex bg-white sticky top-0 shadow-md p-5 z-[99]">
+      <header className="flex bg-white sticky top-0 shadow-md p-5 z-[99] opacity-90 backdrop-blur-lg">
         <button
           className=" mr-4 px-2 bg-white z-[100] lg:hidden"
           onClick={() => setOpenCategory(!openCategory)}
@@ -69,42 +69,37 @@ const Layout = ({
         </button>
         {header}
       </header>
-      <body className="relative mb-4">
-        <nav
+      <body className="relative mb-4 flex justify-center">
+        <div
           className={
-            "h-full fixed min-w-[16rem] left-0 z-[98] top-[80px] transition ease-in-out " +
+            "h-full fixed min-w-[20rem] left-0 z-[98] top-[88px] transition ease-in-out " +
             (openCategory ? "" : "lg:translate-x-0 -translate-x-[16rem]")
           }
         >
           {category}
-        </nav>
+        </div>
+        <nav className="min-h-full relative min-w-[20rem]"></nav>
         <div className="w-full flex justify-center space-x-2">
-          <div className="w-full">
-            <div className="w-full bg-shadow flex justify-center">
-              <Bio />
-            </div>
-            <div className="w-full flex max-w-6xl justify-between">
-              <nav className="lg:min-w-[16rem] lg:static lg:block"></nav>
-              <div
-                className="w-full max-w-3xl px-5 mt-12"
-                data-is-root-path={isRootPath}
-              >
-                {children}
-              </div>
+          <div className="w-full flex max-w-6xl justify-center">
+            {/* <nav className="lg:min-w-[16rem] lg:static lg:block"></nav> */}
+            <div
+              className="w-full max-w-3xl px-5 mt-12"
+              data-is-root-path={isRootPath}
+            >
+              {children}
             </div>
           </div>
-          {tableOfContents ? (
-            <nav
-              className={
-                "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
-                "lg:block lg:translate-x-0 translate-x-[16rem]"
-              }
-            >
-              <TableOfContents content={tableOfContents} />
-            </nav>
-          ) : (
-            ""
-          )}
+          {tableOfContents
+            ? ""
+            : // <nav
+              //   className={
+              //     "sticky top-24 max-h-[80vh] max-w-[16rem] z-[98] mt-4 transition ease-in-out hidden " +
+              //     "lg:block lg:translate-x-0 translate-x-[16rem]"
+              //   }
+              // >
+              //   <TableOfContents content={tableOfContents} />
+              // </nav>
+              ""}
         </div>
       </body>
 
