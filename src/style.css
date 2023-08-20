@@ -197,8 +197,9 @@ footer {
   margin: var(--spacing-4) var(--spacing-0);
 }
 .mark_down aside hr {
-  height: 2px;
+  height: 1px;
   border: 0;
+  background: var(--color-accent) !important;
   margin: var(--spacing-0);
 }
 .mark_down nav {
