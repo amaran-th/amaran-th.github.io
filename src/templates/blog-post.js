@@ -17,7 +17,6 @@ const BlogPostTemplate = ({
   const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
   const thumbnailImg = post.frontmatter.thumbnailImg?.childImageSharp.fluid
-  console.log(post.tableOfContents)
   return (
     <Layout
       location={location}

@@ -6,21 +6,15 @@ import { StaticImage } from "gatsby-plugin-image"
 const Header = ({ openCategory, setOpenCategory, title }) => {
   const [percentScr, setPercentScr] = useState(0) //웹페이지 자체의 스크롤
   const handleScroll = () => {
-    //Math.floor(window.pageYOffset)    //현재 스크롤 위치
-    //document.documentElement.clientHeight //디바이스 높이
-    //document.documentElement.scrollHeight //스크롤을 반영한 전체 높이
     setPercentScr(
       (100 * Math.floor(window.pageYOffset)) /
         (document.documentElement.scrollHeight -
           document.documentElement.clientHeight)
     )
-    console.log(percentScr)
   }
   useEffect(() => {
-    //이벤트 리스너 추가
     window.addEventListener("scroll", handleScroll)
     return () => {
-      //이벤트 리스너 제거
       window.removeEventListener("scroll", handleScroll)
     }
   })

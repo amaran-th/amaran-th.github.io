@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import PostCalender from "../components/calender/PostCalender"
 import Seo from "../components/seo"
 import GatsbyImage from "gatsby-image"
 import "../tailwind.css"
@@ -24,10 +25,10 @@ const BlogIndex = ({ data, location }) => {
     <>
       <Seo title={`메인 홈`} />{" "}
       <Layout location={location} title={siteTitle} categories={categories}>
+        <PostCalender posts={posts} />
         <div className="grid md:grid-cols-3 grid-cols-2 space-x-4">
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
-            console.log(post)
             const thumbnailImg =
               post.frontmatter.thumbnailImg?.childImageSharp.fluid
 
