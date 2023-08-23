@@ -77,7 +77,7 @@ const Layout = ({
           {category}
         </div>
         {openCategory ? (
-          <nav className="min-h-full relative min-w-[20rem]"></nav>
+          <nav className="min-h-full md:block hidden relative min-w-[20rem]"></nav>
         ) : (
           ""
         )}
