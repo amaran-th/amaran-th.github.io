@@ -16,8 +16,6 @@ thumbnailImg: "./10.png"
 
 ---
 
-aaaaa
-
 </aside>
 
 우테코 레벨 3이 끝나고 약 열흘 간의 방학을 맞이했다.
