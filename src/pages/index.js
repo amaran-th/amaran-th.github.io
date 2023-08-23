@@ -26,21 +26,17 @@ const BlogIndex = ({ data, location }) => {
       <Seo title={`메인 홈`} />{" "}
       <Layout location={location} title={siteTitle} categories={categories}>
         <PostCalender posts={posts} />
-        <div className="border grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-x-4">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-4">
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             const thumbnailImg =
               post.frontmatter.thumbnailImg?.childImageSharp.fluid
 
             return (
-              <Link
-                to={post.fields.slug}
-                itemProp="url"
-                className="w-full !mx-0"
-              >
+              <Link to={post.fields.slug} itemProp="url">
                 <div
                   key={post.fields.slug}
-                  className="!mx-0 h-80 flex justify-between justify-items-center border-2 rounded-md shadow-md my-4 hover:bg-slate-100 hover:shadow-xl"
+                  className="h-80 flex justify-between justify-items-center border-2 rounded-md shadow-md my-4 hover:bg-slate-100 hover:shadow-xl"
                 >
                   <article
                     itemScope
