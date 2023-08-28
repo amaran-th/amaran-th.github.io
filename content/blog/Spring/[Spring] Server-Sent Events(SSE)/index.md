@@ -5,6 +5,7 @@ description: "SSE를 사용해 실시간 댓글 기능을 구현해보자."
 category: "Spring"
 tags:
   - Spring
+  - 유스콘
   - 실시간 통신
 thumbnailImg: "./1.png"
 ---
