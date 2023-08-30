@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Spring
   - 로드맵
+  - AOP
 thumbnailImg: "./1.png"
 ---
 
