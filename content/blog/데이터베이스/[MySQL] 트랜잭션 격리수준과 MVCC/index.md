@@ -7,7 +7,7 @@ tags:
   - database
   - MySQL
   - 데이터베이스 성능
-thumbnail: "../mysql.png"
+thumbnailImg: "../mysql.png"
 ---
 
 [트랜잭션 격리 수준과 Locking에 대한 이전 게시글](https://amaran-th.github.io/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction%EA%B3%BC%20Locking/)

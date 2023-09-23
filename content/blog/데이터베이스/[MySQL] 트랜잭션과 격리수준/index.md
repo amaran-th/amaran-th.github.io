@@ -6,7 +6,7 @@ category: "데이터베이스"
 tags:
   - database
   - 데이터베이스 성능
-thumbnail: "./3.png"
+thumbnailImg: "./3.png"
 ---
 
 ## 서론
