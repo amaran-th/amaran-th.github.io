@@ -8,8 +8,8 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
   const handleScroll = () => {
     setPercentScr(
       (100 * Math.floor(window.pageYOffset)) /
-        (document.documentElement.scrollHeight -
-          document.documentElement.clientHeight)
+      (document.documentElement.scrollHeight -
+        document.documentElement.clientHeight)
     )
   }
   useEffect(() => {
@@ -21,7 +21,7 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
 
   return (
     <>
-      <header className="w-[100vw] flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
+      <header className="h-[86px] w-full flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
         <p className="font-logo sm:text-3xl text-2xl p-5 pb-0">
           <button
             className="mr-4 px-2 bg-white z-[100]"
@@ -36,8 +36,8 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
           </button>
           <Link to="/">{title}</Link>
         </p>
-        <div className="flex h-[50px] shadow-inner w-full">
-          <div className="w-[50px] bg-sub"></div>
+        <div className="flex h-[30px] shadow-inner w-full">
+          <div className="w-[30px] bg-sub"></div>
           <div
             className={`flex justify-end bg-sub rounded-r-full`}
             style={{ width: percentScr + "%" }}
@@ -47,8 +47,8 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
               layout="fixed"
               formats={["auto", "webp", "avif"]}
               src="../images/profile-pic.png"
-              width={50}
-              height={50}
+              width={30}
+              height={30}
               quality={95}
               alt="Profile picture"
             />

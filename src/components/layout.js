@@ -26,7 +26,7 @@ const Layout = ({
         <Bio />
       </div>
       <ul
-        className="scroll-box-hidden space-y-2 p-4 px-8 overflow-auto max-h-[calc(100vh-106px-15em)]"
+        className="scroll-box-hidden space-y-2 p-4 px-8 overflow-auto max-h-[calc(100vh-86px-15em)]"
         onScroll={e => {
           let window_scrolling
           e.target.classList.remove("scroll-box-hidden")
@@ -70,7 +70,7 @@ const Layout = ({
       <body className="relative mb-4 flex justify-center min-h-[calc(100vh-104px-160px)]">
         <div
           className={
-            "scroll-box-hidden h-full fixed min-w-[20rem] left-0 z-[98] top-[106px] transition ease-in-out " +
+            "scroll-box-hidden h-full fixed min-w-[20rem] left-0 z-[98] top-[86px] transition ease-in-out " +
             (openCategory ? "translate-x-0" : " -translate-x-[20rem]")
           }
         >
