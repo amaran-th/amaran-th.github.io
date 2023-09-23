@@ -5,7 +5,6 @@ description: "MVD와 4NF, JD와 5NF"
 category: "데이터베이스"
 tags:
   - database
-  - 정규화
   - 데이터베이스 성능
 thumbnail: "./3.png"
 ---
