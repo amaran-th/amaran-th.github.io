@@ -7,6 +7,7 @@ tags:
   - 우아한 테크코스
   - Kerdy
   - 데이터베이스
+thumbnailImg: "../../kerdy.png"
 ---
 
 ## Like 검색과 전문 검색 

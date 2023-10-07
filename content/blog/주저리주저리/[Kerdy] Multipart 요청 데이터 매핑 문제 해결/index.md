@@ -6,6 +6,7 @@ category: "주저리주저리"
 tags:
   - 우아한 테크코스
   - Kerdy
+thumbnailImg: "../../kerdy.png"
 ---
 
 ## 서론
