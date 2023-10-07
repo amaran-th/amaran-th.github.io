@@ -1,5 +1,5 @@
 ---
-title: "[JDBC] JDBC 라이브러리 구현하기"
+title: "[JDBC] JDBC 라이브러리 구현하기(1)"
 date: "2023-10-03T19:47:03.284Z"
 description: "JDBC API의 개념을 알아보고 JdbcTemplate를 직접 구현해보자."
 category: "Java"
