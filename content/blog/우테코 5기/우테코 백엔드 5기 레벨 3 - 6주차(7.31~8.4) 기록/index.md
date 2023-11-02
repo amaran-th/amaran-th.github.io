@@ -2,7 +2,7 @@
 title: "우테코 백엔드 5기 레벨 3 - 6주차(7.31~8.4) 기록"
 date: "2023-08-06T16:34:03.284Z"
 description: "우테코 5기 - level3 6주차 기록"
-section: "지식 공유" 
+section: "회고" 
 category: "우테코 5기"
 tags:
   - 우아한 테크코스

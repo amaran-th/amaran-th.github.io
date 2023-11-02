@@ -2,7 +2,7 @@
 title: "[AOP] 쿼리 카운터 제작기"
 date: "2023-08-30T20:21:03.284Z"
 description: "AOP를 활용해 API에서 실행한 쿼리의 개수를 세어보자."
-section: "지식 공유" 
+section: "문제 해결" 
 category: "Spring"
 tags:
   - 우아한 테크코스

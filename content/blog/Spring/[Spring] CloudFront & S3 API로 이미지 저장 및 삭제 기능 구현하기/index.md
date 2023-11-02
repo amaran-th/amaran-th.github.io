@@ -2,7 +2,7 @@
 title: "[Spring] CloudFront & S3 API로 이미지 저장 및 삭제 기능 구현하기"
 date: "2023-09-10T20:25:03.284Z"
 description: "자바 코드를 통해 S3에 이미지를 업로드하고 삭제해보자."
-section: "지식 공유" 
+section: "문제 해결" 
 category: "Spring"
 tags:
   - 우아한 테크코스

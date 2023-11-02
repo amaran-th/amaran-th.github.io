@@ -2,7 +2,7 @@
 title: "레벨1 레벨 로그"
 date: "2023-03-28T13:28:03.284Z"
 description: "레벨1 기간동안 배운 내용에 대한 정리"
-section: "지식 공유" 
+section: "회고" 
 category: "우테코 5기"
 tags:
   - TIL

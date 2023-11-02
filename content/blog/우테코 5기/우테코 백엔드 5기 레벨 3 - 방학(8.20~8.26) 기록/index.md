@@ -2,7 +2,7 @@
 title: "우테코 백엔드 5기 레벨 3 - 방학(8.20~8.26) 기록"
 date: "2023-08-27T23:23:03.284Z"
 description: "우테코 5기 - level3 방학 기록"
-section: "지식 공유" 
+section: "회고" 
 category: "우테코 5기"
 tags:
   - 우아한 테크코스

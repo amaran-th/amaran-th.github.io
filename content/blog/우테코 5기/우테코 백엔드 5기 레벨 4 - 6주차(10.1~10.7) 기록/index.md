@@ -2,7 +2,7 @@
 title: "우테코 백엔드 5기 레벨 4 - 6주차(10.1~10.7) 기록"
 date: "2023-10-08T22:31:03.284Z"
 description: "우테코 5기 - level4 6주차 기록"
-section: "지식 공유" 
+section: "회고" 
 category: "우테코 5기"
 tags:
   - 우아한 테크코스

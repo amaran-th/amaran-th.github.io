@@ -4,12 +4,14 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "../tailwind.css"
+import PostCalender from "../components/calender/PostCalender"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const essayPosts = data.essay.nodes;
   const sharePosts = data.share.nodes;
   const solutionPosts = data.solution.nodes;
+  const posts = data.allMarkdownRemark.nodes;
 
   const categories = data.categoryList.group
   const sections = data.sectionList.group;
@@ -24,7 +26,8 @@ const BlogIndex = ({ data, location }) => {
     <>
       <Seo title={`메인 홈`} />{" "}
       <Layout location={location} title={siteTitle} sections={sections} categories={categories}>
-        <div className="flex flex-col gap-y-16">
+        <PostCalender posts={posts} />
+        <div className="flex flex-col gap-y-16 mt-8">
           {sections.map(section => (<div className="mb-4">
             <Link to={section.fieldValue} itemProp="url">
               <div className="max-w-[200px] mx-auto font-bold text-center border-b-2 border-black px-2 mb-8 text-2xl">{section.fieldValue}</div>
@@ -34,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
                 <Link to={post.fields.slug} itemProp="url">
                   <p className="max-w-[800px] w-full flex gap-2 justify-between border-b px-1 hover:bg-slate-50">
                     <span className="truncate">{post.frontmatter.title}</span>
-                    <span className="bg-sub text-white rounded-full text-sm px-2 my-auto">{post.frontmatter.category}</span>
+                    <span className="bg-sub text-white rounded-full break-keep text-sm px-2 my-auto">{post.frontmatter.category}</span>
                   </p>
                 </Link>
               ))}
@@ -46,10 +49,6 @@ const BlogIndex = ({ data, location }) => {
                 </div>
               </Link>
             </div>
-
-
-
-
           </div>
           ))}
         </div>

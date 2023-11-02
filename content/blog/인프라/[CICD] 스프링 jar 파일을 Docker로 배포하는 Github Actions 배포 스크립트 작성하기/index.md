@@ -2,7 +2,7 @@
 title: "[CICD] 스프링 jar 파일을 Docker로 배포하는 Github Actions 배포 스크립트 작성하기"
 date: "2023-08-05T18:58:03.284Z"
 description: "스프링 jar 파일을 Docker Image로 만들어 배포해보자."
-section: "지식 공유" 
+section: "문제 해결" 
 category: "인프라"
 tags:
   - 우아한 테크코스
