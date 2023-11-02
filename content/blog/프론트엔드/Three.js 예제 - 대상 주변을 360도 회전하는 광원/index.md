@@ -2,6 +2,7 @@
 title: Three.js 예제 - 대상 주변을 360도 회전하는 광원
 date: "2022-12-29T17:43:03.284Z"
 description: 광원이 대상 주변을 360도 공전하는 모델을 렌더링해보자.
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Three.js

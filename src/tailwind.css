@@ -4,8 +4,7 @@
 @font-face {
   /* 스위트 */
   font-family: "SUITE-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -13,8 +12,7 @@
 @font-face {
   /* 더 잠실체 */
   font-family: "TheJamsil5Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -22,24 +20,23 @@
 @font-face {
   /* 메이플스토리 */
   font-family: "MaplestoryOTFBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   /*고운바탕Regular*/
   font-family: "GowunBatang-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   /* 평창체 */
   font-family: "PyeongChangPeace-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -47,8 +44,7 @@
 @font-face {
   /* 잉크립퀴드 */
   font-family: "InkLipquid";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -56,8 +52,7 @@
 @font-face {
   /* 오뮤 다예쁨체 */
   font-family: "omyu_pretty";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -65,8 +60,7 @@
 @font-face {
   /* 엘리스 디지털코딩체 */
   font-family: "EliceDigitalBaeum_Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -91,12 +85,14 @@
   --color-sub: #e7a6bc;
   --color-shadow: #fff6f9;
 }
+
 .hydrangea-theme {
-  --color-main: #567eb9;
+  --color-main: #79a2e0;
   --color-point: #0c3675;
-  --color-sub: #77b2da;
+  --color-sub: #a8cce3;
   --color-shadow: #d9f0ff;
 }
+
 .freesia-theme {
   --color-main: #ecab31;
   --color-point: #e6a01e;
@@ -108,14 +104,17 @@
   -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
   -webkit-text-fill-color: rgb(0, 0, 0);
 }
+
 .light input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
   -webkit-text-fill-color: #000;
 }
+
 .dark input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
   -webkit-text-fill-color: rgb(255, 255, 255);
 }
+
 .dark input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
   -webkit-text-fill-color: rgb(255, 255, 255);

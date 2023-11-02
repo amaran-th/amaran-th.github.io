@@ -2,6 +2,7 @@
 title: Ch5. 벡터의 유사도
 date: "2023-01-18T15:49:03.284Z"
 description: 벡터의 유사도 기법을 사용하여 문서 간 유사도를 계산해보자.
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - 머신러닝

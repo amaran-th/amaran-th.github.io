@@ -2,6 +2,7 @@
 title: "요구 공학 프로세스"
 date: "2023-06-04T23:51:03.284Z"
 description: "요구사항 개발 단계를 익혀보자."
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 우아한 테크코스

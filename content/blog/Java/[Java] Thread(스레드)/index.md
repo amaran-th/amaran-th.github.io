@@ -2,6 +2,7 @@
 title: "[Java] Thread(스레드)"
 date: "2023-09-10T18:07:03.284Z"
 description: Java 스레드와 관련된 기술 지식을 정리해보았다.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

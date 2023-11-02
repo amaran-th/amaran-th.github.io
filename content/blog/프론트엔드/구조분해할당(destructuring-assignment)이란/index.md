@@ -2,6 +2,7 @@
 title: 구조분해할당(destructuring-assignment)이란?
 date: "2023-03-02T01:39:03.284Z"
 description: 구조 분해 할당에 대해 알아보자
+section: "지식 공유" 
 category: 프론트엔드
 tags:
   - 프론트엔드

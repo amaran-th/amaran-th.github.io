@@ -2,6 +2,7 @@
 title: "[Spring] RESTDocs로 API 명세서 만들기"
 date: "2023-05-30T03:03:03.284Z"
 description: "RESTDocs로 API 명세서를 만들어보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

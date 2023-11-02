@@ -2,6 +2,7 @@
 title: "[Web] Cookie, Session, Token"
 date: "2023-05-01T16:07:03.284Z"
 description: "쿠키, 세션, 토큰의 기본적인 개념과 차이점을 이해해보자"
+section: "지식 공유" 
 category: "보안"
 tags:
   - Web

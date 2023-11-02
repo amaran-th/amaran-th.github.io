@@ -2,6 +2,7 @@
 title: "DataSource와 DriverManager"
 date: "2023-10-11T15:55:03.284Z"
 description: "Connection을 만드는 방법인 DriverManager와 DataSource의 차이점"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

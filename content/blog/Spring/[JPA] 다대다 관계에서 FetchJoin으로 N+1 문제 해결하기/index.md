@@ -2,6 +2,7 @@
 title: "[JPA] 다대다 관계에서 FetchJoin으로 N+1 문제 해결하기"
 date: "2023-07-27T22:12:03.284Z"
 description: "N+1 문제와 FetchJoin에 대해 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

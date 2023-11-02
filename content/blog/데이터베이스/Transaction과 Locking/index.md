@@ -2,6 +2,7 @@
 title: Transaction과 Locking
 date: "2022-12-11T13:57:03.284Z"
 description: "MySQL 트랜잭션과 Locking"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

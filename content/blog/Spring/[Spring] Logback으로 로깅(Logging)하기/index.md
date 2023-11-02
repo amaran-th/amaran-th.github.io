@@ -2,6 +2,7 @@
 title: "[Spring] Logback으로 로깅(Logging)하기"
 date: "2023-08-17T17:53:03.284Z"
 description: "Logging의 개념과 로깅 라이브러리인 Logback의 사용법에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

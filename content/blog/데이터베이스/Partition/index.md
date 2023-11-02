@@ -2,6 +2,7 @@
 title: Partition
 date: "2022-12-06T17:34:03.284Z"
 description: "데이터베이스 Partition 적용하기"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

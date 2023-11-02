@@ -2,6 +2,7 @@
 title: "[Java] Thread-Safety Collection"
 date: "2023-09-16T17:43:03.284Z"
 description: 스레드 안전성을 보장하는 자바 자료구조에 대해 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

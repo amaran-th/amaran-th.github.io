@@ -2,6 +2,7 @@
 title: "[Java] 함수형 인터페이스(Functional Interface)"
 date: "2023-03-26T14:35:03.284Z"
 description: 함수형 인터페이스를 발표해보았습니다.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

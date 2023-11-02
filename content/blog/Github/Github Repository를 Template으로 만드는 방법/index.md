@@ -2,6 +2,7 @@
 title: Github Repository를 Template으로 만드는 방법
 date: "2023-02-18T16:43:03.284Z"
 description: "Github의 template repository를 만들어보자."
+section: "지식 공유" 
 category: "Github"
 tags:
   - Github

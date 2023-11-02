@@ -2,6 +2,7 @@
 title: "[Java] DB 변경사항 롤백하기"
 date: "2023-03-26T17:31:03.284Z"
 description: Spring과 Java에서 DB 로직을 롤백하는 방법에 대해 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

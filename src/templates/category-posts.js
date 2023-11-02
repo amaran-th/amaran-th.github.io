@@ -17,11 +17,7 @@ const CategoryPost = ({ data, location, pageContext }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <p>블로그 포스트를 찾을 수 없습니다.</p>
       </Layout>
     )
   }
@@ -144,6 +140,8 @@ export const pageQuery = graphql`
             }
           }
           category
+          section
+          tags
         }
       }
     }

@@ -2,6 +2,7 @@
 title: Kerdy 프로젝트의 인프라에 대한 논의
 date: "2023-08-05T17:53:03.284Z"
 description: "팀원들과 인프라 구조에 대해 논의한 내용"
+section: "문제 해결" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

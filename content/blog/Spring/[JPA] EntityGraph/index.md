@@ -2,6 +2,7 @@
 title: "[JPA] EntityGraph"
 date: "2023-08-14T01:51:03.284Z"
 description: "EntityGraph로 N+1 문제를 해결해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

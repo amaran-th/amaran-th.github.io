@@ -2,6 +2,7 @@
 title: "[Spring] @SpringBootTest와 DB DLL 쿼리 충돌"
 date: "2023-05-03T15:32:03.284Z"
 description: "@SpringBootTest가 ApplicationContext를 생성하는 원리와 DLL 쿼리 충돌 문제를 해결하는 방법에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

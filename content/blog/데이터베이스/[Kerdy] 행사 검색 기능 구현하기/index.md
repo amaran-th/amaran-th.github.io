@@ -2,6 +2,7 @@
 title: '[Kerdy] 행사 검색 기능 구현하기'
 date: "2023-10-07T16:26:03.284Z"
 description: "Like 검색과 전문 검색 비교하기"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - 우아한 테크코스

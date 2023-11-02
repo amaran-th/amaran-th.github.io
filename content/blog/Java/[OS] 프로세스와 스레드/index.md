@@ -2,6 +2,7 @@
 title: "[OS] 프로세스와 스레드"
 date: "2023-06-06T14:57:03.284Z"
 description: "프로세스와 스레드의 차이를 알아보자"
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

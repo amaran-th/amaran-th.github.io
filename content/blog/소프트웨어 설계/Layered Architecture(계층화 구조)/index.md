@@ -2,6 +2,7 @@
 title: "Layered Architecture(계층화 구조)"
 date: "2023-04-22T18:51:03.284Z"
 description: "계층화 구조에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 소프트웨어 아키텍처

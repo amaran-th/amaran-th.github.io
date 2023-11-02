@@ -2,6 +2,7 @@
 title: "[기술부채] 우테코 5기 레벨2 - 2주차"
 date: "2023-04-30T19:02:03.284Z"
 description: "우테코 2주차 기술 부채"
+section: "지식 공유" 
 category: "우테코 5기"
 tags:
   - 기술 부채

@@ -2,6 +2,7 @@
 title: Three.js 예제 - 방사형으로 오브젝트 정렬하는 예제
 date: "2023-01-07T20:49:03.284Z"
 description: 선형 보간을 이용하여 여러 개의 오브젝트를 렌더링해보자.
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Three.js

@@ -2,6 +2,7 @@
 title: List&Dictionary 사용법
 date: "2022-12-24T00:08:03.284Z"
 description: "C#의 리스트와 딕셔너리를 사용해보자."
+section: "지식 공유" 
 category: "Unity"
 tags:
   - Unity

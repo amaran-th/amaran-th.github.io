@@ -2,6 +2,7 @@
 title: "[Spring] CORS의 개념과 CORS 설정하기"
 date: "2023-05-24T21:45:03.284Z"
 description: "CORS의 개념과 스프링에서 CORS 설정을 바꾸는 방법에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

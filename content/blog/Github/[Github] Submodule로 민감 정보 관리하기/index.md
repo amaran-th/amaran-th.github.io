@@ -2,6 +2,7 @@
 title: "[Github] Submodule로 민감 정보 관리하기"
 date: "2023-08-05T18:03:03.284Z"
 description: "Submodule로 프로젝트의 민감정보를 숨겨보자."
+section: "지식 공유" 
 category: "Github"
 tags:
   - Github

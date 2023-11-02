@@ -2,6 +2,7 @@
 title: Ch3. 언어모델
 date: "2023-01-18T14:03:03.284Z"
 description: 자연어를 처리하는 언어모델에 대해 알아보자
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - 머신러닝

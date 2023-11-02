@@ -2,6 +2,7 @@
 title: "Gatsby 블로그 검색엔진 최적화(SEO)하기"
 date: "2023-04-18T18:12:03.284Z"
 description: "Gatsby 블로그가 구글 검색엔진에 노출되도록 해보자"
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Gatsby

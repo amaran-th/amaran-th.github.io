@@ -2,6 +2,7 @@
 title: '[HTTP] Multipart 요청'
 date: "2023-09-26T00:23:03.284Z"
 description: "Multipart 타입의 기본 개념과 사용법에 대해 정리하였다."
+section: "지식 공유" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

@@ -2,6 +2,7 @@
 title: "[Java] String Pool과 StringBuilder"
 date: "2023-03-01T19:56:03.284Z"
 description: String Pool과 StringBuilder가 뭔지 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

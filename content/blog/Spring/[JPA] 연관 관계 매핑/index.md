@@ -2,6 +2,7 @@
 title: "[JPA] 연관 관계 매핑"
 date: "2023-07-09T22:35:03.284Z"
 description: "JPA를 사용해서 엔티티의 연관관계를 매핑해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

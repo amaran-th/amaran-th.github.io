@@ -9,6 +9,7 @@ const Layout = ({
   location,
   title,
   categories,
+  sections,
   children,
   currentCategory,
   isPost = false,

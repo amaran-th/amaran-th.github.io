@@ -2,6 +2,7 @@
 title: "[디자인 패턴] Proxy Pattern(프록시 패턴)"
 date: "2023-06-08T04:24:03.284Z"
 description: "프록시 패턴에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 디자인 패턴

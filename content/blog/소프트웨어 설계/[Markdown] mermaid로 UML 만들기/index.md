@@ -2,6 +2,7 @@
 title: "[Markdown] mermaid로 UML 만들기"
 date: "2023-03-10T17:18:03.284Z"
 description: "mermaid를 사용해 UML을 그려보자."
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 우아한 테크코스

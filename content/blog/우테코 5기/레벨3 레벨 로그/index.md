@@ -2,6 +2,7 @@
 title: "레벨3 레벨 로그"
 date: "2023-10-08T22:48:03.284Z"
 description: "레벨3 기간동안 배운 내용에 대한 정리"
+section: "지식 공유" 
 category: "우테코 5기"
 tags:
   - TIL

@@ -2,6 +2,7 @@
 title: "[TS] satisfies 키워드"
 date: "2023-03-03T21:47:03.284Z"
 description: TypeScript 4.9에서 추가된 satisfies 키워드에 대해 알아보자.
+section: "지식 공유" 
 category: 프론트엔드
 tags:
   - 프론트엔드

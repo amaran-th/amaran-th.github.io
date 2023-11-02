@@ -2,6 +2,7 @@
 title: "[Android] 구글 플레이스토어 UGC 정책"
 date: "2023-08-08T20:15:03.284Z"
 description: "구글 플레이스토어 심사 통과에 게시글 및 사용자 신고 & 차단 기능이 필요한 이유"
+section: "지식 공유" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

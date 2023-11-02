@@ -2,6 +2,7 @@
 title: "[MySQL] MySQL과 Java의 데이터 타입"
 date: "2023-05-23T21:19:03.284Z"
 description: "MySQL의 자료형과 매핑되는 Java의 자료형 타입을 알아보자"
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

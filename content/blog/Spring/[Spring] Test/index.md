@@ -2,6 +2,7 @@
 title: "[Spring] Test"
 date: "2023-05-02T14:11:03.284Z"
 description: "테스트의 종류와 스프링에서 사용할 수 있는 테스트 어노테이션의 종류를 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

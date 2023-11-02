@@ -2,6 +2,7 @@
 title: "[Spring] AOP"
 date: "2023-06-18T23:21:47.284Z"
 description: "Spring 3대 요소 중 하나인 AOP에 대해 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

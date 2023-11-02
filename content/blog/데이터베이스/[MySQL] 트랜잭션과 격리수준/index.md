@@ -2,6 +2,7 @@
 title: "[MySQL] 트랜잭션과 격리수준"
 date: "2023-06-25T23:57:03.284Z"
 description: "MVD와 4NF, JD와 5NF"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

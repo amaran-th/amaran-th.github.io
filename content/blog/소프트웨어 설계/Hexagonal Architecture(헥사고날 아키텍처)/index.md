@@ -2,6 +2,7 @@
 title: "Hexagonal Architecture(헥사고날 아키텍처)"
 date: "2023-06-30T09:51:03.284Z"
 description: "계층화 구조에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 소프트웨어 아키텍처

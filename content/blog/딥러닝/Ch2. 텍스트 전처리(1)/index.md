@@ -2,6 +2,7 @@
 title: Ch2. 텍스트 전처리(1)
 date: "2023-01-18T13:46:03.284Z"
 description: 학습 전 데이터 전처리 과정에 대해 알아보자
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - 머신러닝

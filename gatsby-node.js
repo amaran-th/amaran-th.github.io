@@ -19,7 +19,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
+      essay: allMarkdownRemark(
+        sort: { frontmatter: { date: ASC } },
+        filter: {frontmatter: { section: {eq: "회고" }}}
+        limit: 1000
+        ) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
+      }
+      share: allMarkdownRemark(
+        sort: { frontmatter: { date: ASC } },
+        filter: {frontmatter: { section: {eq: "지식 공유" }}}
+        limit: 1000
+        ) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
+      }
+      solution: allMarkdownRemark(
+        sort: { frontmatter: { date: ASC } },
+        filter: {frontmatter: { section: {eq: "문제 해결" }}}
+        limit: 1000
+        ) {
         nodes {
           id
           fields {
@@ -29,6 +57,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
       tagList: allMarkdownRemark {
         group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
+      }
+      sectionList: allMarkdownRemark {
+        group(field: frontmatter___section){
           fieldValue
           totalCount
         }
@@ -51,10 +85,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
   const tagPosts = path.resolve("./src/templates/tag-posts.js")
   const categoryPosts = path.resolve("./src/templates/category-posts.js")
+  const sectionPosts = path.resolve("./src/templates/section-posts.js")
 
   // 카테고리 데이터를 가져온다.
   const tags = result.data.tagList.group
   const categories = result.data.categoryList.group
+  const sections = result.data.sectionList.group
   //태그 목록을 가져온다.
   // 카테고리 마다 하나의 페이지를 만든다.
   categories.forEach(category => {
@@ -65,6 +101,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { category: category.fieldValue },
     })
   })
+  sections.forEach(section => {
+    createPage({
+      // 생성할 페이지들의 slug는 카테고리 이름을 kebab base로 변환한 것이다.
+      path: `/${section.fieldValue}/`,
+      component: sectionPosts,
+      context: { section: section.fieldValue },
+    })
+  })
   tags.forEach(tag => {
     createPage({
       // 생성할 페이지들의 slug는 카테고리 이름을 kebab base로 변환한 것이다.
@@ -73,16 +117,52 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { tag: tag.fieldValue },
     })
   })
-  const posts = result.data.allMarkdownRemark.nodes
+  const essayPosts = result.data.essay.nodes;
+  const sharePosts = result.data.share.nodes;
+  const solutionPosts = result.data.solution.nodes;
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+  if (essayPosts.length > 0) {
+    essayPosts.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : essayPosts[index - 1].id
+      const nextPostId = index === essayPosts.length - 1 ? null : essayPosts[index + 1].id
+
+      createPage({
+        path: post.fields.slug,
+        component: blogPost,
+        context: {
+          id: post.id,
+          previousPostId,
+          nextPostId,
+          tableOfContents: post.tableOfContents,
+        },
+      })
+    })
+  }
+  if (sharePosts.length > 0) {
+    sharePosts.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : sharePosts[index - 1].id
+      const nextPostId = index === sharePosts.length - 1 ? null : sharePosts[index + 1].id
+
+      createPage({
+        path: post.fields.slug,
+        component: blogPost,
+        context: {
+          id: post.id,
+          previousPostId,
+          nextPostId,
+          tableOfContents: post.tableOfContents,
+        },
+      })
+    })
+  }
+  if (solutionPosts.length > 0) {
+    solutionPosts.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : solutionPosts[index - 1].id
+      const nextPostId = index === solutionPosts.length - 1 ? null : solutionPosts[index + 1].id
 
       createPage({
         path: post.fields.slug,
@@ -158,6 +238,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       image : String
       category : String
+      section : String
       tags : [String!]
     }
 

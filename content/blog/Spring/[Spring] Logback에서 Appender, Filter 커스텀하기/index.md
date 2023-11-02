@@ -2,6 +2,7 @@
 title: "[Spring] Logback에서 Appender, Filter 커스텀하기"
 date: "2023-07-31T12:58:03.284Z"
 description: "특정 단어를 감지하는 Filter와 슬랙에 알람을 보내주는 Appender를 만들어보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

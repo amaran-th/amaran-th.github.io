@@ -2,6 +2,7 @@
 title: "[Spring] Component Scan"
 date: "2023-04-21T15:20:03.284Z"
 description: "Component Scan과 충돌 처리 방법에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

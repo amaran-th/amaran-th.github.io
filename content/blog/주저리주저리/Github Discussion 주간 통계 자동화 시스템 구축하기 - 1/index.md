@@ -2,6 +2,7 @@
 title: "Github Discussion 주간 통계 자동화 시스템 구축하기 - 1"
 date: "2023-08-23T20:38:03.284Z"
 description: "JavaScript와 Github GraphQL을 활용해 자동화 시스템을 구축해보자."
+section: "문제 해결" 
 category: "주저리주저리"
 tags:
   - javascript
@@ -243,7 +244,8 @@ type Discussion implements Comment & Deletable & Lockable & Node & Reactable & R
   body: String!
   bodyHTML: HTML!
   bodyText: String!
-  category: DiscussionCategory!
+  section: "지식 공유" 
+category: DiscussionCategory!
   comments(
     after: String
     before: String

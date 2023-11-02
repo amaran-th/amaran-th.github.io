@@ -2,6 +2,7 @@
 title: Ch1. 개발환경 설정(작성중)
 date: "2023-01-18T13:18:03.284Z"
 description: 자연어 처리 실습을 위해 개발환경을 설정해보자.
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - jupyter notebook

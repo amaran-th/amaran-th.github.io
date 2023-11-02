@@ -2,6 +2,7 @@
 title: "[Spring] Github 소셜 로그인 구현하기"
 date: "2023-05-26T20:30:03.284Z"
 description: "Github의 인증 API를 사용해 소셜 로그인을 구현해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

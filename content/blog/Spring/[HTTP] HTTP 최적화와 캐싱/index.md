@@ -2,6 +2,7 @@
 title: "[HTTP] HTTP 최적화와 캐싱"
 date: "2023-09-11T15:32:03.284Z"
 description: "HTTP 최적화 기법에 대해 알아보고 Spring에서 최적화 설정을 하는 방법을 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

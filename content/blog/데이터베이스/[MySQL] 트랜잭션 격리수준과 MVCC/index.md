@@ -2,6 +2,7 @@
 title: "[MySQL] 트랜잭션 격리수준과 MVCC"
 date: "2023-09-23T19:00:03.284Z"
 description: "MySQL에서 읽기 부정합을 해소하는 방법"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

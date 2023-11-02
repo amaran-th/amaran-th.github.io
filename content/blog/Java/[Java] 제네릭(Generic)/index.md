@@ -2,6 +2,7 @@
 title: "[Java] 제네릭(Generic)"
 date: "2023-03-05T04:14:03.284Z"
 description: 제네릭의 개념과 사용 방법에 대해 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

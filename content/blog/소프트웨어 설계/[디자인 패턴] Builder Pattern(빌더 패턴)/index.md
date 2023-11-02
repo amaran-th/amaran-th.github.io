@@ -2,6 +2,7 @@
 title: "[디자인 패턴] Builder Pattern(빌더 패턴)"
 date: "2023-03-30T22:50:03.284Z"
 description: "빌더 패턴에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 디자인 패턴

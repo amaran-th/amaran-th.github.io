@@ -2,6 +2,7 @@
 title: "[DB] Transaction과 Spring Transaction"
 date: "2023-10-07T16:11:03.284Z"
 description: "Transaction의 격리 수준과 전파 옵션에 대해 알아보자."
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

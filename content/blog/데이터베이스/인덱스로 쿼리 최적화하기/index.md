@@ -2,6 +2,7 @@
 title: 인덱스로 쿼리 최적화하기
 date: "2023-09-23T18:16:03.284Z"
 description: "MySQL의 인덱스가 가지는 특징을 정리해보았다."
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

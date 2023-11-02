@@ -2,6 +2,7 @@
 title: '[Kerdy] Multipart 요청 데이터 매핑 문제 해결'
 date: "2023-09-23T12:50:03.284Z"
 description: "관리자 페이지를 제작하면서 맞닥뜨린 Multipart 요청 데이터 매핑 문제를 해결해보았다."
+section: "문제 해결" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

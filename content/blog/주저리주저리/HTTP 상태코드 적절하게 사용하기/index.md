@@ -2,6 +2,7 @@
 title: HTTP 상태코드 적절하게 사용하기
 date: "2023-05-20T17:47:03.284Z"
 description: "상태코드의 종류를 알아보자"
+section: "지식 공유" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

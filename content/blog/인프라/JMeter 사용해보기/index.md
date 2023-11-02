@@ -2,6 +2,7 @@
 title: "JMeter 사용해보기"
 date: "2023-10-16T00:03:03.284Z"
 description: "서버 배포를 편리하게 할 수 있는 쉘 스크립트를 작성해보자"
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

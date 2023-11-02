@@ -2,6 +2,7 @@
 title: 데이터베이스 정규화 - 1
 date: "2022-11-29T13:01:03.284Z"
 description: "함수 종속성과 데이터베이스 정규화"
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

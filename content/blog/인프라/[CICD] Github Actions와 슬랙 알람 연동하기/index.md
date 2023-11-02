@@ -2,6 +2,7 @@
 title: "[CICD] Github Actions와 슬랙 알람 연동하기"
 date: "2023-07-23T01:59:03.284Z"
 description: "Github Actions로 수행한 배포 워크플로우의 결과를 슬랙 메세지로 받을 수 있게 해보자."
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

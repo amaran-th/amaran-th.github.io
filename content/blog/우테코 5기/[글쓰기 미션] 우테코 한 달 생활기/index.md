@@ -2,6 +2,7 @@
 title: "[글쓰기 미션] 우테코 한 달 생활기"
 date: "2023-03-29T17:41:03.284Z"
 description: "우테코 한 달을 돌아보며"
+section: "지식 공유" 
 category: "우테코 5기"
 tags:
   - 글쓰기

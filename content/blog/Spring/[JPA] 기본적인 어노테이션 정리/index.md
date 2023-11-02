@@ -2,6 +2,7 @@
 title: "[JPA] 기본적인 어노테이션"
 date: "2023-07-09T22:31:03.284Z"
 description: "JPA에서 사용되는 기본적인 어노테이션을 익혀보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

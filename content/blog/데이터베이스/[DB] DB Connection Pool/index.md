@@ -2,6 +2,7 @@
 title: "[DB] DB Connection Pool"
 date: "2023-10-11T19:29:03.284Z"
 description: "Connection Pool의 개념과 사용법에 대해 알아보자."
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

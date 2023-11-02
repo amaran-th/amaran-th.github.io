@@ -2,6 +2,7 @@
 title: Ch0. 머신러닝 workflow
 date: "2023-01-18T13:17:03.284Z"
 description: 머신러닝의 전반적인 흐름을 파악해보자.
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - 머신러닝

@@ -2,6 +2,7 @@
 title: "Vertical Slice Architecture(버티컬 슬라이스 아키텍처)"
 date: "2023-08-28T15:54:03.284Z"
 description: "버티컬 슬라이스 아키텍처에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 소프트웨어 아키텍처

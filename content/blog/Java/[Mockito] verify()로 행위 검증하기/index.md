@@ -2,6 +2,7 @@
 title: "[Mockito] verify()로 행위 검증하기"
 date: "2023-05-19T21:46:03.284Z"
 description: "verify() 메소드를 활용해 mock 객체의 행위(메서드 동작)를 검증해보자"
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

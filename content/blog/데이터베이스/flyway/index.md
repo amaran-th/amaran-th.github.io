@@ -2,6 +2,7 @@
 title: "flyway"
 date: "2023-07-15T02:37:03.284Z"
 description: "데이터베이스 형상 관리 툴 flyway의 사용법을 알아보자."
+section: "지식 공유" 
 category: "데이터베이스"
 tags:
   - database

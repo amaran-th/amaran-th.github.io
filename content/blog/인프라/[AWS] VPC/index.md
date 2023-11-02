@@ -2,6 +2,7 @@
 title: "[AWS] VPC"
 date: "2023-07-17T10:03:03.284Z"
 description: "AWS VPC의 개념에 대해 알아보자."
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

@@ -2,6 +2,7 @@
 title: "[JPA] 고급 매핑"
 date: "2023-08-13T20:45:03.284Z"
 description: "JPA의 고급 매핑 방법에 대해 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

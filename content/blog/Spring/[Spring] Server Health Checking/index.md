@@ -2,6 +2,7 @@
 title: "[Spring] Server Health Checking"
 date: "2023-05-27T21:54:03.284Z"
 description: "Health Check의 개념과 Actuator를 사용해 Health Check하는 방법을 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

@@ -2,6 +2,7 @@
 title: "[Spring] Spring Web MVC"
 date: "2023-05-21T17:55:03.284Z"
 description: "Spring MVC 구조의 등장 배경과 동작 과정을 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

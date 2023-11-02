@@ -2,6 +2,7 @@
 title: "[디자인 패턴] Strategy Pattern(전략 패턴)"
 date: "2023-02-25T12:31:03.284Z"
 description: "전략패턴에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 디자인 패턴

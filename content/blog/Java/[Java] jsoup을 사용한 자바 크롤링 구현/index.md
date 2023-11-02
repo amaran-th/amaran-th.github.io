@@ -2,6 +2,7 @@
 title: "[Java] jsoup을 사용한 자바 크롤링 구현"
 date: "2023-07-12T22:11:03.284Z"
 description: jsoup을 사용해서 특정 웹사이트를 크롤링해보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - Java

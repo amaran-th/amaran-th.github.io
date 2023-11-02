@@ -2,6 +2,7 @@
 title: "[Spring] Server-Sent Events(SSE)"
 date: "2023-08-27T23:05:03.284Z"
 description: "SSE를 사용해 실시간 댓글 기능을 구현해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - Spring

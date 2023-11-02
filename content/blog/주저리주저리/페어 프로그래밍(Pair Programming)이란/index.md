@@ -2,6 +2,7 @@
 title: 페어 프로그래밍(Pair Programming)이란
 date: "2023-02-19T15:39:03.284Z"
 description: "페어 프로그래밍의 정의와 장점"
+section: "회고" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

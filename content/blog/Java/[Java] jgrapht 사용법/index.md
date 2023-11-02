@@ -2,6 +2,7 @@
 title: "[Java] jgrapht 사용법"
 date: "2023-05-21T19:57:03.284Z"
 description: Java 라이브러리 jgrapht의 사용법에 대해 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

@@ -2,6 +2,7 @@
 title: "[Spring] DB에 생성시간&수정된 시간 자동 셋팅하기"
 date: "2023-04-30T17:29:03.284Z"
 description: "데이터의 생성 시간과 수정 시간을 DB에 자동으로 적용되게 하는 방법에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

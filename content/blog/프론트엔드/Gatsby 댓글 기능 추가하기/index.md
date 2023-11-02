@@ -2,6 +2,7 @@
 title: "Gatsby 댓글 기능 추가하기"
 date: "2023-04-18T14:11:03.284Z"
 description: "utterances를 사용해 Gatsby 블로그에 댓글 기능을 추가해보자"
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Gatsby

@@ -2,6 +2,7 @@
 title: "스크럼"
 date: "2023-08-13T18:28:03.284Z"
 description: "스크럼 책을 읽고 스크럼에 대해 정리해보았다."
+section: "회고" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

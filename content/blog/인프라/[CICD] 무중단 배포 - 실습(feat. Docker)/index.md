@@ -2,6 +2,7 @@
 title: "[CICD] 무중단 배포 - 실습(feat.Docker)"
 date: "2023-10-22T22:30:03.284Z"
 description: "무중단 배포 중 Blue/Green 배포 과정에 대해 알아보자."
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

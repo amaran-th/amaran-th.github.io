@@ -2,6 +2,7 @@
 title: Ch4. 카운트 기반의 단어 표현
 date: "2023-01-18T14:16:03.284Z"
 description: 대표적인 카운트 기반의 단어 표현 방법인 DTM과 TF-IDF에 대해 알아보자.
+section: "지식 공유" 
 category: "딥러닝"
 tags:
   - 머신러닝

@@ -2,6 +2,7 @@
 title: "방학 기념 블로그 UI 뜯어고치기"
 date: "2023-08-20T23:34:03.284Z"
 description: ""
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Gatsby

@@ -2,6 +2,7 @@
 title: "Gatsby 블로그 태그 추가하기"
 date: "2022-12-27T16:04:03.284Z"
 description: "Gatsby 블로그에 태그를 추가해보자"
+section: "지식 공유" 
 category: "프론트엔드"
 tags:
   - Gatsby

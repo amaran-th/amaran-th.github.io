@@ -2,6 +2,7 @@
 title: "DDD 이해하기(설계편)"
 date: "2023-11-01T22:16:03.284Z"
 description: "도메인 주도 설계에 대해 이해해보자."
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 우아한 테크코스

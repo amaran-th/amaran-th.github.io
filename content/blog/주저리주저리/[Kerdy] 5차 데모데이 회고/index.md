@@ -2,6 +2,7 @@
 title: '[Kerdy] 5차 데모데이 회고'
 date: "2023-10-07T16:44:03.284Z"
 description: "5차 데모데이까지의 노력들"
+section: "문제 해결" 
 category: "주저리주저리"
 tags:
   - 우아한 테크코스

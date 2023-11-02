@@ -2,6 +2,7 @@
 title: "[Spring] MVC Configuration 학습테스트"
 date: "2023-05-04T22:06:03.284Z"
 description: "MVC Configuration을 설정해서 interceptor와 argument resolver, view controller를 사용해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

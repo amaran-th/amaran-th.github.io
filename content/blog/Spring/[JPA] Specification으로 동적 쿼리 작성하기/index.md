@@ -2,6 +2,7 @@
 title: "[JPA] Specification으로 동적 쿼리 작성하기"
 date: "2023-08-08T22:20:03.284Z"
 description: "Specification으로 작성한 동적 쿼리를 이용해 필터링 기능을 구현해보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

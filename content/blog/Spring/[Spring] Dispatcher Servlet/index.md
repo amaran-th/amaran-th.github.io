@@ -2,6 +2,7 @@
 title: "[Spring] Dispatcher Servlet"
 date: "2023-05-16T21:08:03.284Z"
 description: "Dispatcher Servlet의 개념과 동작 과정에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

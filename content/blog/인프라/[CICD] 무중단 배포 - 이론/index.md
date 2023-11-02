@@ -2,6 +2,7 @@
 title: "[CICD] 무중단 배포 - 이론"
 date: "2023-10-15T01:24:03.284Z"
 description: "무중단 배포의 개념과 배포 전략에 대해 알아보자."
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

@@ -2,6 +2,7 @@
 title: "[Java] Mockito 사용법(기본)"
 date: "2023-04-23T21:42:03.284Z"
 description: Java 프레임워크 Mockito를 사용하는 법을 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

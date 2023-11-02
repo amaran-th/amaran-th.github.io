@@ -2,6 +2,7 @@
 title: "[Java] Input & Output Stream"
 date: "2023-09-10T01:48:03.284Z"
 description: Java의 InputStream, OutputStream 그리고 File 인터페이스에 대해 알아보자.
+section: "지식 공유" 
 category: "Java"
 tags:
   - 우아한 테크코스

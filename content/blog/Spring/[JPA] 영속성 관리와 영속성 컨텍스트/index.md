@@ -2,6 +2,7 @@
 title: "[JPA] 영속성 관리와 영속성 컨텍스트"
 date: "2023-08-06T16:08:03.284Z"
 description: "JPA의 영속성 컨텍스트의 개념과 메커니즘에 대해 알아보자."
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

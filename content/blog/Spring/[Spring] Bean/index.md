@@ -2,6 +2,7 @@
 title: "[Spring] Bean"
 date: "2023-04-20T21:05:03.284Z"
 description: "Spring Bean에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

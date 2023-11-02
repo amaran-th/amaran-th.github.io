@@ -2,6 +2,7 @@
 title: "[Spring] View Resolver"
 date: "2023-05-20T22:27:03.284Z"
 description: "Spring MVC의 View Resolver에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

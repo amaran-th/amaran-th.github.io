@@ -2,6 +2,7 @@
 title: "[CICD] Self-hosted Runner로 서버 배포 자동화하기"
 date: "2023-06-10T18:53:03.284Z"
 description: "Self-hosted Runner로 사용자 지정 환경에서 Github Action Workflow를 실행시켜보자."
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

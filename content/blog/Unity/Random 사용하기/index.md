@@ -2,6 +2,7 @@
 title: Random 사용하기
 date: "2022-12-11T20:16:03.284Z"
 description: "내장 클래스 Random Class를 사용해보자"
+section: "지식 공유" 
 category: "Unity"
 tags:
   - Unity

@@ -2,6 +2,7 @@
 title: "[IntelliJ] 코드 커버리지 확인하기"
 date: "2023-04-23T19:49:03.284Z"
 description: "코드 커버리지와 IntelliJ에서 브랜치 커버리지를 확인하는 방법에 대해 알아보자"
+section: "지식 공유" 
 category: "소프트웨어 설계"
 tags:
   - 테스트

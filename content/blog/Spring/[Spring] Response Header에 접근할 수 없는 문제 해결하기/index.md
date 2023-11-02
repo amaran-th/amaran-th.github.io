@@ -2,6 +2,7 @@
 title: "[Spring] Response Header에 접근할 수 없는 문제 해결하기"
 date: "2023-05-24T21:10:03.284Z"
 description: "Response Header에 접근할 수 없는 문제 트러블 슈팅(feat. CORS)"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스

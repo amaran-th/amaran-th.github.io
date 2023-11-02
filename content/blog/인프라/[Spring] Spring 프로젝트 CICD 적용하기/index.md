@@ -2,6 +2,7 @@
 title: "[Spring] Spring 프로젝트 CI/CD 적용하기"
 date: "2023-06-02T13:37:03.284Z"
 description: "프로젝트 빌드와 서버 배포를 자동화해보자"
+section: "지식 공유" 
 category: "인프라"
 tags:
   - 우아한 테크코스

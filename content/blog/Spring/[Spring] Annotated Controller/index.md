@@ -2,6 +2,7 @@
 title: "[Spring] Annotated Controller"
 date: "2023-05-05T00:17:47.284Z"
 description: "@Controller와 @RestController의 쓰임에 대해 알아보자"
+section: "지식 공유" 
 category: "Spring"
 tags:
   - 우아한 테크코스
