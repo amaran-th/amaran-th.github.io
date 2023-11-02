@@ -21,6 +21,13 @@ const BlogIndex = ({ data, location }) => {
     if (section === "지식 공유") return sharePosts;
     if (section === "문제 해결") return solutionPosts;
   }
+  const isToday = (date) => {
+    const now = new Date();
+    const compare = new Date(date);
+    return now.getFullYear() === compare.getFullYear()
+      && now.getMonth() === compare.getMonth()
+      && now.getDate() === compare.getDate();
+  }
 
   return (
     <>
@@ -36,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
               {getPosts(section.fieldValue)?.map(post => (
                 <Link to={post.fields.slug} itemProp="url">
                   <p className="max-w-[800px] w-full flex gap-2 justify-between border-b px-1 hover:bg-slate-50">
-                    <span className="truncate">{post.frontmatter.title}</span>
+                    <span className="truncate">{isToday(post.frontmatter.date) ? '🎈 ' : ''}{post.frontmatter.title}</span>
                     <span className="bg-sub text-white rounded-full break-keep text-sm px-2 my-auto">{post.frontmatter.category}</span>
                   </p>
                 </Link>
@@ -94,7 +101,7 @@ export const pageQuery = graphql`
           slug
         }
           frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
           category
@@ -111,7 +118,7 @@ export const pageQuery = graphql`
           slug
         }
           frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
           category
@@ -128,7 +135,7 @@ export const pageQuery = graphql`
           slug
         }
           frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
           category
