@@ -3,7 +3,7 @@ title: "[Java] 알고리즘 문제풀이를 위한 입력값 처리"
 date: "2023-11-03T16:33:03.284Z"
 description: Java의 기본 입력 방법과 StringTokenizer에 대해 알아보자.
 section: "지식 공유" 
-category: "Java"
+category: "알고리즘"
 tags:
   - 우아한 테크코스
   - Java
