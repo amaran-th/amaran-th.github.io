@@ -5,7 +5,6 @@ description: "이진 탐색 알고리즘에 대해 알아보자."
 section: "지식 공유" 
 category: "알고리즘"
 tags:
-  - 우아한 테크코스
   - Java
   - 코딩 테스트
 ---
