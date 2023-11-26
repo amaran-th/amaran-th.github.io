@@ -7,6 +7,7 @@ category: "인프라"
 tags:
   - 우아한 테크코스
   - 배포
+  - kerdy
 thumbnailImg: "./image.png"
 ---
 
