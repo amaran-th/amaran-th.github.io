@@ -11,7 +11,7 @@ tags:
 thumbnailImg: "./dashboard.png"
 ---
 
-[이전 게시글](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[BDD]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9A%B4%EC%98%81%20%EC%9D%BC%EC%A7%80%20-%201/)
+[스프링 스터디 운영 일지 - 1](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[BDD]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9A%B4%EC%98%81%20%EC%9D%BC%EC%A7%80%20-%201/)
 
 ## 들어가며
 ---

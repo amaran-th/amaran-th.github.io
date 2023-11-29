@@ -10,6 +10,10 @@ tags:
   - 스터디 운영 일지 시리즈
 ---
 
+[스프링 스터디 운영 일지 - 1](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[BDD]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9A%B4%EC%98%81%20%EC%9D%BC%EC%A7%80%20-%201/)
+
+[스프링 스터디 운영 일지 - 2](https://amaran-th.github.io/%EC%A3%BC%EC%A0%80%EB%A6%AC%EC%A3%BC%EC%A0%80%EB%A6%AC/[BDD]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9A%B4%EC%98%81%20%EC%9D%BC%EC%A7%80%20-%202/)
+
 ## 들어가며
 ---
 오늘은 스프링 스터디 2주차를 마치고 3주차를 시작하는 날입니다. 전편과 마찬가지로 현재 스터디가 어떻게 진행되고 있는지를 가볍게 한 번 이야기해보려고 합니다.
