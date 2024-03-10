@@ -1,7 +1,7 @@
 ---
 title: "[회고] 2024년 1~2월의 회고록"
 date: "2024-03-10T22:22:03.284Z"
-description: "2023년 8월의 3가지 회고"
+description: "2024년 겨울방학 동안의 회고"
 section: "회고" 
 category: "주저리주저리"
 tags:
