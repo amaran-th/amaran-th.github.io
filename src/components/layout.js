@@ -19,8 +19,7 @@ const Layout = ({
   const isRootPath = location.pathname === rootPath
   const theme = "hydrangea"
   const darkMode = true
-  const [openCategory, setOpenCategory] = useState(true)
-
+  const [openCategory, setOpenCategory] = useState(window.innerWidth > 640)
   const category = (
     <nav className="h-full bg-white border-y border-r shadow-md sticky">
       <div className="w-full bg-shadow flex justify-center h-[15em]">
