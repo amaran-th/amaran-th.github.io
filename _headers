@@ -1,0 +1,41 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+/styles.516a9a626441e7fda36b.css
+  Cache-Control: public, max-age=31536000, immutable
+/17007de1-9eef21dbc3acdf986cdd.js
+  Cache-Control: public, max-age=31536000, immutable
+/commons-2e1002a9bfc17099053c.js
+  Cache-Control: public, max-age=31536000, immutable
+/1fb4dab1236ca8b896fe15ac968a03d4e0a4b9c6-0b17cd90d9c670794b9a.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-category-posts-js-43af18b421483be0db4e.js
+  Cache-Control: public, max-age=31536000, immutable
+/24fa45a6b2ee0570ee75b1903dd1e4fb4eb5715a-468b9975f2eee4163bcf.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-section-posts-js-230f1e39a6752e2da24c.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-tag-posts-js-03076de8e1892cf8311f.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-blog-post-js-622332560dff63ee809b.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-404-js-1441f75cb147e3a4aaf0.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-index-js-dcb73b32afdfd2ec9ead.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-using-typescript-tsx-73356b636a8398e7e31a.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-4e2efd48ef0b6b716ec2.js
+  Cache-Control: public, max-age=31536000, immutable
+/framework-379b7ea7c44f25b32429.js
+  Cache-Control: public, max-age=31536000, immutable
+/app-9708b6dba0b2572e042a.js
+  Cache-Control: public, max-age=31536000, immutable
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
