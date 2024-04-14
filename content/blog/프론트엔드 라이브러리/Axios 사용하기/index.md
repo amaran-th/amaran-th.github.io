@@ -2,8 +2,8 @@
 title: Axios 사용하기
 date: "2023-05-07T19:58:03.284Z"
 description: Axios의 사용법에 대해 간단히 알아보자
-section: "지식 공유" 
-category: 프론트엔드
+section: "지식 공유"
+category: "프론트엔드 라이브러리"
 tags:
   - 발표 스터디
   - 프론트엔드

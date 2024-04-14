@@ -2,8 +2,8 @@
 title: Recoil 사용하기
 date: "2022-11-30T13:01:03.284Z"
 description: "Recoil 기본 및 로컬 스토리지 사용하기"
-section: "지식 공유" 
-category: "프론트엔드"
+section: "지식 공유"
+category: "프론트엔드 라이브러리"
 tags:
   - recoil
   - frontend
