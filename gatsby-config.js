@@ -26,6 +26,9 @@ module.exports = {
       CVE: `https://chip-force-ed0.notion.site/Amaranth-For-blog-publishing-5026c3133e6e4e0380ce569d118cce75`,
     },
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
