@@ -7,6 +7,7 @@ category: JavaScript
 tags:
   - 프론트엔드
   - 브라우저
+thumbnailImg: "./crp.png"
 ---
 
 # CRP(Critical Rendering Path)
@@ -28,7 +29,6 @@ CRP는 다음의 5단계를 거치게 된다.
 3. Layout 구성
 4. Painting
 5. Composite
-   ![](https://i.imgur.com/4u5wm0T.png)
 
 # 1. DOM 트리 생성
 
