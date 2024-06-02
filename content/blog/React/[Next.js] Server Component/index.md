@@ -1,7 +1,7 @@
 ---
 title: "[Next.js] Server Component"
 date: "2024-06-02T23:54:03.284Z"
-description: ""
+description: "서버 컴포넌트와 클라이언트 컴포넌트에 대해 알아보자"
 section: "지식 공유"
 category: "React"
 tags:
