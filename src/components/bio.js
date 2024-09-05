@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react"
 import { VscGithubInverted, VscMail } from "react-icons/vsc"
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -91,7 +91,7 @@ const Bio = () => {
                   EN
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 📁
                 <span className="inline-block text-center font-bold min-w-[5rem]">
                   Portfolio
@@ -111,10 +111,9 @@ const Bio = () => {
                 >
                   EN
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
-          <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Famaran-th.github.io&count_bg=%230C3675&title_bg=%23567EB9&icon=octopusdeploy.svg&icon_color=%23E7E7E7&title=%EC%9D%BC%EC%9D%BC+%EB%B0%A9%EB%AC%B8%EC%9E%90+%EC%88%98&edge_flat=false" /></a>
         </div>
       )}
     </div>

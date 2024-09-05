@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import React, { useEffect, useState } from "react"
 
 const Header = ({ openCategory, setOpenCategory, title }) => {
   const [percentScr, setPercentScr] = useState(0) //웹페이지 자체의 스크롤
   const handleScroll = () => {
     setPercentScr(
       (100 * Math.floor(window.pageYOffset)) /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight)
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)
     )
   }
   useEffect(() => {

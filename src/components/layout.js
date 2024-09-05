@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
 import { ChevronRightIcon } from "@heroicons/react/24/solid"
-import Bio from "./bio"
+import { Link } from "gatsby"
+import React, { useState } from "react"
 import TableOfContents from "./TableOfContents"
+import Bio from "./bio"
 import Header from "./header"
 
 const Layout = ({
@@ -25,7 +25,7 @@ const Layout = ({
   )
   const category = (
     <nav className="h-full bg-white border-y border-r shadow-md sticky">
-      <div className="w-full bg-shadow flex justify-center h-[15em]">
+      <div className="w-full bg-shadow flex justify-center">
         <Bio />
       </div>
       <ul

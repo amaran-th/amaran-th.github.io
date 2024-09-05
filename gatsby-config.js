@@ -20,10 +20,10 @@ module.exports = {
     social: {
       email: `songsy405@naver.com`,
       github: `https://github.com/amaran-th`,
-      portfolioK: `https://chip-force-ed0.notion.site/b50243b25c044af886d904fd8435410b`,
-      portfolioE: `https://chip-force-ed0.notion.site/Portfolio-For-blog-publishing-5306a5c906854320b875b152fddac40e`,
-      CVK: `https://chip-force-ed0.notion.site/Amaranth-bac9cc6bd28b4dfcb0614aa5d9f2f59b`,
-      CVE: `https://chip-force-ed0.notion.site/Amaranth-For-blog-publishing-5026c3133e6e4e0380ce569d118cce75`,
+      portfolioK: ``,
+      portfolioE: ``,
+      CVK: `http://amaran-th.notion.site`,
+      CVE: ``,
     },
   },
   flags: {
