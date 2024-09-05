@@ -64,13 +64,20 @@ const Layout = ({
     </nav>
   )
   return (
-    <div className={theme + "-theme " + (darkMode ? "dark" : "light") + " "}>
+    <div
+      className={
+        theme +
+        "-theme " +
+        (darkMode ? "dark" : "light") +
+        " flex flex-col min-h-[100vh]"
+      }
+    >
       <Header
         openCategory={openCategory}
         setOpenCategory={setOpenCategory}
         title={title}
       />
-      <body className="relative mb-4 flex justify-center min-h-[calc(100vh-104px-160px)]">
+      <body className="relative flex-grow pt-[86px]">
         <div
           className={
             "scroll-box-hidden h-full fixed min-w-[20rem] left-0 z-[98] top-[86px] transition ease-in-out " +
@@ -79,10 +86,8 @@ const Layout = ({
         >
           {category}
         </div>
-        {openCategory ? (
+        {openCategory && (
           <nav className="min-h-full md:block hidden relative min-w-[20rem]"></nav>
-        ) : (
-          ""
         )}
         <div className="w-full flex justify-center space-x-2">
           <div className="w-full flex max-w-6xl justify-center">

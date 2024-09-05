@@ -20,42 +20,40 @@ const Header = ({ openCategory, setOpenCategory, title }) => {
   })
 
   return (
-    <>
-      <header className="h-[86px] w-[100vw] flex flex-col bg-white sticky top-0 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
-        <p className="font-logo sm:text-3xl text-2xl p-5 pb-0">
-          <button
-            className="mr-4 px-2 bg-white z-[100]"
-            onClick={() => setOpenCategory(!openCategory)}
-          >
-            <ChevronDoubleRightIcon
-              className={
-                "h-6 w-6 inline-block transition ease-in-out " +
-                (openCategory ? "rotate-180" : "")
-              }
-            />
-          </button>
-          <Link to="/">{title}</Link>
-        </p>
-        <div className="flex h-[30px] shadow-inner w-full">
-          <div className="w-[30px] bg-sub"></div>
-          <div
-            className={`flex justify-end bg-sub rounded-r-full`}
-            style={{ width: percentScr + "%" }}
-          >
-            <StaticImage
-              className="bio-avatar bg-white rounded-full border border-sub"
-              layout="fixed"
-              formats={["auto", "webp", "avif"]}
-              src="../images/profile-pic.png"
-              width={30}
-              height={30}
-              quality={95}
-              alt="Profile picture"
-            />
-          </div>
+    <header className="w-[100vw] flex flex-col bg-white fixed left-0 top-0 gap-2 shadow-md 0 z-[99] opacity-90 backdrop-blur-lg">
+      <div className="font-logo sm:text-3xl text-2xl p-5 pb-0">
+        <button
+          className="mr-4 px-2 bg-white z-[100]"
+          onClick={() => setOpenCategory(!openCategory)}
+        >
+          <ChevronDoubleRightIcon
+            className={
+              "h-6 w-6 inline-block transition ease-in-out " +
+              (openCategory ? "rotate-180" : "")
+            }
+          />
+        </button>
+        <Link to="/">{title}</Link>
+      </div>
+      <div className="flex h-[30px] shadow-inner w-full">
+        <div className="w-[30px] bg-sub"></div>
+        <div
+          className={`flex justify-end bg-sub rounded-r-full`}
+          style={{ width: percentScr + "%" }}
+        >
+          <StaticImage
+            className="bio-avatar bg-white rounded-full border border-sub"
+            layout="fixed"
+            formats={["auto", "webp", "avif"]}
+            src="../images/profile-pic.png"
+            width={30}
+            height={30}
+            quality={95}
+            alt="Profile picture"
+          />
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   )
 }
 

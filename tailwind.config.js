@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       title: ["MaplestoryOTFBold"],
-      content: ["GowunBatang-Regular"],
+      content: ["IM_Hyemin-Bold"],
       logo: ["PyeongChangPeace-Bold"],
     },
     extend: {
