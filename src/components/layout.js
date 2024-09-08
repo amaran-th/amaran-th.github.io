@@ -77,7 +77,7 @@ const Layout = ({
         setOpenCategory={setOpenCategory}
         title={title}
       />
-      <body className="relative flex flex-grow mb-10">
+      <div className="relative flex w-full flex-1 flex-grow pt-[86px]">
         <div
           className={
             "scroll-box-hidden h-full fixed min-w-[20rem] left-0 z-[98] top-[86px] transition ease-in-out " +
@@ -87,9 +87,9 @@ const Layout = ({
           {category}
         </div>
         {openCategory && (
-          <nav className="min-h-full md:block hidden relative min-w-[20rem]"></nav>
+          <nav className="min-h-full md:block hidden relative min-w-[20rem]" />
         )}
-        <div className="w-full flex justify-center space-x-2">
+        <div className="flex-grow flex justify-center gap-x-2 mb-10">
           <div className="w-full flex max-w-6xl justify-center">
             <div
               className="w-full max-w-3xl px-5 mt-12"
@@ -111,7 +111,7 @@ const Layout = ({
             ""
           )}
         </div>
-      </body>
+      </div>
 
       <footer className="bg-main flex justify-end text-white h-40 px-10">
         © {new Date().getFullYear()}, Built with
