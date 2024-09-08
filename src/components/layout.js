@@ -77,7 +77,7 @@ const Layout = ({
         setOpenCategory={setOpenCategory}
         title={title}
       />
-      <body className="relative flex-grow pt-[86px]">
+      <body className="relative flex flex-grow mb-10">
         <div
           className={
             "scroll-box-hidden h-full fixed min-w-[20rem] left-0 z-[98] top-[86px] transition ease-in-out " +

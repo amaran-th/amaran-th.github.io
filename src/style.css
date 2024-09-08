@@ -332,6 +332,12 @@ footer {
   border-left: 2px solid var(--color-accent);
 }
 
+.mark_down img {
+  margin: 8px 0;
+  border-radius: 5px;
+  border: solid 1px #cdcdcd;
+}
+
 /*Code*/
 :not(pre) > code[class*="language-"] {
   color: var(--color-code);
