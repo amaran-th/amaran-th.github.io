@@ -13,7 +13,7 @@ module.exports = {
     title: `아마란스 생각`,
     author: {
       name: `Amaranth`,
-      summary: `백엔드 개발자 지망생`,
+      summary: `프론트엔드 개발자`,
     },
     description: `아마란스 블로그`,
     siteUrl: `https://amaran-th.github.io`,
