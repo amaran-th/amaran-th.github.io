@@ -1,11 +1,12 @@
-import * as React from "react"
 import { Link, graphql } from "gatsby"
 
+import GatsbyImage from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GatsbyImage from "gatsby-image"
 import "../tailwind.css"
+
+export const Head = () => <Seo title={`카테고리 내 게시글 목록`} />
 
 const CategoryPost = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -29,7 +30,6 @@ const CategoryPost = ({ data, location, pageContext }) => {
       categories={categories}
       currentCategory={category}
     >
-      <Seo title={`카테고리 [${category}]의 게시글 목록`} />{" "}
       {/* 페이지 title 수정 */}
       <span className="text-main text-xl font-bold ">
         {category}({posts.length})

@@ -1,65 +1,91 @@
-import * as React from "react"
 import { Link, graphql } from "gatsby"
 
+import PostCalender from "../components/calender/PostCalender"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "../tailwind.css"
-import PostCalender from "../components/calender/PostCalender"
+
+export const Head = () => <Seo title="메인 홈" />
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const essayPosts = data.essay.nodes;
-  const sharePosts = data.share.nodes;
-  const solutionPosts = data.solution.nodes;
-  const posts = data.allMarkdownRemark.nodes;
+  const essayPosts = data.essay.nodes
+  const sharePosts = data.share.nodes
+  const solutionPosts = data.solution.nodes
+  const posts = data.allMarkdownRemark.nodes
 
   const categories = data.categoryList.group
-  const sections = data.sectionList.group;
+  const sections = data.sectionList.group
 
-  const getPosts = (section) => {
-    if (section === "회고") return essayPosts;
-    if (section === "지식 공유") return sharePosts;
-    if (section === "문제 해결") return solutionPosts;
+  const getPosts = section => {
+    if (section === "회고") return essayPosts
+    if (section === "지식 공유") return sharePosts
+    if (section === "문제 해결") return solutionPosts
   }
-  const isToday = (date) => {
-    const now = new Date();
-    const compare = new Date(date);
-    return now.getFullYear() === compare.getFullYear()
-      && now.getMonth() === compare.getMonth()
-      && now.getDate() === compare.getDate();
+  const isToday = date => {
+    const now = new Date()
+    const compare = new Date(date)
+    return (
+      now.getFullYear() === compare.getFullYear() &&
+      now.getMonth() === compare.getMonth() &&
+      now.getDate() === compare.getDate()
+    )
   }
 
   return (
     <>
-      <Seo title={`메인 홈`} />{" "}
-      <Layout location={location} title={siteTitle} sections={sections} categories={categories}>
+      <Layout
+        location={location}
+        title={siteTitle}
+        sections={sections}
+        categories={categories}
+      >
         <PostCalender posts={posts} />
         <div className="flex flex-col gap-y-16 mt-8">
-          {sections.map(section => (<div className="mb-4">
-            <Link to={section.fieldValue} itemProp="url">
-              <div className="max-w-[200px] mx-auto font-bold text-center border-b-2 border-black px-2 mb-8 text-2xl">{section.fieldValue}</div>
-            </Link>
-            <div>
-              {getPosts(section.fieldValue)?.map(post => (
-                <Link to={post.fields.slug} itemProp="url">
-                  <p className="max-w-[800px] w-full flex gap-2 justify-between border-b px-1 hover:bg-slate-50">
-                    <span className="truncate">{isToday(post.frontmatter.date) ? '🎈 ' : ''}{post.frontmatter.title}</span>
-                    <span className="bg-sub text-white rounded-full break-keep text-sm px-2 my-auto">{post.frontmatter.category}</span>
-                  </p>
-                </Link>
-              ))}
+          {sections.map(section => (
+            <div className="mb-4">
               <Link to={section.fieldValue} itemProp="url">
-                <div className="mt-2 bg-shadow h-[1.5em] rounded-md text-point hover:bg-sub">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mx-auto">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
+                <div className="max-w-[200px] mx-auto font-bold text-center border-b-2 border-black px-2 mb-8 text-2xl">
+                  {section.fieldValue}
                 </div>
               </Link>
+              <div>
+                {getPosts(section.fieldValue)?.map(post => (
+                  <Link to={post.fields.slug} itemProp="url">
+                    <p className="max-w-[800px] w-full flex gap-2 justify-between border-b px-1 hover:bg-slate-50">
+                      <span className="truncate">
+                        {isToday(post.frontmatter.date) ? "🎈 " : ""}
+                        {post.frontmatter.title}
+                      </span>
+                      <span className="bg-sub text-white rounded-full break-keep text-sm px-2 my-auto">
+                        {post.frontmatter.category}
+                      </span>
+                    </p>
+                  </Link>
+                ))}
+                <Link to={section.fieldValue} itemProp="url">
+                  <div className="mt-2 bg-shadow h-[1.5em] rounded-md text-point hover:bg-sub">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6 mx-auto"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
           ))}
         </div>
-      </Layout >
+      </Layout>
     </>
   )
 }
@@ -92,15 +118,15 @@ export const pageQuery = graphql`
       }
     }
     essay: allMarkdownRemark(
-        sort: { frontmatter: { date: DESC } },
-        filter: {frontmatter: { section: {eq: "회고" }}}
-        limit: 5
-        ) {
-        nodes {
-          fields {
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { section: { eq: "회고" } } }
+      limit: 5
+    ) {
+      nodes {
+        fields {
           slug
         }
-          frontmatter {
+        frontmatter {
           date(formatString: "YYYY-MM-DD")
           title
           description
@@ -109,32 +135,15 @@ export const pageQuery = graphql`
       }
     }
     share: allMarkdownRemark(
-        sort: { frontmatter: { date: DESC } },
-        filter: {frontmatter: { section: {eq: "지식 공유" }}}
-        limit: 5
-        ) {
-        nodes {
-          fields {
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { section: { eq: "지식 공유" } } }
+      limit: 5
+    ) {
+      nodes {
+        fields {
           slug
         }
-          frontmatter {
-          date(formatString: "YYYY-MM-DD")
-          title
-          description
-          category
-          }
-        }
-      }
-      solution: allMarkdownRemark(
-        sort: { frontmatter: { date: DESC } },
-        filter: {frontmatter: { section: {eq: "문제 해결" }}}
-        limit: 5
-        ) {
-        nodes {
-          fields {
-          slug
-        }
-          frontmatter {
+        frontmatter {
           date(formatString: "YYYY-MM-DD")
           title
           description
@@ -142,7 +151,23 @@ export const pageQuery = graphql`
         }
       }
     }
-
+    solution: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { section: { eq: "문제 해결" } } }
+      limit: 5
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "YYYY-MM-DD")
+          title
+          description
+          category
+        }
+      }
+    }
 
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {

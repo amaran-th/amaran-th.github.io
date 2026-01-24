@@ -1,12 +1,12 @@
-import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import GatsbyImage from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GatsbyImage from "gatsby-image"
 import "../tailwind.css"
 var kebabCase = require("lodash.kebabcase")
+
+export const Head = () => <Seo title={`태그 게시글 목록`} />
 
 const Tags = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -16,7 +16,6 @@ const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   return (
     <Layout location={location} title={siteTitle} categories={categories}>
-      <Seo title={`태그 [${tag}]의 게시글 목록`} />
       <h1>Tags</h1>
       <div className="border bg-gray-50 p-2 mb-4">
         <ul className="flex flex-wrap">
