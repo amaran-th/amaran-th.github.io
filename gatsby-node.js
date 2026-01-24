@@ -20,10 +20,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       essay: allMarkdownRemark(
-        sort: { frontmatter: { date: ASC } },
-        filter: {frontmatter: { section: {eq: "회고" }}}
+        sort: { frontmatter: { date: ASC } }
+        filter: { frontmatter: { section: { eq: "회고" } } }
         limit: 1000
-        ) {
+      ) {
         nodes {
           id
           fields {
@@ -32,10 +32,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       share: allMarkdownRemark(
-        sort: { frontmatter: { date: ASC } },
-        filter: {frontmatter: { section: {eq: "지식 공유" }}}
+        sort: { frontmatter: { date: ASC } }
+        filter: { frontmatter: { section: { eq: "지식 공유" } } }
         limit: 1000
-        ) {
+      ) {
         nodes {
           id
           fields {
@@ -44,10 +44,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       solution: allMarkdownRemark(
-        sort: { frontmatter: { date: ASC } },
-        filter: {frontmatter: { section: {eq: "문제 해결" }}}
+        sort: { frontmatter: { date: ASC } }
+        filter: { frontmatter: { section: { eq: "문제 해결" } } }
         limit: 1000
-        ) {
+      ) {
         nodes {
           id
           fields {
@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       sectionList: allMarkdownRemark {
-        group(field: frontmatter___section){
+        group(field: frontmatter___section) {
           fieldValue
           totalCount
         }
@@ -117,9 +117,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { tag: tag.fieldValue },
     })
   })
-  const essayPosts = result.data.essay.nodes;
-  const sharePosts = result.data.share.nodes;
-  const solutionPosts = result.data.solution.nodes;
+  const essayPosts = result.data.essay.nodes
+  const sharePosts = result.data.share.nodes
+  const solutionPosts = result.data.solution.nodes
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -128,7 +128,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (essayPosts.length > 0) {
     essayPosts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : essayPosts[index - 1].id
-      const nextPostId = index === essayPosts.length - 1 ? null : essayPosts[index + 1].id
+      const nextPostId =
+        index === essayPosts.length - 1 ? null : essayPosts[index + 1].id
 
       createPage({
         path: post.fields.slug,
@@ -145,7 +146,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (sharePosts.length > 0) {
     sharePosts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : sharePosts[index - 1].id
-      const nextPostId = index === sharePosts.length - 1 ? null : sharePosts[index + 1].id
+      const nextPostId =
+        index === sharePosts.length - 1 ? null : sharePosts[index + 1].id
 
       createPage({
         path: post.fields.slug,
@@ -162,7 +164,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (solutionPosts.length > 0) {
     solutionPosts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : solutionPosts[index - 1].id
-      const nextPostId = index === solutionPosts.length - 1 ? null : solutionPosts[index + 1].id
+      const nextPostId =
+        index === solutionPosts.length - 1 ? null : solutionPosts[index + 1].id
 
       createPage({
         path: post.fields.slug,
@@ -221,10 +224,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       github: String
-      portfolioK: String
-      portfolioE: String
-      CVK: String
-      CVE: String
+      newBlog: String
     }
 
     type MarkdownRemark implements Node {

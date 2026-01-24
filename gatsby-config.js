@@ -7,23 +7,20 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-const siteUrl = `https://amaran-th.github.io`
 module.exports = {
+  jsxRuntime: "automatic",
   siteMetadata: {
-    title: `아마란스 생각`,
+    title: "아마란스 생각",
     author: {
-      name: `Amaranth`,
-      summary: `프론트엔드 개발자`,
+      name: "Amaranth",
+      summary: "프론트엔드 개발자",
     },
     description: `아마란스 블로그`,
     siteUrl: `https://amaran-th.github.io`,
     social: {
       email: `songsy405@naver.com`,
       github: `https://github.com/amaran-th`,
-      portfolioK: ``,
-      portfolioE: ``,
-      CVK: `http://amaran-th.notion.site`,
-      CVE: ``,
+      newBlog: "https://amaran-th.vercel.app/",
     },
   },
   flags: {

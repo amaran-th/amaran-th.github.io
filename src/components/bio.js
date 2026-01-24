@@ -7,7 +7,6 @@
 
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import * as React from "react"
 import { VscGithubInverted, VscMail } from "react-icons/vsc"
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -21,10 +20,7 @@ const Bio = () => {
           social {
             email
             github
-            portfolioK
-            portfolioE
-            CVK
-            CVE
+            newBlog
           }
         }
       }
@@ -36,87 +32,57 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio p-2">
-      <StaticImage
-        className="bio-avatar bg-white"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={100}
-        height={100}
-        quality={95}
-        alt="Profile picture"
-      />
-      {author?.name && (
-        <div className="flex flex-col items-center">
-          <p className="font-title text-point text-xl">{author.name}</p>
-          <p className="text-lg font-bold">{author?.summary || null}</p>
-          <div className="p-2 space-y-2">
-            <p className="flex justify-center space-x-8">
-              <Link
-                className="ml-1 hover:text-point hover:font-bold"
-                target="_blank"
-                to={`${social?.github || ``}`}
-              >
-                <VscGithubInverted className="inline-block -mt-1 -ml-1 w-8 h-8" />
-              </Link>
-              <Link
-                className="ml-1 hover:text-point hover:font-bold"
-                target="_blank"
-                to={`mailto:${social?.email || ``}`}
-              >
-                <VscMail className="inline-block -mt-1 -ml-1 w-8 h-8" />
-              </Link>
-            </p>
-
-            <ul>
-              <li>
-                📑
-                <span className="inline-block text-center font-bold min-w-[5rem]">
-                  CV
-                </span>
+    <>
+      <div className="bio p-2">
+        <StaticImage
+          className="bio-avatar bg-white"
+          layout="fixed"
+          formats={["auto", "webp", "avif"]}
+          src="../images/profile-pic.png"
+          width={100}
+          height={100}
+          quality={95}
+          alt="Profile picture"
+        />
+        {author?.name && (
+          <div className="flex flex-col items-center">
+            <p className="font-title text-point text-xl">{author.name}</p>
+            <p className="text-lg font-bold">{author?.summary || null}</p>
+            <div className="p-2 space-y-2">
+              <p className="flex justify-center space-x-8">
                 <Link
-                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
+                  className="ml-1 hover:text-point hover:font-bold"
                   target="_blank"
-                  to={`${social?.CVK || ``}`}
+                  to={`${social?.github || ``}`}
                 >
-                  KR
-                </Link>{" "}
-                /{" "}
-                <Link
-                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
-                  target="_blank"
-                  to={`${social?.CVE || ``}`}
-                >
-                  EN
+                  <VscGithubInverted className="inline-block -mt-1 -ml-1 w-8 h-8" />
                 </Link>
-              </li>
-              {/* <li>
-                📁
-                <span className="inline-block text-center font-bold min-w-[5rem]">
-                  Portfolio
-                </span>
                 <Link
-                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
+                  className="ml-1 hover:text-point hover:font-bold"
                   target="_blank"
-                  to={`${social?.portfolioK || ``}`}
+                  to={`mailto:${social?.email || ``}`}
                 >
-                  KR
-                </Link>{" "}
-                /{" "}
-                <Link
-                  className="hover:bg-main rounded-sm bg-sub text-white px-2 py-[2px]"
-                  target="_blank"
-                  to={`${social?.portfolioE || ``}`}
-                >
-                  EN
+                  <VscMail className="inline-block -mt-1 -ml-1 w-8 h-8" />
                 </Link>
-              </li> */}
-            </ul>
+              </p>
+            </div>
           </div>
+        )}
+      </div>
+      <div className="migrated-notice flex p-2 font-title flex-col items-center bg-red-100">
+        <p>🚨 새 블로그로 이사했어요 🚨</p>
+        <div className="flex items-center gap-1">
+          <span>➡</span>
+          <Link
+            className="text-red-400 hover:text-red-600"
+            target="_blank"
+            to={`${social?.newBlog || ``}`}
+          >
+            바로가기
+          </Link>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   )
 }
 
