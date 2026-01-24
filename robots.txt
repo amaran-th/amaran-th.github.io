@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://amaran-th.github.io/sitemap-index.xml
+Host: https://amaran-th.github.io
