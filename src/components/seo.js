@@ -33,6 +33,10 @@ const Seo = ({ description, title, children }) => {
         name="google-site-verification"
         content="aZ6Rx91KxboXOthhgdEOqpLc2tw6PThHxoPcNdMfeIk"
       />
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-1344097825263008"
+      ></meta>
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <script
