@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Utterances from "../components/Utterances"
 import TableOfContents from "../components/TableOfContents"
+import { newBlogUrl } from "../utils/new-blog"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, categoryList, markdownRemark: post },
@@ -17,6 +18,7 @@ const BlogPostTemplate = ({
   const categories = categoryList.group
   const writer = site.siteMetadata?.author?.name
   const thumbnailImg = post.frontmatter.thumbnailImg?.childImageSharp.fluid
+  const movedTo = newBlogUrl(post.fields.slug)
   return (
     <Layout
       location={location}
@@ -30,6 +32,14 @@ const BlogPostTemplate = ({
         itemScope
         itemType="http://schema.org/Article"
       >
+        {movedTo && (
+          <p className="mb-6 p-4 rounded-md border-2 font-bold">
+            📦 이 글은 새 블로그로 옮겨졌습니다.{" "}
+            <a href={movedTo} className="underline text-main">
+              새 블로그에서 보기 →
+            </a>
+          </p>
+        )}
         <header className="mb-8">
           <h1
             className="text-main text-5xl font-bold font-title"
@@ -119,11 +129,14 @@ const BlogPostTemplate = ({
 }
 
 export const Head = ({ data: { markdownRemark: post } }) => {
+  const movedTo = newBlogUrl(post.fields.slug)
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
-    />
+    >
+      {movedTo && <link rel="canonical" href={movedTo} />}
+    </Seo>
   )
 }
 
@@ -173,6 +186,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
+      fields {
+        slug
+      }
       html
       tableOfContents
       frontmatter {
