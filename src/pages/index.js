@@ -3,9 +3,17 @@ import { Link, graphql } from "gatsby"
 import PostCalender from "../components/calender/PostCalender"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { NEW_BLOG_HOME } from "../utils/new-blog"
 import "../tailwind.css"
 
-export const Head = () => <Seo title="메인 홈" />
+// The blog moved: point search engines at the new home page and send
+// visitors there right away.
+export const Head = () => (
+  <Seo title="메인 홈">
+    <link rel="canonical" href={NEW_BLOG_HOME} />
+    <meta httpEquiv="refresh" content={`0; url=${NEW_BLOG_HOME}`} />
+  </Seo>
+)
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`

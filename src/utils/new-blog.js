@@ -6,11 +6,16 @@ const byPath = new Map(
   Object.entries(urlMap).map(([path, { newUrl }]) => [path.normalize("NFC"), newUrl])
 )
 
+export const NEW_BLOG_HOME = "https://amaran-th.vercel.app/"
+
 export const newBlogUrl = pathname => {
   if (!pathname) return undefined
   let path = pathname
   try {
     path = decodeURIComponent(pathname)
   } catch {}
-  return byPath.get(path.replace(/^\/+|\/+$/g, "").normalize("NFC"))
+  const key = path.replace(/^\/+|\/+$/g, "").normalize("NFC")
+  // The home page moves to the new blog's home page.
+  if (key === "") return NEW_BLOG_HOME
+  return byPath.get(key)
 }

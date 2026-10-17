@@ -136,6 +136,9 @@ export const Head = ({ data: { markdownRemark: post } }) => {
       description={post.frontmatter.description || post.excerpt}
     >
       {movedTo && <link rel="canonical" href={movedTo} />}
+      {/* An instant refresh is read by Google as a permanent redirect;
+          GitHub Pages cannot send a real 301. */}
+      {movedTo && <meta httpEquiv="refresh" content={`0; url=${movedTo}`} />}
     </Seo>
   )
 }
